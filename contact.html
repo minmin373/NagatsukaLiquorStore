@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Nagatsuka Liquor Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Nagatsuka Liquor Store</h1>
+                </a>
+            </div>
+            <div class="nav-links">
+                <div class="dropdown">
+                    <a href="products.html" class="dropbtn">Products <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="products.html#all-products">All Products</a>
+                        <a href="products.html#best-sellers">Best Sellers</a>
+                        <a href="products.html#whisky">Whisky</a>
+                        <a href="products.html#wine">Wine</a>
+                        <a href="products.html#sparkling-wine">Sparkling Wine</a>
+                        <a href="products.html#shochu">Shochu</a>
+                        <a href="products.html#sake">Sake</a>
+                        <a href="products.html#spirits">Spirits</a>
+                        <a href="products.html#beer">Beer</a>
+                        <a href="products.html#liqueur">Liqueur</a>
+                        <a href="products.html#non-alcohol">Non Alcohol</a>
+                        <a href="products.html#food">Food & Snacks</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="about.html" class="dropbtn">About <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="about.html">Our Story</a>
+                        <a href="about.html#history">History</a>
+                        <a href="about.html#values">Values</a>
+                        <a href="about.html#events">Events</a>
+                    </div>
+                </div>
+                <a href="blog.html">Blog</a>
+                <div class="dropdown">
+                    <a href="contact.html" class="dropbtn">Contact <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="contact.html">Location</a>
+                        <a href="contact.html#contact-form">Contact Form</a>
+                    </div>
+                </div>
+                <div class="nav-actions">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                    <div class="dropdown">
+                        <button class="dropbtn"><i class="fas fa-globe"></i></button>
+                        <div class="dropdown-content">
+                            <a href="contact.html">English</a>
+                            <a href="contact-jp.html">日本語</a>
+                        </div>
+                    </div>
+                    <a href="favorites.html" class="favorite-btn"><i class="fas fa-heart"></i></a>
+                    <a href="login.html" class="login-btn">Login</a>
+                    <a href="signup.html" class="signup-btn">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <section class="contact-header">
+        <h1>Contact Us</h1>
+        <p>Get in touch with us for any inquiries or support</p>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info">
+        <div class="info-grid">
+            <div class="info-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Visit Us</h3>
+                <p>123 Liquor Street</p>
+                <p>Tokyo, Japan 100-0001</p>
+                <p>Monday - Saturday: 10:00 AM - 8:00 PM</p>
+                <p>Sunday: 11:00 AM - 6:00 PM</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-phone"></i>
+                <h3>Call Us</h3>
+                <p>+81 (0)3-1234-5678</p>
+                <p>+81 (0)3-8765-4321</p>
+                <p>For international orders:</p>
+                <p>+81 (0)3-1234-5678</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email Us</h3>
+                <p>info@nagatsukaliquor.com</p>
+                <p>orders@nagatsukaliquor.com</p>
+                <p>support@nagatsukaliquor.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+        <div class="form-container">
+            <h2>Send us a Message</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="order">Order Status</option>
+                        <option value="product">Product Information</option>
+                        <option value="support">Technical Support</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <h2>Find Us</h2>
+        <div class="map-container">
+            <!-- Replace with actual map embed code -->
+            <div class="map-placeholder">
+                <p>Map will be embedded here</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What are your shipping policies?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We offer both domestic and international shipping. Domestic orders are typically delivered within 2-3 business days, while international shipping times vary by location.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Do you offer gift wrapping?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we offer complimentary gift wrapping for all orders. You can add a personal message to be included with the gift.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What payment methods do you accept?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We accept all major credit cards, PayPal, and bank transfers. For international orders, we also accept various local payment methods.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Nagatsuka Liquor Store</h3>
+                <p>Your trusted source for premium Japanese spirits and beverages.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 5 Chome-5-1 Showacho, Akishima, Tokyo 196-0015, Japan</p>
+                <p><i class="fas fa-clock"></i> Monday to Saturday 10:00-20:00</p>
+                <p><i class="fas fa-clock"></i> Sunday 10:00-19:00</p>
+                <p><i class="fas fa-clock"></i> Monday Closed</p>
+                <p><i class="fas fa-phone"></i> +81 42 541 0128</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nagatsuka Liquor Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html> 

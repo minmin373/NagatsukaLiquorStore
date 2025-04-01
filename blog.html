@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Nagatsuka Liquor Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Nagatsuka Liquor Store</h1>
+                </a>
+            </div>
+            <div class="nav-links">
+                <div class="dropdown">
+                    <a href="products.html" class="dropbtn">Products <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="products.html">All Products</a>
+                        <a href="products.html#best-sellers">Best Sellers</a>
+                        <a href="products.html#whisky">Whisky</a>
+                        <a href="products.html#wine">Wine</a>
+                        <a href="products.html#sparkling-wine">Sparkling Wine</a>
+                        <a href="products.html#shochu">Shochu</a>
+                        <a href="products.html#sake">Sake</a>
+                        <a href="products.html#spirits">Spirits</a>
+                        <a href="products.html#beer">Beer</a>
+                        <a href="products.html#liqueur">Liqueur</a>
+                        <a href="products.html#non-alcohol">Non Alcohol</a>
+                        <a href="products.html#food">Food & Snacks</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="about.html" class="dropbtn">About <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="about.html">Our Story</a>
+                        <a href="about.html#history">History</a>
+                        <a href="about.html#values">Values</a>
+                        <a href="about.html#events">Events</a>
+                    </div>
+                </div>
+                <a href="blog.html">Blog</a>
+                <div class="dropdown">
+                    <a href="contact.html" class="dropbtn">Contact <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="contact.html">Location</a>
+                        <a href="contact.html#contact-form">Contact Form</a>
+                    </div>
+                </div>
+                <div class="nav-actions">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                    <div class="dropdown">
+                        <button class="dropbtn"><i class="fas fa-globe"></i></button>
+                        <div class="dropdown-content">
+                            <a href="blog.html">English</a>
+                            <a href="blog-jp.html">日本語</a>
+                        </div>
+                    </div>
+                    <a href="favorites.html" class="favorite-btn"><i class="fas fa-heart"></i></a>
+                    <a href="login.html" class="login-btn">Login</a>
+                    <a href="signup.html" class="signup-btn">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <header class="blog-header">
+        <h1>Our Blog</h1>
+        <p>Discover stories about sake, wine, and spirits</p>
+        <div class="blog-search">
+            <input type="text" placeholder="Search articles...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <!-- Blog Categories -->
+    <section class="blog-categories">
+        <div class="category-filters">
+            <button class="active">All</button>
+            <button>Sake</button>
+            <button>Wine</button>
+            <button>Spirits</button>
+            <button>Beer</button>
+            <button>Events</button>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="blog">
+        <div class="blog-grid">
+            <!-- Blog Post 1 -->
+            <a href="blog-post-sake-tasting.html" class="blog-card">
+                <div class="blog-image">
+                    <img src="images/sake-tasting.jpg" alt="Sake Tasting Guide">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="date">March 15, 2024</span>
+                        <span class="category">Sake</span>
+                    </div>
+                    <h3 class="blog-title">Complete Guide to Sake Tasting</h3>
+                    <p class="blog-excerpt">Learn the art of sake tasting with our comprehensive guide. Discover the different types of sake, proper tasting techniques, and how to appreciate the subtle flavors.</p>
+                    <span class="read-more">Read More <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <!-- Blog Post 2 -->
+            <a href="blog-post-wine-pairing.html" class="blog-card">
+                <div class="blog-image">
+                    <img src="images/wine-pairing.jpg" alt="Wine Pairing">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="date">March 10, 2024</span>
+                        <span class="category">Wine</span>
+                    </div>
+                    <h3 class="blog-title">Perfect Wine Pairings for Japanese Cuisine</h3>
+                    <p class="blog-excerpt">Explore the best wine pairings for your favorite Japanese dishes. From sushi to tempura, find the perfect wine to enhance your dining experience.</p>
+                    <span class="read-more">Read More <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <!-- Blog Post 3 -->
+            <a href="blog-post-japanese-whisky.html" class="blog-card">
+                <div class="blog-image">
+                    <img src="images/japanese-whisky.jpg" alt="Japanese Whisky">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="date">March 5, 2024</span>
+                        <span class="category">Whisky</span>
+                    </div>
+                    <h3 class="blog-title">Japanese Whisky: A Rising Star</h3>
+                    <p class="blog-excerpt">Discover why Japanese whisky has become a global sensation. Learn about its history, production methods, and what makes it unique in the world of spirits.</p>
+                    <span class="read-more">Read More <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <!-- Blog Post 4 -->
+            <a href="blog-post-craft-beer.html" class="blog-card">
+                <div class="blog-image">
+                    <img src="images/craft-beer.jpg" alt="Craft Beer">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="date">March 1, 2024</span>
+                        <span class="category">Beer</span>
+                    </div>
+                    <h3 class="blog-title">Craft Beer Revolution in Japan</h3>
+                    <p class="blog-excerpt">Explore the growing craft beer scene in Japan. Meet local brewers, learn about unique ingredients, and discover the best craft beers to try.</p>
+                    <span class="read-more">Read More <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Stay updated with the latest articles, events, and product updates</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email address">
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Nagatsuka Liquor Store</h3>
+                <p>Your trusted source for premium Japanese spirits and beverages.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 5 Chome-5-1 Showacho, Akishima, Tokyo 196-0015, Japan</p>
+                <p><i class="fas fa-clock"></i> Monday to Saturday 10:00-20:00</p>
+                <p><i class="fas fa-clock"></i> Sunday 10:00-19:00</p>
+                <p><i class="fas fa-clock"></i> Monday Closed</p>
+                <p><i class="fas fa-phone"></i> +81 42 541 0128</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nagatsuka Liquor Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Category filter functionality
+        const categoryButtons = document.querySelectorAll('.category-filters button');
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html> 

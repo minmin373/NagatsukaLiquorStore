@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Nagatsuka Liquor Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Nagatsuka Liquor Store</h1>
+                </a>
+            </div>
+            <div class="nav-links">
+                <div class="dropdown">
+                    <a href="products.html" class="dropbtn">Products <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="products.html">All Products</a>
+                        <a href="products.html#best-sellers">Best Sellers</a>
+                        <a href="products.html#whisky">Whisky</a>
+                        <a href="products.html#wine">Wine</a>
+                        <a href="products.html#sparkling-wine">Sparkling Wine</a>
+                        <a href="products.html#shochu">Shochu</a>
+                        <a href="products.html#sake">Sake</a>
+                        <a href="products.html#spirits">Spirits</a>
+                        <a href="products.html#beer">Beer</a>
+                        <a href="products.html#liqueur">Liqueur</a>
+                        <a href="products.html#non-alcohol">Non Alcohol</a>
+                        <a href="products.html#food">Food & Snacks</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="about.html" class="dropbtn">About <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="about.html">Our Story</a>
+                        <a href="about.html#history">History</a>
+                        <a href="about.html#values">Values</a>
+                        <a href="about.html#events">Events</a>
+                    </div>
+                </div>
+                <a href="blog.html">Blog</a>
+                <div class="dropdown">
+                    <a href="contact.html" class="dropbtn">Contact <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="contact.html">Location</a>
+                        <a href="contact.html#contact-form">Contact Form</a>
+                    </div>
+                </div>
+                <div class="nav-actions">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                    <div class="dropdown">
+                        <button class="dropbtn"><i class="fas fa-globe"></i></button>
+                        <div class="dropdown-content">
+                            <a href="login.html">English</a>
+                            <a href="login-jp.html">日本語</a>
+                        </div>
+                    </div>
+                    <a href="favorites.html" class="favorite-btn"><i class="fas fa-heart"></i></a>
+                    <a href="login.html" class="login-btn">Login</a>
+                    <a href="signup.html" class="signup-btn">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Section -->
+    <section class="auth-section">
+        <div class="auth-container">
+            <div class="auth-header">
+                <h1>Welcome Back</h1>
+                <p>Please login to your account</p>
+            </div>
+            <form class="auth-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" name="remember">
+                        Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button type="submit" class="auth-btn">Login</button>
+            </form>
+            <div class="social-login">
+                <p>Or login with</p>
+                <div class="social-buttons">
+                    <button class="social-btn google">
+                        <i class="fab fa-google"></i>
+                        Google
+                    </button>
+                    <button class="social-btn facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        Facebook
+                    </button>
+                </div>
+            </div>
+            <div class="auth-footer">
+                <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Address: [Store Address]</p>
+                <p>Phone: [Phone Number]</p>
+                <p>Email: [Email]</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nagatsuka Liquor Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

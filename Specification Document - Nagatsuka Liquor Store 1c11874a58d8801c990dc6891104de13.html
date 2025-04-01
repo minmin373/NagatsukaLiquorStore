@@ -1,0 +1,756 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Specification Document - Nagatsuka Liquor Store </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-transparentGray { background-color: undefined; }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1c11874a-58d8-801c-990d-c6891104de13" class="page sans"><header><h1 class="page-title">Specification Document - Nagatsuka Liquor Store </h1><p class="page-description"></p></header><div class="page-body"><h2 id="1c11874a-58d8-8048-bea8-cd64507855de" class="">Executive Summary </h2><p id="1c11874a-58d8-80e4-a9e8-d11b233db776" class="">Nagatsuka Liquor Store is a family-owned business which as established in<br/>1927. The business has built a strong reputation for its premium selection<br/>of products. However, in the highly competitive market, the store faces<br/>several challenges in customer engagement and brand visibility due to<br/>lack of online communication.<br/>The purpose of the project is to develop a professional website to brand<br/>credibility, attract new customers and improve communication with<br/>customers. The website will serve as a digital platform, addressing key<br/>business objectives such as showcasing unique products.<br/>A competitor analysis reveals that most liquor stores lack visually<br/>appealing designs. The proposed website successfully prioritises a<br/>modern, bold aesthetic which reflect brand values and personality.<br/>Additionally advanced features such as search bar with filters and<br/>language are included for business’ long-term development.<br/>Although further refinement in details is required, by implementing this<br/>website, Nagatsuka Liquor Store aims to establish a strong digital<br/>presence, enhance customer relationships and secure its position as a<br/>leader in the premium liquor retail sector in a long-term.<br/></p><h2 id="1c11874a-58d8-80c7-9c2f-c1e055b2bf35" class="">Table of Content </h2><p id="1c11874a-58d8-80e7-8efb-e3149b79cb40" class="">Executive Summary </p><ol type="1" id="1c11874a-58d8-806e-b742-dc8aef1ac283" class="numbered-list" start="1"><li>Application Purpose and scope <ol type="a" id="1c11874a-58d8-8062-8182-f6f19a917ab9" class="numbered-list" start="1"><li>Background and market research</li></ol><ol type="a" id="1c11874a-58d8-8067-9a73-e9c31fa41064" class="numbered-list" start="2"><li>Application and Scope</li></ol></li></ol><ol type="1" id="1c11874a-58d8-8053-8581-fc104b02f467" class="numbered-list" start="2"><li>Top 5 prioritised objectives </li></ol><ol type="1" id="1c11874a-58d8-8079-bd5d-f1dfff260cfa" class="numbered-list" start="3"><li>Target Audience <ol type="a" id="1c11874a-58d8-8025-9dc2-c17547cac56e" class="numbered-list" start="1"><li>Primary Target </li></ol><ol type="a" id="1c11874a-58d8-80cd-bc54-e974ffeca061" class="numbered-list" start="2"><li>Secondary Target </li></ol></li></ol><ol type="1" id="1c11874a-58d8-80ca-9198-d74c6b03be1a" class="numbered-list" start="4"><li>Competitor Analysis <ol type="a" id="1c11874a-58d8-8065-8d4a-dd9fe953ddc9" class="numbered-list" start="1"><li> 小川商店　Koyama Liquor Store</li></ol><ol type="a" id="1c11874a-58d8-80b8-8b7e-f849b50d9ebf" class="numbered-list" start="2"><li> 矢島酒店 Yajima Liquor Store</li></ol><ol type="a" id="1c11874a-58d8-8088-93d4-fda78fe4b554" class="numbered-list" start="3"><li>はせがわ酒店 Hasegawa Liquor Store</li></ol><ol type="a" id="1c11874a-58d8-8003-af64-fb2b1ce546e9" class="numbered-list" start="4"><li> Recommendations</li></ol></li></ol><ol type="1" id="1c11874a-58d8-800d-997e-d046f654ab5d" class="numbered-list" start="5"><li>Brand Style Guide<ol type="a" id="1c11874a-58d8-8044-8f5b-dc71b6963d33" class="numbered-list" start="1"><li>Mission Statement</li></ol><ol type="a" id="1c11874a-58d8-801f-b0f6-c282b48965d5" class="numbered-list" start="2"><li>Brand Personality</li></ol><ol type="a" id="1c11874a-58d8-80d1-8af8-c7fbfe488b8b" class="numbered-list" start="3"><li>Colour Palette</li></ol><ol type="a" id="1c11874a-58d8-8063-9450-e7a5f6b57a1e" class="numbered-list" start="4"><li>Typography</li></ol><ol type="a" id="1c11874a-58d8-80d9-901b-e7a455991289" class="numbered-list" start="5"><li>Logo design</li></ol></li></ol><ol type="1" id="1c11874a-58d8-8072-b399-f3e3bcfa9e63" class="numbered-list" start="6"><li>Proposed Application Design <ol type="a" id="1c11874a-58d8-8055-8a1f-e2dbe939d94c" class="numbered-list" start="1"><li>Main features</li></ol><ol type="a" id="1c11874a-58d8-80b1-bc2b-c77b1c5859e1" class="numbered-list" start="2"><li>Design Elements</li></ol><ol type="a" id="1c11874a-58d8-8090-8121-e4d53462ddfc" class="numbered-list" start="3"><li>Flow Chart</li></ol><ol type="a" id="1c11874a-58d8-80f7-977a-f61c77b8a140" class="numbered-list" start="4"><li>Wireframe</li></ol><ol type="a" id="1c11874a-58d8-80b2-9bc3-e36b96faf3c9" class="numbered-list" start="5"><li>Designed web page</li></ol></li></ol><ol type="1" id="1c11874a-58d8-80a8-9ed3-ff58660cf3f1" class="numbered-list" start="7"><li>Time Log</li></ol><ol type="1" id="1c11874a-58d8-80b1-9588-fe60ca69c8ef" class="numbered-list" start="8"><li>References </li></ol><p id="1c11874a-58d8-80ff-9162-c7f5c25e52d4" class="">
+</p><h2 id="1c11874a-58d8-8026-9ae8-f453766e898d" class="">1. Application Purpose and Scope </h2><h3 id="1c11874a-58d8-8053-ae25-e8b172f1eab5" class="">a. Business background and market research </h3><p id="1c11874a-58d8-809f-97f7-d0687440622d" class="">Nagatsuka Liquor Store was established in 1927 by Yoshisaburo Nagatsuka<br/>and has been a family-operated business in Tokyo for nearly a century.<br/>Over recent decades, competition in the liquor retail market has<br/>intensified due to legal changes that permit supermarkets and<br/>convenience stores to sell alcohol (Anchorman, 2024a). In response, the<br/>store has specialized in premium alcoholic beverages, including sake and<br/>wine, to differentiate itself.<br/>Beyond competition, shifts in consumer behavior pose additional<br/>challenges. Factors such as evolving taste preferences, economic<br/>pressures, and Japan’s aging population have led to declining alcohol<br/>consumption overall (Sakeportal, 2024a). To ensure long-term<br/>sustainability, the business must establish competitive advantages<br/>through branding, digital presence, and personalised experiences<br/>(Anchorman, 2024b). One recent example is organising events in<br/>collaboration with local restaurants, encouraging customers to taste new<br/>flavours and fostering local community engagement.<br/></p><p id="1c11874a-58d8-8085-874a-f9994f1fabca" class="">
+</p><h3 id="1c11874a-58d8-80f1-a4ad-c4c4c345291e" class="">Application Purpose and Scope </h3><p id="1c11874a-58d8-8060-9a39-c9e56f2683c8" class="">Despite its long-standing reputation, Nagatsuka Liquor Store lacks an official website, relying only on social media (Instagram and Facebook) for online communication. Having a website is crucial to enhancing brand credibility, promoting the brand, reaching new customers, and increasing in-store visits. According to Forbes (Council, 2020), a website is a fundamental business tool today for visibility, marketing, and customer interaction. The website aims to support the store’s long term sustainability in an highly competitive market by serving as a powerful communication platform</p><p id="1c11874a-58d8-801e-b2aa-d8336d6c925d" class="">
+</p><h2 id="1c11874a-58d8-8086-8546-c494cf475b62" class="">5 Prioritised objectives </h2><p id="1c11874a-58d8-8062-a1b8-f15f4a601010" class="">Reflecting on the store’s current challenges and business<br/>strategy, the website aims to achieve the following objectives:<br/></p><p id="1c11874a-58d8-80c1-beaa-cad039afebd7" class="">
+</p><ul id="1c11874a-58d8-80f9-8691-cba43f130807" class="bulleted-list"><li style="list-style-type:disc">Objective1 (5/5)  - Display unique products</li></ul><p id="1c11874a-58d8-8095-bfe0-eb161c936fe9" class="">Nagatsuka Liquor Store offers unique products that not many stores carry, which is a highly competitive advantage compared to other stores. Promoting unique products can attract customers who seek premium products and new flavours. Although the website will not include an online shop due to current business operations, an online catalog can serve as a reference for in-store purchases.</p><p id="1c11874a-58d8-8095-9de3-f18da4206e0e" class="">
+</p><ul id="1c11874a-58d8-8082-b38c-c65c4627df37" class="bulleted-list"><li style="list-style-type:disc">Objective 2 (4/5) - Improve communication with customers</li></ul><p id="1c11874a-58d8-80e8-a952-c3a733dd0850" class="">Currently, the only communication tools with customers are limited to Instagram, Facebook, in-person interactions, and phone calls. While Instagram and Facebook accounts are suitable for making information available quickly, the website is designed to serve other purposes. It will<br/>include essential business information such as store details, contact methods, FAQs, and event announcements. This structured approach will improve customer interactions beyond social media.<br/></p><p id="1c11874a-58d8-8073-8286-f0442df13f64" class="">
+</p><ul id="1c11874a-58d8-8032-917f-c20fafbe677e" class="bulleted-list"><li style="list-style-type:disc">Objective 3 (5/5) - Reach highly desirable market</li></ul><p id="1c11874a-58d8-80dc-b98f-e7f919876782" class="">As the overall market is shrinking, it is important to reach a highly desirable market—those who are most likely to visit the store and become repeat buyers. Having an online presence will help the business be exposed to a larger audience through SEO and digital marketing strategies.</p><p id="1c11874a-58d8-80a7-b2c3-d5884e3736be" class="">
+</p><ul id="1c11874a-58d8-8083-abad-d0536e08672e" class="bulleted-list"><li style="list-style-type:disc">Objective 4 (4/5) - Strengthen brand identity </li></ul><p id="1c11874a-58d8-806f-9523-d75aa1f93bca" class="">With nearly 100 years of history, Nagatsuka Liquor Store has built brand trust and specialised product offerings. However, in a competitive market, providing additional value is crucial (Anchorman, 2024c). A well-designed<br/>website can proactively enhance brand identity by delivering a cohesive message through compelling content and strategic visual elements.<br/></p><p id="1c11874a-58d8-804a-bd37-ca21827b49de" class="">
+</p><ul id="1c11874a-58d8-8092-8f1f-dfabe3834685" class="bulleted-list"><li style="list-style-type:disc">Objective 5 (5/5) - Improve product discovery </li></ul><p id="1c11874a-58d8-8023-8391-e1520c9356df" class="">To maintain a competitive advantage, it is crucial for the business to continuously introduce new offerings, and the website should reflect this innovation (Anchorman, 2024d). According to research, particularly for sake, about 40% of people find it challenging to pair sake with food, while more than 60% stated they want to try new flavours (楯の川酒造株式会社, 2022).<br/>This indicates the need for professional guidance, which can be incorporated into the website through educational content, product filters, and a user-friendly search function. Even if customers do not purchase immediately, such features enhance brand engagement and product awareness in the long term.<br/></p><p id="1c11874a-58d8-806d-8a54-d0950f7c6e61" class="">
+</p><h2 id="1c11874a-58d8-8025-902e-f38db2fe8658" class="">3. Target Audience</h2><p id="1c11874a-58d8-8063-aac3-cdf333b19bcb" class="">Researches on consumer behaviour is conducted in order to identify target audience. According to research conducted by Daichishiko in 2019, 22% of Japanese respondents stated they do not consume alcohol. The research also revealed gender differences in drinking habits. Among men, 31% said they drink almost every day, while 22% reported drinking a few times a<br/>week. For women, about half reported drinking between daily and a few times per month (CoLtd, n.d.). In terms of location, for both men and women, the most popular place to drink is at home—50% for men and 45% for women. Popular alcoholic beverages also differ by gender, with men<br/>enjoying beer and women preferring cocktails. According to another study on consumption preferences, consumers are primarily influenced by taste, price, and product uniqueness when making purchasing decisions. Additionally, campaigns and recommendations significantly<br/>impact their buying choices (店頭でのお酒購入についての意識調査, 2024).<br/>Another study conducted by Datacom revealed some drinking preferences. The most popular reason to drink is to relax (28.2%), followed by enjoying alcohol with food (23.3%). Other reasons include stress relief (21.8%) and simply enjoying the taste (20.4%) (小林祐太, 2024).<br/></p><p id="1c11874a-58d8-80fd-af9b-fde8bd157286" class="">
+</p><h3 id="1c11874a-58d8-80fe-801a-c296b28a1b5c" class="">3.1 Primary Target </h3><p id="1c11874a-58d8-806d-8fef-ca0a1bc349c8" class="">Alcohol Enthusiasts - Yuito Mamura </p><p id="1c11874a-58d8-80a7-b091-dac33a49be2e" class="">According to Nagatsuka Liquor Store, 70% of existing customers are men in<br/>their 30s and 40s. The website aims to appeal to a similar target segment,<br/>recognising that this group represents a strong purchasing force in the<br/>market. Targeting a younger segment is also crucial for long-term business<br/>stability, as they have the potential to become loyal customers over time.<br/></p><p id="1c11874a-58d8-80d8-80ba-d7015849ce0a" class=""><strong>Gender: </strong>Male <strong>Age Group: </strong>36 <strong>Nationality: </strong>Japan <strong>Experience: </strong>Drinks regularly at home (3x/week), prefers beer, and seeks high-quality sake for personal consumption and gifts. <strong>Education: </strong>Bachelor’s degree in Economics <strong>Occupation: </strong>Sales Professional (Real Estate) <strong>Residence: </strong>Lives in Tokyo <strong>Computer Literacy: </strong>Competent, active on social media (Instagram, Facebook, and X), but not a frequent user. <strong>Other: </strong>Married for 10 years and father of two kids </p><p id="1c11874a-58d8-808e-87ab-dae0a8a6b710" class="">
+</p><p id="1c11874a-58d8-8027-adfe-f83bea5acd16" class="">Objectives; </p><p id="1c11874a-58d8-80c5-b5e3-ea09b3f79d85" class="">He enjoys discovering new alcohol varieties to<br/>drink at home, typically to relax after work. He<br/>usually drinks beer and is particularly interested<br/>in premium products and unique flavours.<br/>Additionally, he is looking for expert<br/>recommendations when purchasing alcohol as a<br/>gift for colleagues or family members.<br/></p><p id="1c11874a-58d8-8036-bea5-dd72ccdb1c17" class="">
+</p><p id="1c11874a-58d8-80b5-bed0-e428dac18ba4" class="">Expectations: </p><p id="1c11874a-58d8-80fb-a34c-de23f2bb4603" class="">He is expecting to discover unique products through<br/>descriptions which helps him to choose the item when<br/>he visits the store. He also expects to keep being<br/>updated on new products and read blogs about various<br/>topics related to alcohol in order to learn more.<br/></p><p id="1c11874a-58d8-8094-ab04-f3e0cc04fc90" class="">
+</p><h3 id="1c11874a-58d8-80dd-8c24-fc248a7b5fa9" class="">3.2 Secondary target </h3><p id="1c11874a-58d8-80fb-9157-eb5984548fe1" class="">Occasional drinkers - Ai Miura</p><p id="1c11874a-58d8-80fe-9644-d43beb182ae1" class="">The secondary market consists of women in their late 20s to 30s. Research by Mynavi Marketing Lab (2024) found that 25.1% of women prefer drinking outside due to food offerings at restaurants. Additionally, 18.7% of women in this age group buy alcohol to drink at home. Key motivations for at-home drinking include affordability, flexibility, and the ability to enjoy alcohol with female friends or family. </p><p id="1c11874a-58d8-8084-be6a-da8e1032df41" class="">Research suggests that young women enjoy drinking not only for<br/>socializing with friends but also for personal enjoyment (はたらく女<br/>性のアルコール事情を調査!, 2024). Nagatsuka Liquor Store offers<br/>events that are particularly appealing to this demographic,<br/>emphasizing affordability and social experiences. These events<br/>provide an opportunity for women to explore new drinks in a welcoming environment with friends. <br/></p><p id="1c11874a-58d8-80de-8989-fced28b47b16" class="">
+</p><p id="1c11874a-58d8-8066-b6c6-c8d7683ca796" class=""><strong>Gender: </strong>Female <strong>Age Group: </strong>28 <strong>Nationality: </strong>Japan <strong>Experience: </strong>Enjoys pairing sake with food, has limited experience with sake but is interested in expert recommendations. <strong>Education: </strong>Bachelor’s degree in Business <strong>Occupation: </strong>Administrative Professional <strong>Residence: </strong>Tokyo <strong>Computer Literacy: </strong>Competent, active on social media such as Instagram and TikTok. </p><p id="1c11874a-58d8-806c-8faf-f2a38eb49b16" class="">
+</p><p id="1c11874a-58d8-8072-aa5c-fcc2cc2dbe91" class="">Objectives: </p><p id="1c11874a-58d8-80c2-80bd-d103c7e1a4b9" class="">She is interested in discovering new drinks,<br/>particularly sake, for dinner with friends at home<br/>or personal enjoyment. Similar to wine, sake<br/>selection requires knowledge, and she seeks<br/>professional guidance based on her preferences.<br/></p><p id="1c11874a-58d8-805c-986d-fa5fe86ac668" class="">
+</p><p id="1c11874a-58d8-802d-bcc2-c1ecd224ec83" class="">Expectations: </p><p id="1c11874a-58d8-8015-8d8c-c7321c6278b6" class="">She expects to be able to search the products with<br/>ease based on her preference on her drinks such as<br/>“combination with food”, and “sweet cocktail”. She<br/>expects that the website is welcoming, and easy to<br/>navigate which prevents her from feeling<br/>overwhelmed by the product selection.<br/>Additionally, she expects the design of the website<br/>to be connected to social media accounts because<br/>she prefers social media to be updated about<br/>upcoming events and announcements.<br/></p><p id="1c11874a-58d8-80a5-9517-cc1d5fadf919" class="">
+</p><h2 id="1c11874a-58d8-80f4-8f69-dfd842206610" class="">4. Competitor Analysis </h2><p id="1c11874a-58d8-80d9-83b9-fc56387ad00c" class=""><strong>Competitor #1 </strong>⼩川商店 Koyama Liquor Store (26.5/40) </p><p id="1c11874a-58d8-801c-819d-e034e81015e6" class="">The website has the strongest<br/>design among competitors. It<br/>has a traditional and simple<br/>design. It incorporates animated<br/>elements and a clear hierarchy,<br/>making it easy to navigate.<br/>However, product listings and<br/>announcements should be<br/>improved by adding images or<br/>bold titles to help users find<br/>information more easily.<br/></p><p id="1c11874a-58d8-80a4-8cba-de0d8980c8ad" class="">
+</p><p id="1c11874a-58d8-8035-9113-ede25aa29e78" class=""><strong>Competitor #2 </strong>⽮島酒店 Yajima Liquor Store (23.5/40) </p><p id="1c11874a-58d8-803a-94b7-cdc5b2cce489" class="">The website follows a simple design<br/>with banners to promote products<br/>and focus on accessibility. The<br/>website includes an online store with<br/>informative product listings.<br/>However, improvements could be<br/>made by following basic design<br/>principles, such as reducing the<br/>number of colours and improving<br/>visual hierarchy. Additionally, the<br/>search bar can be improved by<br/>adding filters, sorting, and keyword<br/>search features.<br/></p><p id="1c11874a-58d8-8058-878e-df55de440220" class="">
+</p><p id="1c11874a-58d8-80b1-bfb8-db26fd5a0304" class=""><strong>Competitor #3 </strong>はせがわ酒店 Hasegawa Liquor Store (24.5/40)  </p><p id="1c11874a-58d8-8095-8859-da434bdc7994" class="">The website has a minimalistic<br/>structure with a focus on text<br/>rather than visual elements. For<br/>better design, the website can<br/>include more visual elements to<br/>support user experience. Also,<br/>improving hierarchy and contrast<br/>would help guide users more<br/>effectively and prioritise key<br/>information.<br/></p><p id="1c11874a-58d8-8087-8368-d7df029f0841" class="">
+</p><h3 id="1c11874a-58d8-80a5-910d-ebe4cc9cb162" class="">4.1 小川商店　Koyama Liquor Store</h3><p id="1c11874a-58d8-80fb-a742-e65af5e4df03" class="">Colour - 3.5/5</p><p id="1c11874a-58d8-8099-a761-fb2f0a0d4ce1" class="">The colors of this website are<br/>very simple. It uses white as the<br/>background and dark-toned<br/>colors, such as purple and blue,<br/>as accent colors, which are<br/>highlighted in buttons and<br/>headlines. Light gray and subtle<br/>shadows are also used to<br/>separate sections.<br/>The design is intended to create<br/>a traditional Japanese<br/>atmosphere and establish a<br/>sense of trust and elegance by<br/>using analogous colors of blue<br/>and purple.<br/></p><p id="1c11874a-58d8-806e-abd0-f388a140e8e6" class="">
+</p><p id="1c11874a-58d8-8003-8175-f1af6fa94cd9" class="">Font - 3/5 </p><p id="1c11874a-58d8-80d7-b20c-ccaa49d62bea" class="">The website uses Yu Mincho, one<br/>of the most commonly used<br/>fonts. Mincho fonts have<br/>decorative strokes at the end of<br/>characters, similar to serif fonts<br/>in English. This font is used to<br/>create a traditional and elegant<br/>impression in design (フォント日<br/>本語・英語の種類・選び方と定番フ<br/>ォントを紹介 | Adobe, n.d.a).<br/>The headline and logo use a<br/>bold font weight to create<br/>hierarchy, which could be more<br/>distinct if the font sizes were<br/>larger for better design.<br/></p><p id="1c11874a-58d8-806f-8c53-e20db532d1e6" class="">
+</p><p id="1c11874a-58d8-8032-804c-fb5fda944b00" class="">Contrast - 2/5</p><p id="1c11874a-58d8-80f1-93f5-d40ed8f366b8" class="">The website does not include much<br/>contrast in design other than the<br/>contrast between accent colors<br/>and the white background, making<br/>the design very simplistic and hard<br/>to navigate effectively. This could<br/>be improved by changing the size<br/>or weight of fonts, using different<br/>types of fonts, and incorporating<br/>various shapes to create a visually<br/>appealing design and establish a<br/>clear hierarchy of information<br/>(Contrast in Graphic Design:<br/>Understanding What It Means and<br/>How to Use It, n.d.).<br/></p><p id="1c11874a-58d8-808f-a48d-e0e05afc9cbf" class="">
+</p><p id="1c11874a-58d8-8060-a916-cb8edf351390" class="">Repetition/unity - 2.5/5 </p><p id="1c11874a-58d8-8049-a174-d97283dd97ca" class="">The website includes a number<br/>of repetitive elements in<br/>structure, colours, shapes, and<br/>fonts, creating a comprehensive<br/>design. The page design often<br/>consists of rectangular shapes<br/>with overlaid text and images.<br/>In terms of colour, the same<br/>rules are applied across pages.<br/>For example, blue is used for<br/>links and headings, while light<br/>gray is used to separate<br/>sections.<br/></p><p id="1c11874a-58d8-8033-ab32-d08da1d75403" class="">
+</p><p id="1c11874a-58d8-80d0-a45b-f4f61e66b73d" class="">Alignment -3/5</p><p id="1c11874a-58d8-8070-be43-d970b45d68aa" class="">On most pages, elements such as page<br/>titles and body text are aligned to the<br/>left. The landing page includes different<br/>types of alignment—left, right, and<br/>centre—guiding the user’s eye in a Z<br/>pattern (20 Web Design Principles to<br/>Follow, n.d.). On desktop, elements are<br/>distributed across the page, while on<br/>mobile screens, they are consistently<br/>aligned to the left, improving<br/>readability.<br/>On the product page, the table<br/>categories and item alignments are<br/>inconsistent, which could be improved<br/>to create a more structured and visually<br/>cohesive layout.<br/></p><p id="1c11874a-58d8-8087-b9ad-fabd24b1c2f1" class="">
+</p><p id="1c11874a-58d8-800e-897e-eed1a395a782" class="">Proximity - 5/5</p><p id="1c11874a-58d8-8050-9e7b-f1bac220f193" class="">Information is clearly<br/>categorized into sections and<br/>topics by incorporating<br/>rectangular elements, making it<br/>easy for the user to understand.<br/>On the landing page, each<br/>content block includes different<br/>designs and padding, improving<br/>the layout.<br/></p><p id="1c11874a-58d8-8013-9ba4-deea449212b7" class="">
+</p><p id="1c11874a-58d8-8044-8bed-c308f9d2e982" class="">Input Interface - 3/5</p><p id="1c11874a-58d8-80ab-a2d0-d775174b2560" class="">The website is designed to be<br/>user-friendly—navigation bars,<br/>dropdown menus, scrollable<br/>pages, and clickable buttons are<br/>simple and easy to understand.<br/>The search bar allows users to<br/>search for products by name,<br/>location, and producer.<br/>However, this feature may not<br/>be effective if the user is not<br/>familiar with alcohol. It could be<br/>improved by providing<br/>suggestions rather than giving<br/>users full control.<br/></p><p id="1c11874a-58d8-80c7-bffe-ca78eb85c150" class="">
+</p><p id="1c11874a-58d8-8077-82de-de8c0121148c" class="">Output Interface - 3/5</p><p id="1c11874a-58d8-8098-ba62-e78def335be5" class="">The loading speed can be slow, although<br/>the website provides visual feedback<br/>with an animated logo. Each page<br/>includes animations where images and<br/>text slide in after loading, which can be<br/>slightly distracting to the user. The<br/>website has a responsive design that<br/>works on both desktop and mobile.<br/>However, on the landing page, when<br/>scrolling down, the size of the automated<br/>video changes, causing a shaking effect<br/>that disrupts the experience. <br/></p><p id="1c11874a-58d8-8007-888f-d2ab6feb0888" class="">
+</p><h3 id="1c11874a-58d8-80e3-9c63-c3afbeeade96" class="">4.2 矢島酒店 Yajima Liquor Store</h3><p id="1c11874a-58d8-807a-983f-c6c8843041c7" class="">Colour 2.5/5</p><p id="1c11874a-58d8-8087-ad28-e2cf6e16556f" class="">The website uses a white<br/>background with black as the<br/>accent colour. Additionally,<br/>three colours are used for<br/>different purposes: green for<br/>links, orange for icons, buttons,<br/>and arrows, and red for prices.<br/>Blue, orange, and purple are also<br/>used for tags. These colours do<br/>not complement each other,<br/>resulting in an overwhelming<br/>design. Furthermore, images<br/>and banners feature colourful<br/>designs, adding to the visual<br/>clutter.<br/></p><p id="1c11874a-58d8-80fe-9e8b-f546c5384315" class="">
+</p><p id="1c11874a-58d8-80ff-9eb0-e0723f4819cd" class="">Font - 3/5</p><p id="1c11874a-58d8-8081-9247-d88f850af4d1" class="">The website uses Gothic fonts, which are commonly<br/>used in Japan. This font is simplistic, similar to sans-serif<br/>fonts in English, and is chosen to convey a stable<br/>impression in the design (フォント日本語・英語の種類・選<br/>び方と定番フォントを紹介 | Adobe, n.d.b). Mincho fonts are<br/>used only for blog titles on desktop, while the same font<br/>is used for titles on mobile.<br/></p><p id="1c11874a-58d8-80c9-b9b2-e12dd5cf661a" class="">
+</p><p id="1c11874a-58d8-808c-8423-c98630d4d01a" class="">Contrast - 2.5/5</p><p id="1c11874a-58d8-803c-a924-d71a459cd072" class="">The website lacks strong<br/>contrast overall. The primary<br/>contrast comes from black text<br/>against a white background. On<br/>the blog page, variations in font<br/>size help create hierarchy.<br/></p><p id="1c11874a-58d8-8046-a048-f47200c843a6" class="">
+</p><p id="1c11874a-58d8-80fe-ba02-fac3625c06f0" class="">Repetition/Unity - 3/5</p><p id="1c11874a-58d8-804c-a088-d6eef2c18325" class="">Repetitive elements are found<br/>across pages, particularly in<br/>product listings, which consist<br/>of product images, descriptions,<br/>and prices. Additionally, black<br/>rectangles are used for titles,<br/>effectively separating sections.<br/></p><p id="1c11874a-58d8-80ca-a940-fbfb11d7adff" class="">
+</p><p id="1c11874a-58d8-803e-851c-e0d7b4941cf1" class="">Alignment - 3.5/5</p><p id="1c11874a-58d8-80cf-bd06-d05b4f6fe9fc" class="">Most of the content is leftaligned.<br/>The navigation menu<br/>and sorting feature in the<br/>product listing are right-aligned,<br/>which is a common design<br/>practice. However, in the<br/>product listing, images and text<br/>could be consistently aligned to<br/>the left or centre to create a<br/>cleaner layout. Additionally, the<br/>header is not aligned with the<br/>content. The width of the header<br/>should be adjusted to match the<br/>content width for a more<br/>cohesive design.<br/></p><p id="1c11874a-58d8-8090-89a2-d7e1ad54b7b5" class="">
+</p><p id="1c11874a-58d8-80e9-ab05-c774bad7e838" class="">Proximity - 3.5/5</p><p id="1c11874a-58d8-80c3-a350-f7a75d692111" class="">Information is clearly categorized<br/>using shapes (rectangles), boxes, and<br/>padding. However, the proximity of<br/>elements on the blog page could be<br/>improved by adding more space<br/>between lines.<br/></p><p id="1c11874a-58d8-8074-8d59-f9b35d067bb7" class="">
+</p><p id="1c11874a-58d8-803f-ad83-c95ebe747437" class="">Interface Interface - 3/5</p><p id="1c11874a-58d8-808e-9949-d6d5a90daaf6" class="">The navigation bar consists of<br/>five sections:<br/>1) Logo 2) Home, About Store,<br/>Guidance, Blog, and Contact, 3)<br/>My Page, Sign Up, and Cart, 4)<br/>Search Bar, 5) Product<br/>Navigation Bar<br/>Although these are standard<br/>menu items, the colour choices<br/>and structure may make the<br/>navigation appear confusing.<br/>The search bar functionality<br/>could also be improved by<br/>allowing users to filter results. On<br/>mobile, the navigation bar is<br/>better designed, as items are<br/>listed in a dropdown menu.<br/></p><p id="1c11874a-58d8-806f-af37-e12f411aaace" class="">
+</p><p id="1c11874a-58d8-80ee-aafc-ee6fae046841" class="">Output Interface - 3/5</p><p id="1c11874a-58d8-80c8-bcf3-e89f884a59d2" class="">The website is responsive and<br/>functions on both desktop and<br/>mobile. However, some<br/>elements, such as the font for<br/>blog titles, change depending on<br/>the device.<br/></p><p id="1c11874a-58d8-80ed-bf1d-f947d0298595" class="">
+</p><h2 id="1c11874a-58d8-8034-9531-c52c9b639cd1" class="">4.3 はせがわ酒店 Hasegawa Liquor Store</h2><p id="1c11874a-58d8-802d-bb2c-d3790a520899" class="">Colour - 3/5</p><p id="1c11874a-58d8-8007-918c-e7ba7f2ac97c" class="">The website uses a white<br/>background with purple as the<br/>accent colour. Gray is used for<br/>box designs, while links are<br/>highlighted in blue. Red is also<br/>used in certain areas, such as<br/>the “Map” button. However, the<br/>use of blue and red is<br/>inconsistent with the brand’s<br/>colour scheme. The overall<br/>design is minimalistic. <br/></p><p id="1c11874a-58d8-80b4-8bd1-f242f833ad4d" class="">
+</p><p id="1c11874a-58d8-8014-b930-e013183ff67a" class="">Font 3/5 </p><p id="1c11874a-58d8-8020-a1ad-e7dc3eab8d10" class="">Gothic fonts are used with<br/>varying weights (フォント日本語・<br/>英語の種類・選び方と定番フォント<br/>を紹介 | Adobe, n.d.c). The font is<br/>easy to read, but due to its<br/>simplicity, it lacks personality in<br/>the design.<br/></p><p id="1c11874a-58d8-8052-85f3-db45edd7fab3" class="">
+</p><p id="1c11874a-58d8-80a2-b7d4-d191fff2e507" class="">Contrast 3.5 </p><p id="1c11874a-58d8-8076-a15b-c3d92489343c" class="">The website demonstrates clear<br/>colour contrast, with a white<br/>background and purple<br/>elements used to separate<br/>sections. However, additional<br/>contrast—such as adjusting font<br/>sizes for headlines and body text<br/>—could improve readability and<br/>navigation.<br/></p><p id="1c11874a-58d8-809d-8480-d9b7e58fce39" class="">
+</p><p id="1c11874a-58d8-8080-a227-df0cd6199c1c" class="">Repetition/unity - 3/5</p><p id="1c11874a-58d8-80c1-9344-cae071456374" class="">The website maintains<br/>consistency in design elements,<br/>including colour and highlighted<br/>headlines, creating a cohesive<br/>appearance. However, the online<br/>store page has a completely<br/>different design from the rest of<br/>the site, which may confuse<br/>users (image 1).<br/></p><p id="1c11874a-58d8-80a4-99b9-c947fd9ba2f5" class="">
+</p><p id="1c11874a-58d8-8028-9924-e9db7a4f6544" class="">Alignment - 3.5/5</p><p id="1c11874a-58d8-80c5-a98b-c1791f51d267" class="">Most text is left-aligned across<br/>different pages. On the landing<br/>page, sections are evenly<br/>distributed, creating an<br/>organised layout.<br/></p><p id="1c11874a-58d8-8038-afdc-ccc8954ea855" class="">
+</p><p id="1c11874a-58d8-8043-a6a6-dc7066c63bd5" class="">Proximity - 4/5</p><p id="1c11874a-58d8-8059-b5ce-c90de6e53e8a" class="">The website demonstrates clear<br/>proximity between headlines,<br/>content blocks, and padding,<br/>ensuring a structured<br/>appearance.<br/></p><p id="1c11874a-58d8-80f1-9931-dbc43483a897" class="">
+</p><p id="1c11874a-58d8-8090-9020-ccb5b391498a" class="">Input Interface - 3/5 </p><p id="1c11874a-58d8-806b-a100-eec9dadbe225" class="">The menu bar is easy to understand.<br/>However, on the online store page, the<br/>menu bar is hidden and should be<br/>included for better navigation.<br/>Additionally, links on the landing page<br/>could be made larger to encourage<br/>users to explore the site (image 2).<br/>The online store allows users to search<br/>for products by category and hashtag,<br/>making it easier to find specific items.<br/>On mobile, the website retains the<br/>same design as the desktop version,<br/>leading to usability issues such as the<br/>menu bar being too small to click.<br/></p><p id="1c11874a-58d8-8096-9dae-ed6293e4c95a" class="">
+</p><p id="1c11874a-58d8-80e9-9505-ced001604181" class="">Output Interface - 2/5 </p><p id="1c11874a-58d8-80b3-b694-f22fadbfbcf1" class="">The website is not fully<br/>responsive when resizing the<br/>screen on desktop. On mobile,<br/>the unchanged design<br/>negatively impacts the user<br/>experience.<br/></p><p id="1c11874a-58d8-80ef-bd5c-dee89ed693d1" class="">
+</p><h3 id="1c11874a-58d8-808a-8d7c-d204ea6517c7" class="">4.4 Recommendation</h3><p id="1c11874a-58d8-8036-8151-c923a0cc1701" class="">Based on the competitor analysis, the website for Nagatsuka Liquor Store will be designed to address key<br/>insights observed in competing sites while ensuring a user-centric experience. Most competitor websites<br/>follow a simplistic structure but lack strong design elements to reinforce brand identity. Additionally, they rely<br/>heavily on text with minimal visual elements, despite the importance of a clear visual hierarchy in modern web<br/>design, which enhances communication effectiveness (20 Web Design Principles to Follow, n.d.).<br/>Furthermore, many competitor websites fail to utilise images effectively, often featuring low-quality visuals<br/>that disrupt the user experience.<br/>To differentiate itself, the proposed website will incorporate strong branding through the strategic use of<br/>colors, shapes, and visual elements. It will also feature recommended products to enhance user engagement<br/>and highlight the store’s unique offerings. Additionally, the website will prioritise high-quality visuals to create<br/>an immersive experience and improve product discovery.<br/></p><p id="1c11874a-58d8-80db-867f-f9666dc8cf4b" class="">
+</p><h2 id="1c11874a-58d8-801a-a627-ca4c9b3da4a4" class="">5.0 Brand Style Guide</h2><h3 id="1c11874a-58d8-801a-b522-cce3c49d6c21" class="">5.1 Mission Statement </h3><p id="1c11874a-58d8-8019-af24-d9ab53549fd5" class="">Our mission is to establish long-term business<br/>stability while contributing to the well-being and<br/>happiness of everyone connected to us—customers,<br/>suppliers, and the community. Through the sale of<br/>quality liquor and food, we strive to enrich the local<br/>community and foster meaningful connections.<br/></p><p id="1c11874a-58d8-803b-9623-f8dc27cf2013" class="">
+</p><h3 id="1c11874a-58d8-80e6-b466-ffbf41d574bc" class="">5.2 Brand Personality </h3><p id="1c11874a-58d8-805e-910a-c1f65ad5d464" class="">The brand personality is shaped by the business’s mission and long-standing history. Nagatsuka Liquor Store firmly believes that great food and drinks bring joy to people’s lives, a value deeply reflected in the brand. It is also strategically crafted to attract new audiences and ensure long-term business sustainability. Brand personality traits: Welcoming, trustworthy, adaptable, ambitious, and warm.</p><p id="1c11874a-58d8-80ee-a672-d333a171facd" class="">
+</p><h3 id="1c11874a-58d8-8024-87ac-c8b8578c66f5" class="">5.3 Colour Palette</h3><p id="1c11874a-58d8-806d-a407-f2b7e6f2d882" class="">To reflect the brand’s personality and distinguish it from<br/>competitors, the colour palette has been carefully<br/>selected. Colour palette is designed to attract both men<br/>and women. Most competitor websites follow a<br/>traditional and simplistic aesthetic, often featuring<br/>white backgrounds with dark-toned colours like blue<br/>and purple. While these choices convey sophistication,<br/>they may lack warmth and engagement, making them<br/>less appealing to younger or new audiences. In contrast,<br/>the store’s website design will prioritise a welcoming<br/>and inviting atmosphere, aligning with the brand’s<br/>values and fostering a sense of connection with<br/>customers.<br/></p><p id="1c11874a-58d8-80fd-8b8d-fa016b6af45d" class="">
+</p><p id="1c11874a-58d8-8086-9316-efa8224975b2" class="">HEX: FEFCE9 RGB: 254 252 233 HEX: 2C611B RGB: 44 97 27 HEX: CF5B15 RGB: 207 91 21 HEX: EDE0B7 RGB: 237 224 183 HEX: 46240F RGB: 70 36 15 </p><p id="1c11874a-58d8-80f9-83a6-d3d465eec937" class="">
+</p><h3 id="1c11874a-58d8-8016-8037-d08b4bfeb275" class="">5.4 Typography </h3><p id="1c11874a-58d8-8092-bdb3-eccb9cceaa7c" class="">To reflect the brand’s personality and<br/>distinguish it from competitors, the colour<br/>palette has been carefully selected. Most<br/>competitor websites follow a traditional<br/>and simplistic aesthetic, often featuring<br/>white backgrounds with dark-toned colours<br/>like blue and purple. While these choices<br/>convey sophistication, they may lack<br/>warmth and engagement, making them less<br/>appealing to younger or new audiences. In<br/>contrast, the store’s website design will<br/>prioritize a welcoming and inviting<br/>atmosphere, aligning with the brand’s<br/>values and fostering a sense of connection<br/>with customers.<br/></p><p id="1c11874a-58d8-80ff-8ac6-c5ea001a7afe" class="">
+</p><p id="1c11874a-58d8-8053-9a58-c418481e1512" class="">Japanese </p><p id="1c11874a-58d8-8053-b76b-d1073e5d1744" class=""><strong>Genno Kaku (for headlines, and call-to-action) </strong></p><p id="1c11874a-58d8-80c3-a10c-c392a6c0bdfa" class=""><strong>ADS Rumba (for body text) </strong></p><p id="1c11874a-58d8-8026-9992-c0c471db4529" class="">ENGLISH </p><p id="1c11874a-58d8-809c-9543-e5356e3ab801" class=""><strong>Lalezar (for headlines, and call-to-action) </strong></p><p id="1c11874a-58d8-802a-bb35-d35a8be4ab52" class=""><strong>Figtree (for body text) </strong></p><p id="1c11874a-58d8-802e-ae72-d742f9b900f7" class="">
+</p><h3 id="1c11874a-58d8-80b8-b6ac-d092e76c25aa" class="">5.5 Logo Design </h3><p id="1c11874a-58d8-803f-b9ea-d6717b910c8a" class="">The logo design has not been finalized due to<br/>delays in client communication. It aims to<br/>embody the brand’s values and personality,<br/>fostering a sense of connection with customers<br/>while conveying trustworthiness.<br/>The following inspirations influence the logo<br/>design:<br/></p><p id="1c11874a-58d8-8063-b257-cc5b6a813a0e" class="">
+</p><h2 id="1c11874a-58d8-8064-b357-c4a8140c6686" class="">6.0 Proposed Application </h2><h3 id="1c11874a-58d8-805a-bb20-f137ba911962" class="">6.1 Main features</h3><p id="1c11874a-58d8-805a-873c-d958358cbc0a" class="">The website will allow users to search for products using a variety of<br/>categories. Additionally, registered users can save products as a<br/>reference when purchasing in-store. This feature enables the business to<br/>better understand user preferences, leading to a more personalised<br/>shopping experience. This sets the business apart from supermarkets<br/>and convenience stores. The website will highlight the store’s unique selling points, such as events, special products, and exclusive offerings. Promotions and announcements will be displayed at the top of the homepage to instantly capture users&#x27; attention. A blog section will keep users engaged with the brand while educating those interested in alcohol, helping them expand their knowledge. The website design aims to be bold and modern while maintaining trustworthiness, making it relevant to the current audience. Additionally, as Japan’s domestic market continues to shrink (Sakeportal, 2024a), the website will also be designed to appeal to non-Japanese customers by incorporating an internationally friendly design and language options.<br/></p><p id="1c11874a-58d8-8027-82e8-d98556a0dc8d" class="">
+</p><p id="1c11874a-58d8-80a1-87bf-d3003b24c760" class="">Colour </p><p id="1c11874a-58d8-802c-807e-f8686d6e60c7" class="">The website follows the brand<br/>style guide, ensuring<br/>consistency in brand identity<br/>while conveying a warm and<br/>inviting atmosphere.<br/></p><p id="1c11874a-58d8-8067-a8fd-d16486d591ee" class="">
+</p><p id="1c11874a-58d8-8021-968b-dd7e9765b3ad" class="">Font </p><p id="1c11874a-58d8-80a2-b1cb-f60ba87fe71b" class="">Typography aligns with the<br/>brand style guide to maintain a<br/>cohesive look. Bold fonts are<br/>used for headlines and titles,<br/>while smaller, easily readable<br/>fonts are applied to body text<br/>for optimal legibility.<br/></p><p id="1c11874a-58d8-80b4-8d0d-e62f799041ec" class="">
+</p><p id="1c11874a-58d8-8093-908e-df943bab59ea" class="">Contrast </p><p id="1c11874a-58d8-8063-aa80-fd40ba8590c0" class="">The website demonstrates<br/>strong colour contrast, with<br/>darker tones consistently placed<br/>against lighter backgrounds to<br/>enhance readability. Typography<br/>also maintains a clear contrast,<br/>with distinct size differences<br/>between headings and body<br/>text to improve visual hierarchy.<br/></p><p id="1c11874a-58d8-80aa-94a5-c06a5c32014a" class="">
+</p><p id="1c11874a-58d8-80fe-9161-fa69ef303145" class="">Repetition/Unity </p><p id="1c11874a-58d8-800e-b8f4-e3f7f98cbb2f" class="">Repetitive design elements<br/>ensure a cohesive experience<br/>across all pages. Consistent use<br/>of colour and typography, such<br/>as green for headlines and<br/>buttons and dark brown for<br/>body text, reinforces brand<br/>identity. Additionally, patterns<br/>will be incorporated during the<br/>design phase to further enhance<br/>unity.<br/></p><p id="1c11874a-58d8-80d1-ba34-eaa7909db765" class="">
+</p><p id="1c11874a-58d8-8012-9bb8-d378d60f7afd" class="">Alignment </p><p id="1c11874a-58d8-80d8-96ff-e73535ebb843" class="">All elements are structured<br/>within a grid system, creating a<br/>clean and sophisticated design.<br/>On desktop, most content is<br/>left-aligned, except for<br/>headlines and buttons, as<br/>studies show that users spend<br/>80% of their time viewing the<br/>left half of a webpage (Laja,<br/>2021). On mobile, most design<br/>elements are center-aligned to<br/>accommodate smaller screen<br/>sizes.<br/></p><p id="1c11874a-58d8-805e-a156-f44ebd5dbbbf" class="">
+</p><p id="1c11874a-58d8-8018-82ba-dabb39ca4bcd" class="">Proximity </p><p id="1c11874a-58d8-8027-96da-dc61729dc64d" class="">Information is clearly<br/>categorised through the use of<br/>distinct headlines, spacing, and<br/>visual elements such as lines<br/>and shapes. A key differentiator<br/>from competitors is the<br/>inclusion of sufficient padding<br/>between different content<br/>sections, improving readability<br/>and comprehension. This<br/>approach also enhances user<br/>interaction, particularly on<br/>mobile devices (Qamarjafari,<br/>2024).<br/></p><p id="1c11874a-58d8-80c6-93a7-fec406753514" class="">
+</p><p id="1c11874a-58d8-805b-b5be-e6fe576e12b2" class="">Interput Interface </p><p id="1c11874a-58d8-803d-b1bb-cf7e6ef39fc8" class="">The navigation bar is designed<br/>to be simple and intuitive. Based<br/>on competitor analysis, the<br/>product listing page includes<br/>advanced features such as<br/>filters, sorting options, and<br/>categorized navigation, allowing<br/>users to discover products more<br/>efficiently. A keyword-based<br/>search function further<br/>enhances usability.<br/></p><p id="1c11874a-58d8-80f4-9cad-e225fd831164" class="">
+</p><p id="1c11874a-58d8-8048-bcac-ccb3323ab1c9" class="">Output Interface</p><p id="1c11874a-58d8-804d-a364-c3eb2e622155" class="">The website is fully responsive,<br/>adapting seamlessly to different<br/>devices. It prioritises visual<br/>feedback and smooth<br/>transitions between pages,<br/>ensuring an intuitive and<br/>engaging user experience.<br/></p><p id="1c11874a-58d8-801c-9d27-f4fd3af00506" class="">
+</p><h3 id="1c11874a-58d8-8065-84e5-dc86823bba94" class="">6.3 Flow chart</h3><p id="1c11874a-58d8-80f8-94a9-cf9627c09621" class="">Here is the flow chart<br/>based on the conducted<br/>research on market<br/>situations, target audience<br/>as well as competitors.<br/>Each branch indicates the<br/>page linkage starting from<br/>home (landing page).<br/>Navigation bar allows the<br/>user to transit to other<br/>pages from anywhere.<br/></p><p id="1c11874a-58d8-800b-ae33-d029521848d1" class="">
+</p><p id="1c11874a-58d8-8028-b723-c0a56df9fee1" class="">6.4 Wireframe </p><p id="1c11874a-58d8-80b6-b74c-fb8d7ec86f03" class="">Layout grid is applied when designing<br/>wireframes as follows:<br/>Desktop (1920px by 1080px) - 12 columns,<br/>Margin 198px, and Gutter 20px<br/>Mobile (430px by 932px) - 12 columns,<br/>Margin 24px, Gutter 8px<br/>The link for Figma file of complete<br/>wireframes is as follows:<br/></p><p id="1c11874a-58d8-804c-8b1f-e77c853483fe" class="">
+</p><p id="1c11874a-58d8-8023-9a39-f8fe059b5c03" class="">
+</p><p id="1c11874a-58d8-80f0-93e0-dfe2609dbb47" class="">Navigation bar includes logo, products, about,<br/>blog, contact, search bar, language, favourite<br/>product and long in/sign up links. Products,<br/>About, Contact and Language link include<br/>dropdown menu that shows subcategories.<br/>Banners include promotion of unique product<br/>and announcement which are linked to related<br/>page once the user clicks it.<br/>The next section shows the categories of the<br/>products - as the flow chart indicated the<br/>products will be categorised depending on the<br/>type. Each rectangle shape indicates<br/>categories which will lead the user to product<br/>page.<br/></p><p id="1c11874a-58d8-8050-be64-c78917a4e704" class="">
+</p><p id="1c11874a-58d8-8010-9b43-cc0a4e4cbf59" class="">Best Seller - the section shows best seller.<br/>The user can easily recognise the products.<br/>Each product is clickable as well as “learn<br/>more” button which will guide the user to<br/>product page.<br/>The next page is about the business. The<br/>short but engaging description about the<br/>business history and values will be shown<br/>here. The user can click “learn more” button<br/>if they are interested.<br/></p><p id="1c11874a-58d8-8003-9ca1-ea7acbecb64c" class="">
+</p><p id="1c11874a-58d8-8032-8ed1-f25a3a5cca2e" class="">Blog - each blog include engaging titles,<br/>description and call-to-action. The user<br/>can either click one of the blog post or<br/>“read more” button in order to transit to<br/>the blog page.<br/>Contact page has two sections - contact<br/>form as well as map. The user can enter<br/>personal information and message and<br/>submit the form. If there is an error, it gives<br/>feedback to the user, ensuring avoiding<br/>mistakes. In terms of map, it is connected<br/>to Google map, enhancing accessibility to<br/>the store.<br/></p><p id="1c11874a-58d8-807d-8aa9-ed8303fe5b9a" class="">
+</p><p id="1c11874a-58d8-8053-b5bd-f72d1aa0ba40" class="">The last section of the landing page includes FAQs,<br/>improving communication with customers while<br/>reducing the workload for business side.<br/>The arrow on right indicates the clickable elements<br/>which shows answers to questions.<br/></p><p id="1c11874a-58d8-80df-bfba-e94f2f243bfb" class="">
+</p><p id="1c11874a-58d8-8022-8a93-f859665504b9" class="">The product page allows the user to discover<br/>the product with ease by using keywords,<br/>categories and sorting features. Categories<br/>include not only alcohol types but also price,<br/>food and alcohol content as these are the<br/>qualities often target audience seek when<br/>purchasing alcohol.<br/>In order to see more wireframes, please visit<br/>the link provided.<br/></p><p id="1c11874a-58d8-8092-89c3-ff9b5e230248" class="">
+</p><h3 id="1c11874a-58d8-80fc-9f70-fabca944f384" class="">6.5 Designed webpage </h3><p id="1c11874a-58d8-802b-8a20-cc19a7014fd3" class="">Each colours are strategically applied creating<br/>hierarchy, enhancing brand consistency. Orange is<br/>applied to navigation bar, and green is used to buttons<br/>and headlines.<br/>Banner always should include call-to action and button,<br/>encouraging the user to click the links.<br/>Icons are often used in the design, adding warmth to<br/>the design.<br/>Images will be carefully edited in order to enhance the<br/>readability.<br/></p><p id="1c11874a-58d8-80cb-852f-cbc31fa00d17" class="">
+</p><p id="1c11874a-58d8-80f9-abd9-fd1c7b9ffd35" class="">The images of the products are recommended to only<br/>include product to enhance the premium look of the<br/>products.<br/>Additionally, the image for “who are we?” section<br/>should be replaced with another image which<br/>expresses warm and welcome rather than classic<br/>atmosphere. Orange coloured element is added to the<br/>background to add warmth to the design while<br/>maintaining the brand identity.<br/></p><p id="1c11874a-58d8-8033-b39b-d3d3151265b1" class="">
+</p><p id="1c11874a-58d8-80ac-9870-fb42be050b48" class="">For blog post, images will be edited in order to enhance<br/>the readability of text overlayed.<br/>For background, beige is applied to separate sections.<br/></p><p id="1c11874a-58d8-8094-8d85-e025dd5c5ffa" class="">
+</p><p id="1c11874a-58d8-803c-89eb-e0a402337b05" class="">The documentation failed to include the completed<br/>design of other pages, the design for a whole website<br/>will be consistent as the landing page.<br/>In terms of future development, the website requires<br/>some pages including “Favourite”page, flow of signing<br/>up, as well as interactive element such as dropdown<br/>menu. Although the design requires refinement such as<br/>adding patterns, texture or incorporating the highquality<br/>images, the project will maintain the guideline<br/>the documentation indicates.<br/>Additionally, majority of the content on the website is<br/>not filled. It is crucial to actively communicate with the<br/>client in order to complete the project within the<br/>period of time.<br/></p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

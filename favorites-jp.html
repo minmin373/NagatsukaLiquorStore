@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お気に入り - 永塚酒店</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index-jp.html">
+                    <h1>永塚酒店</h1>
+                </a>
+            </div>
+            <div class="nav-links">
+                <div class="dropdown">
+                    <button class="dropbtn">商品 <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="products-jp.html">全商品</a>
+                        <a href="products-jp.html#best-sellers">ベストセラー</a>
+                        <a href="products-jp.html#whisky">ウイスキー</a>
+                        <a href="products-jp.html#wine">ワイン</a>
+                        <a href="products-jp.html#sparkling-wine">スパークリングワイン</a>
+                        <a href="products-jp.html#shochu">焼酎</a>
+                        <a href="products-jp.html#sake">日本酒</a>
+                        <a href="products-jp.html#spirits">スピリッツ</a>
+                        <a href="products-jp.html#beer">ビール</a>
+                        <a href="products-jp.html#liqueur">リキュール</a>
+                        <a href="products-jp.html#non-alcohol">ノンアルコール</a>
+                        <a href="products-jp.html#food">食品・スナック</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">会社概要 <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="about-jp.html">会社概要</a>
+                        <a href="about-jp.html#history">沿革</a>
+                        <a href="about-jp.html#values">企業理念</a>
+                    </div>
+                </div>
+                <a href="blog-jp.html">ブログ</a>
+                <div class="dropdown">
+                    <button class="dropbtn">お問い合わせ <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="contact-jp.html">店舗情報</a>
+                        <a href="contact-jp.html#contact-form">お問い合わせフォーム</a>
+                    </div>
+                </div>
+                <div class="nav-actions">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                    <div class="dropdown">
+                        <button class="dropbtn"><i class="fas fa-globe"></i></button>
+                        <div class="dropdown-content">
+                            <a href="favorites.html">English</a>
+                            <a href="favorites-jp.html">日本語</a>
+                        </div>
+                    </div>
+                    <a href="favorites-jp.html" class="favorite-btn"><i class="fas fa-heart"></i></a>
+                    <a href="login-jp.html" class="login-btn">ログイン</a>
+                    <button class="signup-btn">新規登録</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Favorites Header -->
+    <header class="favorites-header">
+        <h1>お気に入り</h1>
+        <p>保存した商品一覧</p>
+    </header>
+
+    <!-- Favorites Content -->
+    <section class="favorites-section">
+        <div class="favorites-container">
+            <!-- Empty State -->
+            <div class="empty-state">
+                <i class="fas fa-heart"></i>
+                <h2>お気に入りはまだありません</h2>
+                <p>お気に入り商品を追加してください</p>
+                <a href="products-jp.html" class="browse-btn">商品を探す</a>
+            </div>
+
+            <!-- Favorites Grid (will be populated when items are added) -->
+            <div class="favorites-grid">
+                <!-- Example Favorite Item -->
+                <div class="favorite-item">
+                    <div class="favorite-image">
+                        <img src="images/sake1.jpg" alt="獺祭 二割三分">
+                        <button class="remove-favorite"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="favorite-details">
+                        <h3>獺祭 二割三分</h3>
+                        <p class="category">日本酒</p>
+                        <p class="price">¥12,800</p>
+                        <button class="add-to-cart">カートに追加</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>お問い合わせ</h3>
+                <p>住所：[店舗住所]</p>
+                <p>電話：[電話番号]</p>
+                <p>メール：[メールアドレス]</p>
+            </div>
+            <div class="footer-section">
+                <h3>フォローする</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>クイックリンク</h3>
+                <ul>
+                    <li><a href="products-jp.html">商品</a></li>
+                    <li><a href="about-jp.html">会社概要</a></li>
+                    <li><a href="blog-jp.html">ブログ</a></li>
+                    <li><a href="contact-jp.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 永塚酒店. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

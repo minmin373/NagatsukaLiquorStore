@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Page 2 - Nagatsuka Liquor Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Nagatsuka Liquor Store</h1>
+                </a>
+            </div>
+            <div class="nav-links">
+                <div class="dropdown">
+                    <a href="products.html" class="dropbtn">Products <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="products.html">All Products</a>
+                        <a href="products.html#best-sellers">Best Sellers</a>
+                        <a href="products.html#whisky">Whisky</a>
+                        <a href="products.html#wine">Wine</a>
+                        <a href="products.html#sparkling-wine">Sparkling Wine</a>
+                        <a href="products.html#shochu">Shochu</a>
+                        <a href="products.html#sake">Sake</a>
+                        <a href="products.html#spirits">Spirits</a>
+                        <a href="products.html#beer">Beer</a>
+                        <a href="products.html#liqueur">Liqueur</a>
+                        <a href="products.html#non-alcohol">Non Alcohol</a>
+                        <a href="products.html#food">Food & Snacks</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="about.html" class="dropbtn">About <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="about.html">Our Story</a>
+                        <a href="about.html#history">History</a>
+                        <a href="about.html#values">Values</a>
+                        <a href="about.html#events">Events</a>
+                    </div>
+                </div>
+                <a href="blog.html">Blog</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Contact <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="contact.html">Location</a>
+                        <a href="contact.html#contact-form">Contact Form</a>
+                    </div>
+                </div>
+                <div class="nav-actions">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                    <div class="dropdown">
+                        <button class="dropbtn"><i class="fas fa-globe"></i></button>
+                        <div class="dropdown-content">
+                            <a href="#">English</a>
+                            <a href="#">日本語</a>
+                        </div>
+                    </div>
+                    <a href="favorites.html" class="favorite-btn"><i class="fas fa-heart"></i></a>
+                    <a href="login.html" class="login-btn">Login</a>
+                    <a href="signup.html" class="signup-btn">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Header -->
+    <header class="products-header">
+        <h1>Our Products</h1>
+        <p>Discover our premium selection of Japanese liquor</p>
+    </header>
+
+    <!-- Filter and Search Section -->
+    <section class="filter-container">
+        <div class="search-bar">
+            <input type="text" placeholder="Search products...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="filter-options">
+            <select name="category">
+                <option value="">All Categories</option>
+                <option value="sake">Sake</option>
+                <option value="wine">Wine</option>
+                <option value="beer">Beer</option>
+                <option value="spirits">Spirits</option>
+                <option value="whisky">Whisky</option>
+                <option value="shochu">Shochu</option>
+                <option value="liqueur">Liqueur</option>
+                <option value="non-alcohol">Non Alcohol</option>
+                <option value="food">Food & Snacks</option>
+            </select>
+            <select name="price">
+                <option value="">Price Range</option>
+                <option value="0-1000">Under ¥1,000</option>
+                <option value="1000-3000">¥1,000 - ¥3,000</option>
+                <option value="3000-5000">¥3,000 - ¥5,000</option>
+                <option value="5000+">Over ¥5,000</option>
+            </select>
+            <select name="alcohol">
+                <option value="">Alcohol Content</option>
+                <option value="low">Low (5-10%)</option>
+                <option value="medium">Medium (10-15%)</option>
+                <option value="high">High (15%+)</option>
+            </select>
+            <select name="food">
+                <option value="">Food Pairing</option>
+                <option value="sushi">Sushi</option>
+                <option value="sashimi">Sashimi</option>
+                <option value="tempura">Tempura</option>
+                <option value="grilled">Grilled</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="product-section">
+        <div class="product-grid">
+            <!-- Next 24 products -->
+            <div class="product-card">
+                <img src="images/sake5.jpg" alt="Dassai 45" class="product-image">
+                <div class="product-content">
+                    <div class="product-category">Sake</div>
+                    <h3 class="product-title">Dassai 45</h3>
+                    <p class="product-description">Junmai Daiginjo with 45% rice polishing ratio.</p>
+                    <div class="product-price">¥8,800</div>
+                    <div class="product-actions">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+            <!-- Add 23 more product cards here -->
+        </div>
+        
+        <!-- Pagination -->
+        <div class="pagination">
+            <a href="products.html" class="prev"><i class="fas fa-chevron-left"></i> Previous</a>
+            <a href="products.html">1</a>
+            <a href="products-page2.html" class="active">2</a>
+            <a href="products-page3.html">3</a>
+            <a href="products-page4.html">4</a>
+            <a href="products-page5.html">5</a>
+            <span class="dots">...</span>
+            <a href="products-page10.html">10</a>
+            <a href="products-page3.html" class="next">Next <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Nagatsuka Liquor Store has been serving premium Japanese liquor since 1927.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>123 Liquor Street</li>
+                    <li>Tokyo, Japan</li>
+                    <li>Phone: +81 123-456-789</li>
+                    <li>Email: info@nagatsuka.com</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nagatsuka Liquor Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
