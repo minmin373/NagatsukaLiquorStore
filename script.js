@@ -9,6 +9,95 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize FAQ accordion
     initializeFAQ();
 
+    // Initialize filter groups and sort options
+    const filterHeaders = document.querySelectorAll('.filter-header');
+    const sortHeader = document.querySelector('.sort-header');
+    
+    // Initialize all filter groups as expanded
+    document.querySelectorAll('.filter-content').forEach(content => {
+        content.classList.remove('collapsed');
+    });
+    
+    // Initialize sort options as expanded
+    const sortContent = document.querySelector('.sort-content');
+    if (sortContent) {
+        sortContent.classList.remove('collapsed');
+    }
+    
+    // Add click event listener to each filter header
+    filterHeaders.forEach(header => {
+        // Make the entire header clickable
+        header.addEventListener('click', function(e) {
+            // Prevent event from bubbling up
+            e.stopPropagation();
+            
+            // Get the content and toggle button
+            const content = this.nextElementSibling;
+            const toggleBtn = this.querySelector('.toggle-filter');
+            
+            // Toggle the collapsed class on the content
+            content.classList.toggle('collapsed');
+            
+            // Toggle the active class on the button
+            toggleBtn.classList.toggle('active');
+        });
+        
+        // Also make the toggle button itself clickable
+        const toggleBtn = header.querySelector('.toggle-filter');
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', function(e) {
+                // Prevent event from bubbling up to the header
+                e.stopPropagation();
+                
+                // Get the content
+                const content = this.closest('.filter-header').nextElementSibling;
+                
+                // Toggle the collapsed class on the content
+                content.classList.toggle('collapsed');
+                
+                // Toggle the active class on the button
+                this.classList.toggle('active');
+            });
+        }
+    });
+    
+    // Add click event listener to sort header
+    if (sortHeader) {
+        // Make the entire sort header clickable
+        sortHeader.addEventListener('click', function(e) {
+            // Prevent event from bubbling up
+            e.stopPropagation();
+            
+            // Get the content and toggle button
+            const content = this.nextElementSibling;
+            const toggleBtn = this.querySelector('.toggle-sort');
+            
+            // Toggle the collapsed class on the content
+            content.classList.toggle('collapsed');
+            
+            // Toggle the active class on the button
+            toggleBtn.classList.toggle('active');
+        });
+        
+        // Also make the toggle button itself clickable
+        const toggleBtn = sortHeader.querySelector('.toggle-sort');
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', function(e) {
+                // Prevent event from bubbling up to the header
+                e.stopPropagation();
+                
+                // Get the content
+                const content = this.closest('.sort-header').nextElementSibling;
+                
+                // Toggle the collapsed class on the content
+                content.classList.toggle('collapsed');
+                
+                // Toggle the active class on the button
+                this.classList.toggle('active');
+            });
+        }
+    }
+
     // Carousel functionality
     const carousel = document.querySelector('.carousel');
     if (!carousel) return;
@@ -79,6 +168,99 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Start the slideshow
     startSlideshow();
+
+    // Price Range Slider
+    const priceSlider = document.querySelector('.price-slider');
+    const minPriceDisplay = document.querySelector('.min-price');
+    const maxPriceDisplay = document.querySelector('.max-price');
+
+    if (priceSlider) {
+        priceSlider.addEventListener('input', function() {
+            const value = this.value;
+            maxPriceDisplay.textContent = `¥${Number(value).toLocaleString()}`;
+        });
+    }
+
+    // Filter functionality
+    const applyFiltersBtn = document.querySelector('.apply-filters-btn');
+    if (applyFiltersBtn) {
+        applyFiltersBtn.addEventListener('click', function() {
+            // Get all selected filters
+            const selectedCategories = Array.from(document.querySelectorAll('input[name="category"]:checked'))
+                .map(checkbox => checkbox.value);
+            const selectedAlcohol = Array.from(document.querySelectorAll('input[name="alcohol"]:checked'))
+                .map(checkbox => checkbox.value);
+            const selectedFood = Array.from(document.querySelectorAll('input[name="food"]:checked'))
+                .map(checkbox => checkbox.value);
+            const maxPrice = priceSlider ? priceSlider.value : null;
+            const sortBy = document.querySelector('input[name="sort"]:checked').value;
+
+            // Here you would typically make an API call to filter the products
+            console.log('Applying filters:', {
+                categories: selectedCategories,
+                alcohol: selectedAlcohol,
+                food: selectedFood,
+                maxPrice,
+                sortBy
+            });
+
+            // For now, we'll just show an alert
+            alert('Filters applied! In a real implementation, this would update the product grid.');
+        });
+    }
+
+    // Make sure the CSS is properly applied for collapsed state
+    // This ensures the content is hidden when collapsed
+    const style = document.createElement('style');
+    style.textContent = `
+        .filter-content.collapsed, .sort-content.collapsed {
+            max-height: 0 !important;
+            opacity: 0 !important;
+            margin-top: 0 !important;
+            overflow: hidden !important;
+            pointer-events: none !important;
+        }
+    `;
+    document.head.appendChild(style);
+
+    // Hamburger Menu Functionality
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    // Toggle hamburger menu
+    hamburgerMenu.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!hamburgerMenu.contains(event.target) && !navLinks.contains(event.target)) {
+            hamburgerMenu.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+
+    // Handle dropdown menus in mobile view
+    dropdowns.forEach(dropdown => {
+        const dropbtn = dropdown.querySelector('.dropbtn');
+        const dropdownContent = dropdown.querySelector('.dropdown-content');
+
+        dropbtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownContent.classList.toggle('show');
+        });
+    });
+
+    // Close dropdowns when clicking outside
+    window.addEventListener('click', function() {
+        document.querySelectorAll('.dropdown-content').forEach(dropdown => {
+            if (dropdown.classList.contains('show')) {
+                dropdown.classList.remove('show');
+            }
+        });
+    });
 });
 
 // Dropdown functionality
