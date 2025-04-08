@@ -422,11 +422,7 @@ h1, h2, h3, h4, h5, h6, .logo h1, .section-title h2, .blog-title, .product-title
     }
     
     .category-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 2rem 0;
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .footer-container {
@@ -1119,6 +1115,7 @@ h1, h2, h3, h4, h5, h6, .logo h1, .section-title h2, .blog-title, .product-title
 }
 
 .product-category {
+    font-family: 'Lalezar', cursive;
     color: var(--forest-green);
     font-weight: 600;
     margin-bottom: 0.5rem;
@@ -1147,10 +1144,11 @@ h1, h2, h3, h4, h5, h6, .logo h1, .section-title h2, .blog-title, .product-title
 }
 
 .product-price {
-    font-size: 1.3rem;
-    font-weight: 600;
+    font-family: 'Lalezar', cursive;
+    font-size: 2rem;
     color: var(--warm-orange);
-    margin-bottom: 1rem;
+    font-weight: 600;
+    margin: 1rem 0;
 }
 
 .product-actions {
@@ -2168,9 +2166,9 @@ footer {
 }
 
 .pagination a.active {
-    background-color: #1a1a1a;
+    background-color: var(--dark-brown);
     color: white;
-    border-color: #1a1a1a;
+    border-color: var(--dark-brown);
 }
 
 .pagination .prev, .pagination .next {
@@ -2297,7 +2295,7 @@ footer {
     border-radius: 20px;
     cursor: pointer;
     font-size: 0.9rem;
-    color: #555;
+    color: var(--dark-brown);
     transition: background-color 0.2s, color 0.2s;
 }
 
@@ -2486,6 +2484,7 @@ footer {
 }
 
 .product-info h1 {
+    font-family: 'Lalezar', cursive;
     font-size: 2.5rem;
     margin: 1rem 0;
     color: var(--dark-brown);
@@ -2508,6 +2507,7 @@ footer {
 }
 
 .product-price {
+    font-family: 'Lalezar', cursive;
     font-size: 2rem;
     color: var(--warm-orange);
     font-weight: 600;
@@ -2515,22 +2515,26 @@ footer {
 }
 
 .product-description {
+    font-family: 'Figtree', sans-serif;
     margin: 2rem 0;
     line-height: 1.8;
 }
 
 .product-details {
+    font-family: 'Figtree', sans-serif;
     list-style: none;
     margin-top: 1.5rem;
 }
 
 .product-details li {
+    font-family: 'Figtree', sans-serif;
     margin-bottom: 0.8rem;
     display: flex;
     gap: 1rem;
 }
 
 .product-details strong {
+    font-family: 'Lalezar', cursive;
     min-width: 150px;
 }
 
@@ -2541,6 +2545,7 @@ footer {
 }
 
 .stock-info {
+    font-family: 'Figtree', sans-serif;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -2666,6 +2671,7 @@ footer {
 
 .blog-post-content p {
     margin-bottom: 1.5rem;
+    color: var(--dark-brown);
 }
 
 .blog-post-content ul {
@@ -2675,6 +2681,7 @@ footer {
 
 .blog-post-content li {
     margin-bottom: 0.8rem;
+    color: var(--dark-brown);
 }
 
 .blog-post-footer {
@@ -2862,7 +2869,7 @@ footer {
 
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -3054,7 +3061,7 @@ footer {
     justify-content: space-between;
     margin-top: 0.5rem;
     font-size: 0.9rem;
-    color: #666;
+    color: var(--dark-brown);
 }
 
 /* Apply Filters Button */
@@ -3180,7 +3187,7 @@ footer {
 
 .sort-header h3 {
     font-size: 0.9rem;
-    color: #333;
+    color: var(--dark-brown);
     margin: 0;
     font-weight: 600;
 }
@@ -3188,7 +3195,7 @@ footer {
 .toggle-sort {
     background: none;
     border: none;
-    color: #666;
+    color: var(--dark-brown);
     cursor: pointer;
     font-size: 0.8rem;
     transition: transform 0.3s ease, color 0.2s ease;
@@ -3200,7 +3207,7 @@ footer {
 }
 
 .toggle-sort:hover {
-    color: #333;
+    color: var(--dark-brown);
     background-color: #e0e0e0;
 }
 
@@ -3234,6 +3241,7 @@ footer {
 .sort-content .radio-item {
     font-size: 0.85rem;
     padding: 0.3rem 0;
+    color: var(--dark-brown);
 }
 
 /* Filter Content Improvements */
