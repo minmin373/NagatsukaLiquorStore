@@ -241,7 +241,7 @@ h1, h2, h3, h4, h5, h6, .logo h1, .section-title h2, .blog-title, .product-title
 .hero-cta-button {
     position: absolute;
     bottom: 180px;
-    left: 180px;
+    left: 200px;
     background-color: var(--warm-orange);
     color: var(--white);
     padding: 18px 30px;
@@ -1413,12 +1413,30 @@ footer {
 /* Products Page */
 .products-header {
     padding: 6rem 2rem 2rem;
-    background-color: var(--cream);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/klara-kulikova-CPMZguYURMw-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    text-align: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .products-header h1 {
-    text-align: center;
-    margin-bottom: 2rem;
+    font-family: 'Lalezar', cursive;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.products-header p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .filter-container {
@@ -1434,9 +1452,17 @@ footer {
 
 .search-bar input {
     flex: 1;
+    border: 1px solid var(--cream);
     padding: 0.8rem;
-    border: 1px solid #ddd;
     border-radius: 4px;
+    font-size: 1rem;
+    background: var(--white);
+    color: var(--dark-brown);
+}
+
+.search-bar input::placeholder {
+    color: var(--dark-brown);
+    opacity: 0.7;
 }
 
 .search-bar button {
@@ -1446,6 +1472,11 @@ footer {
     padding: 0.8rem 1.5rem;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: var(--dark-brown);
 }
 
 .filter-sort-container {
@@ -1499,8 +1530,8 @@ footer {
 
 /* About Page */
 .about-hero {
-    height: 40vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/about-hero.jpg');
+    height: 550px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/klara-kulikova-CPMZguYURMw-unsplash.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -1509,6 +1540,25 @@ footer {
     text-align: center;
     color: var(--white);
     margin-top: 60px;
+    padding: 2rem;
+}
+
+.about-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-hero-content h1 {
+    font-family: 'Lalezar', cursive;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .history-section {
@@ -2166,9 +2216,9 @@ footer {
 }
 
 .pagination a.active {
-    background-color: var(--dark-brown);
+    background-color: #1a1a1a;
     color: white;
-    border-color: var(--dark-brown);
+    border-color: #1a1a1a;
 }
 
 .pagination .prev, .pagination .next {
@@ -2295,7 +2345,7 @@ footer {
     border-radius: 20px;
     cursor: pointer;
     font-size: 0.9rem;
-    color: var(--dark-brown);
+    color: #555;
     transition: background-color 0.2s, color 0.2s;
 }
 
@@ -2671,7 +2721,6 @@ footer {
 
 .blog-post-content p {
     margin-bottom: 1.5rem;
-    color: var(--dark-brown);
 }
 
 .blog-post-content ul {
@@ -2681,7 +2730,6 @@ footer {
 
 .blog-post-content li {
     margin-bottom: 0.8rem;
-    color: var(--dark-brown);
 }
 
 .blog-post-footer {
@@ -2991,7 +3039,32 @@ footer {
 .filter-group h3 {
     font-size: 1.1rem;
     margin-bottom: 1rem;
-    color: #333;
+    color: var(--dark-brown);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.sort-header h3 {
+    font-size: 0.9rem;
+    color: var(--dark-brown);
+    margin: 0;
+    font-weight: 600;
+}
+
+.keywords-header h3 {
+    font-size: 1.1rem;
+    color: var(--dark-brown);
+}
+
+.product-section h3 {
+    color: var(--dark-brown);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
 }
 
 /* Checkbox and Radio Groups */
@@ -3061,7 +3134,7 @@ footer {
     justify-content: space-between;
     margin-top: 0.5rem;
     font-size: 0.9rem;
-    color: var(--dark-brown);
+    color: #666;
 }
 
 /* Apply Filters Button */
@@ -3097,38 +3170,48 @@ footer {
 
 /* Search Container */
 .search-container {
-    max-width: 1400px;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin: 3rem auto;
     padding: 0 2rem;
 }
 
 .search-bar {
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
+    background: transparent;
+    padding: 1rem;
+    border-radius: 8px;
     max-width: 600px;
     margin: 0 auto;
 }
 
 .search-bar input {
     flex: 1;
-    padding: 0.75rem 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--cream);
+    padding: 0.8rem;
     border-radius: 4px;
     font-size: 1rem;
+    background: var(--white);
+    color: var(--dark-brown);
+}
+
+.search-bar input::placeholder {
+    color: var(--dark-brown);
+    opacity: 0.7;
 }
 
 .search-bar button {
-    padding: 0.75rem 1.5rem;
-    background: #8B0000;
-    color: white;
+    background-color: var(--warm-orange);
+    color: var(--white);
     border: none;
+    padding: 0.8rem 1.5rem;
     border-radius: 4px;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background-color 0.3s ease;
 }
 
 .search-bar button:hover {
-    background: #660000;
+    background-color: var(--dark-brown);
 }
 
 /* Responsive Design */
@@ -3187,7 +3270,7 @@ footer {
 
 .sort-header h3 {
     font-size: 0.9rem;
-    color: var(--dark-brown);
+    color: #333;
     margin: 0;
     font-weight: 600;
 }
@@ -3195,7 +3278,7 @@ footer {
 .toggle-sort {
     background: none;
     border: none;
-    color: var(--dark-brown);
+    color: #666;
     cursor: pointer;
     font-size: 0.8rem;
     transition: transform 0.3s ease, color 0.2s ease;
@@ -3207,7 +3290,7 @@ footer {
 }
 
 .toggle-sort:hover {
-    color: var(--dark-brown);
+    color: #333;
     background-color: #e0e0e0;
 }
 
@@ -3241,7 +3324,6 @@ footer {
 .sort-content .radio-item {
     font-size: 0.85rem;
     padding: 0.3rem 0;
-    color: var(--dark-brown);
 }
 
 /* Filter Content Improvements */
@@ -3270,4 +3352,72 @@ footer {
     .sort-content {
         margin-top: 0.5rem;
     }
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title h2 {
+    font-family: 'Lalezar', cursive;
+    font-size: 2.5rem;
+    color: var(--dark-brown);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.section-title p {
+    font-family: 'Figtree', sans-serif;
+    font-size: 1.2rem;
+    color: var(--dark-brown);
+    line-height: 1.6;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.featured-products h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.blog h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.events-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #2c611b;
+    font-size: 2.5rem;
+}
+
+.newsletter-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+}
+
+.related-posts h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--dark-brown);
+    font-size: 2.5rem;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark-brown);
 }
