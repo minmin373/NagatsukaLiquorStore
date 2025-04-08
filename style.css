@@ -23,6 +23,11 @@ body {
     background-color: var(--light-beige);
 }
 
+/* Typography */
+h1, h2, h3, h4, h5, h6, .logo h1, .section-title h2, .blog-title, .product-title, .event-content h3, .value-card h3, .team-member h3, .faq-question h3, .blog-hero-content h1, .about-hero-content h1, .contact-hero-content h1, .blog-header h1, .newsletter-section h2, .footer-section h3, .carousel-content h2, .about-content h2, .events-section h2, .blog h2, .faq h2, .form-container h2, .product-categories .section-title h2, .featured-products h2, .events-cta p, .blog-excerpt, .event-description, .product-description, .value-card p, .team-member p, .faq-answer p, .blog-hero-content p, .about-hero-content p, .contact-hero-content p, .blog-header p, .newsletter-section p, .carousel-content p, .about-content p, .events-cta p, .blog-excerpt, .event-description, .product-description, .value-card p, .team-member p, .faq-answer p {
+    font-family: 'Lalezar', cursive;
+}
+
 /* Navigation */
 .navbar {
     background-color: var(--warm-orange);
@@ -44,7 +49,7 @@ body {
 
 .logo h1 {
     font-size: 1.5rem;
-    color: var(--forest-green);
+    color: var(--white);
 }
 
 .logo a {
@@ -231,6 +236,28 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.hero-cta-button {
+    position: absolute;
+    bottom: 180px;
+    left: 180px;
+    background-color: var(--warm-orange);
+    color: var(--white);
+    padding: 18px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-cta-button:hover {
+    background-color: #b54d12;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .carousel-content {

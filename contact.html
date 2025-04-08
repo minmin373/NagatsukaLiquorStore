@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Nagatsuka Liquor Store</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Lalezar&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -24,10 +24,40 @@
             </div>
             <div class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="products.html">Products</a>
-                <a href="about.html">About</a>
+                <div class="dropdown">
+                    <a href="products.html" class="dropbtn">Products <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="products.html#all-products">All Products</a>
+                        <a href="products.html#best-sellers">Best Sellers</a>
+                        <a href="products.html#whisky">Whisky</a>
+                        <a href="products.html#wine">Wine</a>
+                        <a href="products.html#sparkling-wine">Sparkling Wine</a>
+                        <a href="products.html#shochu">Shochu</a>
+                        <a href="products.html#sake">Sake</a>
+                        <a href="products.html#spirits">Spirits</a>
+                        <a href="products.html#beer">Beer</a>
+                        <a href="products.html#liqueur">Liqueur</a>
+                        <a href="products.html#non-alcohol">Non Alcohol</a>
+                        <a href="products.html#food">Food & Snacks</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="about.html" class="dropbtn">About <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="about.html">Our Story</a>
+                        <a href="about.html#history">History</a>
+                        <a href="about.html#values">Values</a>
+                        <a href="about.html#events">Events</a>
+                    </div>
+                </div>
                 <a href="blog.html">Blog</a>
-                <a href="contact.html">Contact</a>
+                <div class="dropdown">
+                    <a href="contact.html" class="dropbtn">Contact <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="contact.html">Location</a>
+                        <a href="contact.html#contact-form">Contact Form</a>
+                    </div>
+                </div>
                 <div class="nav-actions">
                     <div class="dropdown">
                         <button class="dropbtn"><i class="fas fa-globe"></i></button>
@@ -56,18 +86,16 @@
             <div class="info-card">
                 <i class="fas fa-map-marker-alt"></i>
                 <h3>Visit Us</h3>
-                <p>123 Liquor Street</p>
-                <p>Tokyo, Japan 100-0001</p>
-                <p>Monday - Saturday: 10:00 AM - 8:00 PM</p>
-                <p>Sunday: 11:00 AM - 6:00 PM</p>
+                <p>5 Chome-5-1 Showacho, Akishima </p>
+                <p>Tokyo, Japan 196-0015</p>
+                <p>Tuesday - Saturday 10:00 AM - 8:00 PM</p>
+                <p>Sunday 10:00 AM - 19:00 PM</p>
+                <p>Monday Closed</p>
             </div>
             <div class="info-card">
                 <i class="fas fa-phone"></i>
                 <h3>Call Us</h3>
-                <p>+81 (0)3-1234-5678</p>
-                <p>+81 (0)3-8765-4321</p>
-                <p>For international orders:</p>
-                <p>+81 (0)3-1234-5678</p>
+                <p>+81 42 541 0128</p>
             </div>
             <div class="info-card">
                 <i class="fas fa-envelope"></i>
@@ -83,32 +111,7 @@
     <section class="contact-form-section">
         <div class="form-container">
             <h2>Send us a Message</h2>
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <select id="subject" name="subject" required>
-                        <option value="">Select a subject</option>
-                        <option value="general">General Inquiry</option>
-                        <option value="order">Order Status</option>
-                        <option value="product">Product Information</option>
-                        <option value="support">Technical Support</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
+            <iframe id="JotFormIFrame-250968855902874" title="Contact Form" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allowfullscreen="true" allow="geolocation; microphone; camera" frameborder="0" scrolling="no" style="min-width:100%;height:539px;border:none;" src="https://form.jotform.com/250968855902874"></iframe>
         </div>
     </section>
 
@@ -186,7 +189,7 @@
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/shinichi_nagatsuka.saketen/"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
