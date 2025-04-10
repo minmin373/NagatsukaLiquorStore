@@ -1615,45 +1615,55 @@ footer {
 }
 
 .history-section {
+    background-color: #f9f9f9;
     padding: 4rem 2rem;
-    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .timeline {
-    max-width: 800px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     position: relative;
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 100%;
-    background-color: var(--forest-green);
+    padding-left: 2rem;
+    border-left: 3px solid #ccc;
 }
 
 .timeline-item {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2rem;
     position: relative;
+    padding-left: 2rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -1.1rem;
+    top: 0;
+    width: 1rem;
+    height: 1rem;
+    background-color: #fff;
+    border: 3px solid #ccc;
+    border-radius: 50%;
 }
 
 .year {
-    background-color: var(--forest-green);
-    color: var(--white);
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
 }
 
-.event {
-    width: 45%;
-    background-color: var(--cream);
-    padding: 1.5rem;
-    border-radius: 8px;
+.event h3 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+.event p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
 }
 
 .values-section {

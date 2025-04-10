@@ -1,0 +1,702 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Product information </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-transparentGray { background-color: undefined; }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1d11874a-58d8-804e-9f09-f3561aa93cbb" class="page sans"><header><h1 class="page-title">Product information </h1><p class="page-description"></p></header><div class="page-body"><p id="1d11874a-58d8-8083-8e9a-f21b932dfc94" class="">
+</p><h2 id="1d11874a-58d8-801e-a24e-dcbad2a380e2" class="">Whisky </h2><ul id="1d11874a-58d8-8051-8124-c038cfa6eb75" class="toggle"><li><details open=""><summary><mark class="highlight-yellow_background"><strong>Yamazaki Distiller&#x27;s Reserve</strong></mark>: A single malt whisky with a delicate balance of fruit and Mizunara (Japanese oak) flavors.</summary><p id="1d11874a-58d8-8061-990a-dc77a61fe052" class=""><strong>General Description:</strong></p><p id="1d11874a-58d8-80be-a547-cfccde97ab6f" class="">Yamazaki Distiller’s Reserve is a refined single malt whisky from Japan’s first and most iconic distillery. Known for its complex and delicate character, this whisky is a harmonious blend of spirits matured in various types of casks, including American oak, Spanish sherry, and Japanese Mizunara oak. The result is a light yet flavorful whisky with notes of red berries, coconut, and subtle spice, making it ideal for both whisky newcomers and seasoned drinkers.</p><p id="1d11874a-58d8-8052-b175-dc23d3f9e486" class=""><strong>Distillery:</strong></p><p id="1d11874a-58d8-80cd-b897-faf8818c0d99" class="">Suntory Yamazaki Distillery</p><p id="1d11874a-58d8-8087-9acc-c1d3bfade2e7" class=""><strong>Region:</strong></p><p id="1d11874a-58d8-8042-9824-c2b7b42dd6a9" class="">Yamazaki, Shimamoto, Osaka Prefecture, Japan</p><p id="1d11874a-58d8-8031-8251-e650c5afa3c6" class=""><strong>Age:</strong></p><p id="1d11874a-58d8-8047-9225-e39767791f8c" class="">No Age Statement (NAS)</p><p id="1d11874a-58d8-8054-9db1-e944e207caef" class="">(<em>A blend of young to medium-aged whiskies, typically including some aged around 10 years and others more mature</em>)</p><p id="1d11874a-58d8-80dd-baf6-f528ed1124dc" class=""><strong>Alcohol by Volume (ABV):</strong></p><p id="1d11874a-58d8-8006-9874-c1e5673e4810" class="">43%</p><p id="1d11874a-58d8-809f-98ed-e10975445797" class=""><strong>Volume:</strong></p><p id="1d11874a-58d8-8085-b9e2-c3fd4ed3e051" class="">700ml</p></details></li></ul><ul id="1d11874a-58d8-80bb-8da2-fe1f512b4a26" class="toggle"><li><details open=""><summary><mark class="highlight-yellow_background"><strong>Nikka From The Barrel</strong></mark>: A robust blend offering deep flavors and a high proof, reflecting Nikka&#x27;s craftsmanship.</summary><p id="1d11874a-58d8-806f-b2fb-d375de4e7c9c" class=""><strong>General Description:</strong></p><p id="1d11874a-58d8-8099-a717-d4f3b5fe1bac" class="">Nikka From The Barrel is a bold and complex blended whisky crafted from a precise marriage of single malt and grain whiskies from Nikka’s Yoichi and Miyagikyo distilleries. It is then re-casked (&quot;married&quot;) to allow the flavors to harmonize, creating a rich, full-bodied whisky with intense notes of dried fruit, spice, and toffee. Despite its high alcohol content, it remains smooth and well-balanced, making it a favorite among whisky connoisseurs around the world.</p><p id="1d11874a-58d8-80e3-a6d0-da489f691fda" class=""><strong>Distillery:</strong></p><p id="1d11874a-58d8-80da-bddc-df24e2f6c129" class="">Nikka Whisky (Yoichi &amp; Miyagikyo Distilleries)</p><p id="1d11874a-58d8-8072-9a15-d4bbda50ae4a" class=""><strong>Region:</strong></p><p id="1d11874a-58d8-8063-953f-f80a23b8d68a" class="">Japan (primarily Yoichi in Hokkaido and Miyagikyo in Miyagi Prefecture)</p><p id="1d11874a-58d8-80d3-9643-ccdfe6249a14" class=""><strong>Age:</strong></p><p id="1d11874a-58d8-80f6-98a4-c48e669a5c83" class="">No Age Statement (NAS)</p><p id="1d11874a-58d8-80ed-b59c-d8f827fc4a19" class="">(<em>A blend of various aged whiskies, typically around 3–12 years</em>)</p><p id="1d11874a-58d8-8058-a9c7-e0dfb63c0c08" class=""><strong>Alcohol by Volume (ABV):</strong></p><p id="1d11874a-58d8-80d6-b209-cc5428b4d0e0" class="">51.4%</p><p id="1d11874a-58d8-802c-8454-f7e9b26f398e" class=""><strong>Volume:</strong></p><p id="1d11874a-58d8-80dc-9835-c2a46d968fd8" class="">500ml</p></details></li></ul><ul id="1d11874a-58d8-804d-817e-dadb152e54a2" class="toggle"><li><details open=""><summary><mark class="highlight-yellow_background"><strong>Taketsuru Pure Malt 2020</strong></mark>: A tribute to Masataka Taketsuru, featuring a blend of malts with rich and balanced notes. </summary><p id="1d11874a-58d8-8083-9577-da5ca2c0908a" class=""><strong>General Description:</strong></p><p id="1d11874a-58d8-80d9-a5ec-f10a0aa874fa" class="">Taketsuru Pure Malt 2020 is a refined and elegant Japanese whisky that pays tribute to the &quot;Father of Japanese Whisky,&quot; Masataka Taketsuru. This expression blends carefully selected malt whiskies from Nikka&#x27;s Yoichi and Miyagikyo distilleries. The 2020 edition offers a smoother and more balanced profile than its predecessors, with soft notes of dried fruit, malt, subtle smoke, and a touch of spice. It’s crafted to be approachable yet deep, perfect for sipping neat or with a splash of water.</p><p id="1d11874a-58d8-80cb-9ba8-cc0b8f84f8e1" class=""><strong>Distillery:</strong></p><p id="1d11874a-58d8-8041-8886-c06c1403b55b" class="">Nikka Whisky (Yoichi &amp; Miyagikyo Distilleries)</p><p id="1d11874a-58d8-80b2-b534-cd4e760d2d74" class=""><strong>Region:</strong></p><p id="1d11874a-58d8-8010-8309-d122b48fdcee" class="">Japan (Hokkaido &amp; Miyagi Prefecture)</p><p id="1d11874a-58d8-80fd-afd2-f2280df889c3" class=""><strong>Age:</strong></p><p id="1d11874a-58d8-80da-b2f7-d0b86ce72886" class="">No Age Statement (NAS)</p><p id="1d11874a-58d8-80b3-a81e-e54882a00efe" class=""><strong>Alcohol by Volume (ABV):</strong></p><p id="1d11874a-58d8-809b-a092-d545df10273b" class="">43%</p><p id="1d11874a-58d8-8074-8fbc-f58df60b13c5" class=""><strong>Volume:</strong></p><p id="1d11874a-58d8-80e6-bcd7-e154454e48a5" class="">700ml</p></details></li></ul><ul id="1d11874a-58d8-8070-9dbe-dc66cb6b94f6" class="toggle"><li><details open=""><summary><mark class="highlight-yellow_background"><strong>The Chita Single Grain</strong></mark>: A smooth and light whisky from the Chita distillery, known for its versatility. </summary><p id="1d11874a-58d8-800d-8c11-f7344171bf27" class=""><strong>General Description:</strong></p><p id="1d11874a-58d8-80e7-ad3e-fadbbe449267" class="">The Chita Single Grain is a delicate and versatile Japanese whisky crafted at Suntory’s Chita Distillery. Unlike malt whisky, which is made from malted barley, this single grain whisky is produced mainly from corn and distilled in column stills, resulting in a smooth, clean, and slightly sweet profile. With subtle notes of honey, crème brûlée, and floral undertones, The Chita is ideal for sipping neat, on the rocks, or as a refreshing highball.</p><p id="1d11874a-58d8-808c-aa4f-e9fbc1794294" class=""><strong>Distillery:</strong></p><p id="1d11874a-58d8-8006-889d-f1af76db9e39" class="">Suntory Chita Distillery</p><p id="1d11874a-58d8-801b-97c5-f45ca86a8246" class=""><strong>Region:</strong></p><p id="1d11874a-58d8-805b-9a95-d8c51e5c9072" class="">Chita Peninsula, Aichi Prefecture, Japan</p><p id="1d11874a-58d8-8081-9b59-d1449b93c8c5" class=""><strong>Age:</strong></p><p id="1d11874a-58d8-80fc-b8fd-ddb7f5b15cbf" class="">No Age Statement (NAS)</p><p id="1d11874a-58d8-8066-87e3-e61e225a15e4" class=""><strong>Alcohol by Volume (ABV):</strong></p><p id="1d11874a-58d8-80cb-b866-d6235f2c9fc8" class="">43%</p><p id="1d11874a-58d8-80be-914e-dc82d87aa120" class=""><strong>Volume:</strong></p><p id="1d11874a-58d8-8060-ab09-e0f7a215b921" class="">700ml</p></details></li></ul><ul id="1d11874a-58d8-8089-a646-d4e82a0b2f0c" class="toggle"><li><details open=""><summary><mark class="highlight-yellow_background"><strong>Kujira Inari</strong></mark>: A unique whisky offering a blend of traditional and innovative flavors.</summary><p id="1d11874a-58d8-800f-a4bd-eaa8723a8445" class=""><strong>General Description:</strong></p><p id="1d11874a-58d8-8095-b944-ff0fb920a3bf" class="">Kujira Inari Ryukyu Whisky is a premium Japanese whisky crafted by the Masahiro Distillery, one of Okinawa&#x27;s oldest and most esteemed distilleries. Distilled from 100% premium Indica rice and black koji mold, this whisky embodies the rich traditions of the Ryukyu Islands. The name &quot;Inari&quot; pays homage to the Japanese god of rice cultivation, reflecting the whisky&#x27;s deep connection to its primary ingredient. Matured in carefully selected barrels under Okinawa&#x27;s subtropical climate, Kujira Inari offers a harmonious blend of tropical fruit, delicate oak, and butterscotch flavors, culminating in a long, sweet finish. <a href="https://cnsimports.com/products/kujira-inari-ryukyu-whisky/?utm_source=chatgpt.com">Chips Liquor+3CNS Imports+3Kujira Whisky+3</a></p><p id="1d11874a-58d8-80a8-9726-f14b101b768f" class=""><strong>Distillery:</strong></p><p id="1d11874a-58d8-80d0-87dc-c60edfd2a459" class="">Masahiro Distillery</p><p id="1d11874a-58d8-8084-9355-fe2214d0ee5f" class=""><strong>Region:</strong></p><p id="1d11874a-58d8-80b8-97ef-ed2547d06a99" class="">Okinawa, Japan<a href="https://shingroupcorp.com/products/kujira-okinawa-whisky-inari/?utm_source=chatgpt.com">Shin Group Corporation</a></p><p id="1d11874a-58d8-805e-9cff-d78235b5ddde" class=""><strong>Age:</strong></p><p id="1d11874a-58d8-800f-8d92-d6f949931e37" class="">No Age Statement (NAS)</p><p id="1d11874a-58d8-80cb-be1c-c6774a79d4f9" class=""><strong>Alcohol by Volume (ABV):</strong></p><p id="1d11874a-58d8-8036-8e63-c07053c3ba90" class="">46%<a href="https://cnsimports.com/products/kujira-inari-ryukyu-whisky/?utm_source=chatgpt.com">Kujira Whisky+2CNS Imports+2Shin Group Corporation+2</a></p><p id="1d11874a-58d8-802c-945a-df375ef46958" class=""><strong>Volume:</strong></p><p id="1d11874a-58d8-80a8-bab1-e707103ee554" class="">700ml</p></details></li></ul><p id="1d11874a-58d8-80ad-901b-eed63343dff6" class="">
+</p><h2 id="1d11874a-58d8-80fc-8626-e1c473d683de" class="">Wine</h2><ul id="1d11874a-58d8-80af-84b7-db0b732509a9" class="toggle"><li><details open=""><summary><mark class="highlight-yellow_background"><strong>Takahata Winery Oura Chardonnay 202</strong></mark><strong>2</strong>: An award-winning Japanese Chardonnay with elegant fruit flavors. </summary><p id="1d11874a-58d8-8093-ac70-e4a5731716d5" class=""><strong>General Description:</strong></p><p id="1d11874a-58d8-80ed-b5fe-c444e47cb000" class="">Takahata Winery&#x27;s Oura Chardonnay 2022 is a distinguished Japanese white wine from Yamagata Prefecture. This vintage showcases the winery&#x27;s commitment to quality and the unique terroir of the region. Crafted from carefully selected Chardonnay grapes, it offers a harmonious balance of tropical fruit flavors and well-integrated oak nuances, resulting in a wine of remarkable depth and elegance.<a href="https://www.vivino.com/US/en/takahata-les-trois-ciseaux-d-oura-en-kamiwada-chardonnay/w/11281532?srsltid=AfmBOorvr0i6uI3RKBpnY1wmeFsLkMcyUMzeh14L7mn4DAQWpph4ycAm&amp;year=2022&amp;utm_source=chatgpt.com">Wine-Searcher+7Vivino+7Wine-Searcher+7</a></p><p id="1d11874a-58d8-805e-9c97-e5323d167dd1" class=""><strong>Winery:</strong></p><p id="1d11874a-58d8-80ee-bd9f-f6723a84b8fc" class="">Takahata Winery</p><p id="1d11874a-58d8-8004-a9b2-ed0a07cdbed5" class=""><strong>Region:</strong></p><p id="1d11874a-58d8-800d-9260-e9728ba7e5c1" class="">Yamagata Prefecture, Japan<a href="https://www.wine-searcher.com/find/takahata%2Bles%2Bthree%2Bciseaux%2Boura%2Bramiwada%2Bchard%2Byamagata%2Bjapan?srsltid=AfmBOop4_G2yZzBJf-Argv8rv6BtfhK1yKO-FBqZCeng1SL57Eeo53sN&amp;utm_source=chatgpt.com">IWSC+3Wine-Searcher+3Wine-Searcher+3</a></p><p id="1d11874a-58d8-80d2-bb3a-d611cc4dff4e" class=""><strong>Grape Variety:</strong></p><p id="1d11874a-58d8-8048-bed8-cd4b3efda166" class="">Chardonnay</p><p id="1d11874a-58d8-8060-ba34-ee6eb1973747" class=""><strong>Vintage:</strong></p><p id="1d11874a-58d8-803a-a465-c767acbb30f3" class="">2022</p><p id="1d11874a-58d8-8097-b90a-e7342bacdc0e" class=""><strong>Alcohol by Volume (ABV):</strong></p><p id="1d11874a-58d8-80ff-aadb-d289643c5e82" class="">14% <a href="https://www.vivino.com/AU/en/takahata-les-trois-ciseaux-d-oura-en-kamiwada-chardonnay/w/11281532?srsltid=AfmBOoremBliJ_tL07EoFMI4hMRMV2TSpOffuiIUWgBItYkMaAA51DKc&amp;utm_source=chatgpt.com">Vivino</a></p><p id="1d11874a-58d8-80e9-b147-d30b7d398f25" class=""><strong>Volume:</strong></p><p id="1d11874a-58d8-80f1-9f56-c3b42f3a1dc7" class="">750ml</p></details></li></ul><ul id="1d11874a-58d8-8024-a7a1-f53e82a0a1f5" class="toggle"><li><details open=""><summary><mark class="highlight-yellow_background"><strong>Sapporo Breweries Grande Polaire Azuminoikeda Syrah 2018</strong></mark>: A distinguished Syrah showcasing Japan&#x27;s winemaking prowess.</summary><p id="1d11874a-58d8-8009-9706-e2ce29bd75a8" class=""><strong>General Description:</strong></p><p id="1d11874a-58d8-802d-88ad-f649c8edd055" class="">The Grande Polaire Azuminoikeda Syrah 2018 is a distinguished Japanese red wine from Sapporo Breweries, showcasing the exceptional quality of Syrah grapes cultivated in the Azuminoikeda Vineyard of Nagano Prefecture. This vintage offers a harmonious blend of rich fruit flavors and subtle spice, reflecting the unique terroir of the region.</p><p id="1d11874a-58d8-8045-b30b-d8e4b9fcd752" class=""><strong>Winery:</strong></p><p id="1d11874a-58d8-8013-a706-fcd91ba3f7f3" class="">Sapporo Breweries</p><p id="1d11874a-58d8-80e4-b27d-cb5b226117ae" class=""><strong>Region:</strong></p><p id="1d11874a-58d8-80fa-9189-e6acd33365f2" class="">Azuminoikeda Vineyard, Nagano Prefecture, Japan</p><p id="1d11874a-58d8-80fb-92f2-d580063f84f9" class=""><strong>Grape Variety:</strong></p><p id="1d11874a-58d8-80e5-9df7-de96d6b9f1c0" class="">Syrah (Shiraz)</p><p id="1d11874a-58d8-80be-a904-f8b115058e3d" class=""><strong>Vintage:</strong></p><p id="1d11874a-58d8-8064-884c-e43cfa77c223" class="">2018<a href="https://www.sapporobeer.jp/product/wine/3A23/?utm_source=chatgpt.com">サッポロビール株式会社</a></p><p id="1d11874a-58d8-80c9-8cfc-cd77c88d2886" class=""><strong>Alcohol by Volume (ABV):</strong></p><p id="1d11874a-58d8-8007-bb18-df7eee689b1d" class="">13% <a href="https://www.wine-searcher.com/find/grand%2Bpolaire%2Bazuminoikeda%2Bsra%2Bnagano%2Bjapan/2018?srsltid=AfmBOoqOqgNrrJFL538EPFx8n-OCgGIIqSfpM8ZwmAFwgVJaqZjZeVcJ&amp;utm_source=chatgpt.com">サッポロビール株式会社+12Wine-Searcher+12Wine-Searcher+12</a></p><p id="1d11874a-58d8-8073-81c8-d5cf0481dbc2" class=""><strong>Volume:</strong></p><p id="1d11874a-58d8-8035-ab70-d82b66f232ce" class="">750ml<a href="https://www.iwsc.net/results/detail/126177/grande-polaire-azuminoikeda-cabernet-sauvignon-2018?utm_source=chatgpt.com">Vivino+3IWSC+3IWSC+3</a></p></details></li></ul><ul id="1d11874a-58d8-80b3-96d7-c32586d66101" class="toggle"><li><details open=""><summary><mark class="highlight-yellow_background"><strong>Château Mercian Hokushin Chardonnay 2022</strong></mark>: A refined Chardonnay reflecting the terroir of Hokushin. </summary><p id="1d11874a-58d8-80dc-a219-e6e17460c846" class=""><strong>General Description:</strong></p><p id="1d11874a-58d8-80b9-8c8b-d473bca9a016" class="">Château Mercian Hokushin Chardonnay 2022 is a refined Japanese white wine from Nagano Prefecture&#x27;s Hokushin region. Crafted from carefully selected Chardonnay grapes, this vintage showcases a harmonious balance of fruit and oak influences, reflecting the unique terroir of the area. It offers a complex and well-balanced flavor profile, making it a standout example of Japanese winemaking excellence.</p><p id="1d11874a-58d8-8088-8193-c8d6d4f0b9c8" class=""><strong>Winery:</strong></p><p id="1d11874a-58d8-805c-9ec3-dd242193b206" class="">Château Mercian</p><p id="1d11874a-58d8-8024-a873-c1a0b59b314e" class=""><strong>Region:</strong></p><p id="1d11874a-58d8-80d1-9a73-fcbd059e7adf" class="">Hokushin, Nagano Prefecture, Japan</p><p id="1d11874a-58d8-800a-8e1f-dce119ea9016" class=""><strong>Grape Variety:</strong></p><p id="1d11874a-58d8-809e-9345-c3111dc21107" class="">Chardonnay<a href="https://en.imadeya.co.jp/collections/chateau_mercian?utm_source=chatgpt.com">IMADEYA+1Wine-Searcher+1</a></p><p id="1d11874a-58d8-8098-91a6-d45a0b531aca" class=""><strong>Vintage:</strong></p><p id="1d11874a-58d8-8063-a8e6-e15aba2571a0" class="">2022<a href="https://www.chateaumercian.com/en/our-wines/?utm_source=chatgpt.com">North &amp; South Wines+2Château Mercian+2Château Mercian+2</a></p><p id="1d11874a-58d8-80a9-88f5-f85ac0ada39d" class=""><strong>Alcohol by Volume (ABV):</strong></p><p id="1d11874a-58d8-80ce-b638-d77e89baefaa" class="">Information not specified</p><p id="1d11874a-58d8-804a-9a99-fd59db794aa1" class=""><strong>Volume:</strong></p><p id="1d11874a-58d8-804a-8726-d01c65b04b1b" class="">750ml</p></details></li></ul><ul id="1d11874a-58d8-8005-bad3-e6687b187174" class="toggle"><li><details open=""><summary><mark class="highlight-yellow_background"><strong>Grace Akeno Red 2019</strong></mark>: A notable red wine with a harmonious blend of flavors. <a href="https://www.vivino.com/toplists/top-25-japanese-red-wines-right-now-global?srsltid=AfmBOopjnMyZ4cBBEPVaNa94NwyKzlHtO7uvp0DOpkuRRO9zjk3X1wdc&amp;utm_source=chatgpt.com">Vivino</a></summary><p id="1d11874a-58d8-804d-b342-cdc1fae819ab" class=""><strong>General Description:</strong></p><p id="1d11874a-58d8-80a3-8c1d-f786f1f879e4" class="">Grace Akeno Red 2019 is a distinguished Japanese red wine from Grace Winery, located in the Yamanashi Prefecture. This Bordeaux-style blend showcases the winery&#x27;s dedication to quality and the unique terroir of the Akeno region, offering a harmonious balance of fruit, structure, and elegance.</p><p id="1d11874a-58d8-8048-8c12-ec9a0fa809ca" class=""><strong>Winery:</strong></p><p id="1d11874a-58d8-80e8-86cb-fdcdab3b7277" class="">Grace Winery</p><p id="1d11874a-58d8-80db-ad7a-ea02cd5ca81c" class=""><strong>Region:</strong></p><p id="1d11874a-58d8-8017-af9a-cb79ccee18e8" class="">Akeno, Yamanashi Prefecture, Japan</p><p id="1d11874a-58d8-80d7-95a4-e45a4a2e8947" class=""><strong>Grape Varieties:</strong></p><p id="1d11874a-58d8-805d-bf77-e2d4196e8256" class="">Cabernet Franc (60%), Petit Verdot (27%), Cabernet Sauvignon (13%) <a href="https://www.decanter.com/wine-reviews/japan/kyushu/grace-cuvee-misawa-akeno-yamanashi-japan-2019-80616?utm_source=chatgpt.com">Decanter</a></p><p id="1d11874a-58d8-8097-ad44-e107ba7020c5" class=""><strong>Vintage:</strong></p><p id="1d11874a-58d8-80c1-954e-d8463aa042e5" class="">2019<a href="https://www.wine-searcher.com/find/grace%2Bcuvee%2Bmisawa%2Bakeno%2Bkoshu%2Byamanashi%2Bjapan/2019?srsltid=AfmBOoq8rgxjBw2gZJ3Lf5E51JQGy60HiNqU6theiUBdLxTEDMOBF48L&amp;utm_source=chatgpt.com">GRACE WINE - Just another WordPress site+5Wine-Searcher+5Grand Cru, Wine Concierge+5</a></p><p id="1d11874a-58d8-80c8-a0ea-ea2c0c99ef66" class=""><strong>Alcohol by Volume (ABV):</strong></p><p id="1d11874a-58d8-8024-9cbd-d6890ddf5185" class="">12.5% <a href="https://www.wine-searcher.com/find/grace%2Bcuvee%2Bmisawa%2Bakeno%2Bkoshu%2Byamanashi%2Bjapan/2019?srsltid=AfmBOoq8rgxjBw2gZJ3Lf5E51JQGy60HiNqU6theiUBdLxTEDMOBF48L&amp;utm_source=chatgpt.com">Grand Cru, Wine Concierge+10Wine-Searcher+10Wine-Searcher+10</a></p><p id="1d11874a-58d8-806a-8296-c4d3deb450f4" class=""><strong>Volume:</strong></p><p id="1d11874a-58d8-8094-88ae-f977b5486481" class="">750ml</p></details></li></ul><ul id="1d11874a-58d8-80ba-80dd-c9140fefce05" class="toggle"><li><details open=""><summary><mark class="highlight-yellow_background"><strong>Takahiko Yoichi-Nobori Aihara Passetoutgrain 2021</strong></mark>: A unique red blend offering a taste of Hokkaido&#x27;s vineyards.</summary><p id="1d11874a-58d8-803f-9b67-ebfedb7e184c" class=""><strong>General Description:</strong></p><p id="1d11874a-58d8-80ea-bf73-f68d48150dfb" class="">Domaine Takahiko&#x27;s Yoichi-Nobori Passetoutgrain 2021 is a unique Japanese red wine hailing from Hokkaido&#x27;s esteemed Yoichi-Nobori region. This blend artfully combines Pinot Noir and Zweigelt grapes, resulting in a wine that balances the elegance of Pinot Noir with the robust character of Zweigelt. The 2021 vintage offers a harmonious fusion of fruit-forward notes and subtle earthy undertones, reflecting the distinct terroir of the region.<a href="https://www.raisin.digital/en/artisans/natural-winemakers/takahiko-soga/domaine-takahiko/wines/reds/yoichi-nobori-passetoutgrain-19423/?utm_source=chatgpt.com">Wine-Searcher+2Raisin+2Wine-Searcher+2</a></p><p id="1d11874a-58d8-807f-b03a-e6216b2134e6" class=""><strong>Winery:</strong></p><p id="1d11874a-58d8-805f-8c9f-c29d08b45298" class="">Domaine Takahiko</p><p id="1d11874a-58d8-806a-b9a1-db61842d60b5" class=""><strong>Region:</strong></p><p id="1d11874a-58d8-8060-8b7a-c91c37307e2c" class="">Yoichi-Nobori, Hokkaido Prefecture, Japan</p><p id="1d11874a-58d8-803d-97ae-d16a7eb6648d" class=""><strong>Grape Varieties:</strong></p><ul id="1d11874a-58d8-8087-8b23-eeb23ad3c5e9" class="bulleted-list"><li style="list-style-type:disc">Pinot Noir<a href="https://www.vivino.com/US/en/takahiko-yoichi-nobori-aihara-passetoutgrain/w/2317921?srsltid=AfmBOop-OtG7GBCiuVfIml-AjtJPP0lYS_311mAkFekSp-ldiFbmW1w6&amp;utm_source=chatgpt.com">Raisin+2Vivino+2Vinica+2</a></li></ul><ul id="1d11874a-58d8-8023-80a3-d42be1a037ef" class="bulleted-list"><li style="list-style-type:disc">Zweigelt<a href="https://www.raisin.digital/en/artisans/natural-winemakers/takahiko-soga/domaine-takahiko/wines/reds/yoichi-nobori-passetoutgrain-19423/?utm_source=chatgpt.com">Raisin</a></li></ul><p id="1d11874a-58d8-8026-9b12-d52ebda22556" class=""><strong>Vintage:</strong></p><p id="1d11874a-58d8-80ba-a744-d4ea45419a8b" class="">2021</p><p id="1d11874a-58d8-8035-b5d1-c06b7bfd8586" class=""><strong>Alcohol by Volume (ABV):</strong></p><p id="1d11874a-58d8-80ad-90bb-c76c82ca0bbe" class="">12.5%<a href="https://www.raisin.digital/en/artisans/natural-winemakers/takahiko-soga/domaine-takahiko/wines/reds/yoichi-nobori-passetoutgrain-19423/?utm_source=chatgpt.com">Raisin+1Vivino+1</a></p><p id="1d11874a-58d8-8043-a2ff-ef7054312d22" class=""><strong>Volume:</strong></p><p id="1d11874a-58d8-80d2-92de-f11a615ad776" class="">750ml</p></details></li></ul><p id="1d11874a-58d8-80f7-8848-e3cd39a661e8" class="">
+</p><h2 id="1d11874a-58d8-8015-9c14-ec02e14a1d30" class="">Sparkling Wine </h2><ul id="1d11874a-58d8-8021-9795-f45ea2ab5fa6" class="toggle"><li><details open=""><summary><strong>Domaine Sogga Pressurage de Grappe Entières Rosé</strong>: A top-rated Japanese sparkling rosé with vibrant flavors. </summary><p id="1d11874a-58d8-8047-9ce3-d7b56f3519a5" class="">Domaine Sogga&#x27;s Pressurage de Grappe Entières Rosé is a distinguished Japanese sparkling wine from Nagano Prefecture. Crafted using whole-cluster pressing, this méthode traditionnelle sparkling rosé offers a refined effervescence and a complex flavor profile, reflecting the winery&#x27;s dedication to quality and the unique terroir of the region.<a href="https://www.vivino.com/US/en/domaine-sogga-pressurage-de-grappe-entieres-rose/w/8837795?srsltid=AfmBOooEEdvNNpTJxaYVkF3bpIEa97-qtkzcBXE_-GHkQjfYUsE4bSGB&amp;utm_source=chatgpt.com">Vivino</a></p><p id="1d11874a-58d8-8090-b344-c61f18cc0712" class=""><strong>Winery:</strong></p><p id="1d11874a-58d8-8050-a82d-c44a613f8da5" class="">Domaine Sogga</p><p id="1d11874a-58d8-8039-8ca2-da7116692118" class=""><strong>Region:</strong></p><p id="1d11874a-58d8-80e6-bbd0-c70ca413a3b2" class="">Nagano Prefecture, Japan</p><p id="1d11874a-58d8-80de-9726-ef4a2849ad5d" class=""><strong>Grape Variety:</strong></p><p id="1d11874a-58d8-80cc-ae88-f7ba31d7353d" class="">Information not specified</p><p id="1d11874a-58d8-8019-96c9-dcdd7350a266" class=""><strong>Vintage:</strong></p><p id="1d11874a-58d8-8052-bfce-edbbfb50c79c" class="">Information not specified</p><p id="1d11874a-58d8-80b8-803b-dad469bceeb3" class=""><strong>Alcohol by Volume (ABV):</strong></p><p id="1d11874a-58d8-8001-9ffa-c2e427ff8cef" class="">Information not specified</p><p id="1d11874a-58d8-80dd-bcf9-c664a57a1b1d" class=""><strong>Volume:</strong></p><p id="1d11874a-58d8-8085-936c-e008f3fc6d79" class="">750ml</p></details></li></ul><ul id="1d11874a-58d8-80a9-af09-cb0163fe81cb" class="toggle"><li><details open=""><summary><strong>Ajimu Merlot Vintage Rosé Brut 2019</strong>: A sparkling rosé brut showcasing the finesse of Japanese winemaking. </summary><p id="1d11874a-58d8-80b3-b759-f456c3c9de23" class=""><strong>General Description:</strong></p><p id="1d11874a-58d8-8075-82b3-e63730e150ef" class="">Ajimu Winery&#x27;s Merlot Vintage Rosé Brut 2019 is a distinguished Japanese sparkling wine from Oita Prefecture. Crafted predominantly from Merlot grapes, this vintage showcases the winery&#x27;s dedication to quality and the unique terroir of the region. It offers a harmonious blend of fruit-forward notes and subtle complexity, making it a standout example of Japanese sparkling winemaking.</p><p id="1d11874a-58d8-800d-b2a2-de657070bbc4" class=""><strong>Winery:</strong></p><p id="1d11874a-58d8-8052-a9ca-ef2ac8c5d602" class="">Ajimu Winery</p><p id="1d11874a-58d8-8025-bfcf-d8f108af0318" class=""><strong>Region:</strong></p><p id="1d11874a-58d8-80d5-b3ec-e845cf770d2a" class="">Oita Prefecture, Japan<a href="https://www.regionalwines.co.nz/products/nautilus-methode-rose-16?srsltid=AfmBOorG6buPRfC_NHIc1WHmeEaHulr0tLyh2xQ2NBKNdP_IAuGrnlzv&amp;utm_source=chatgpt.com">regionalwines.co.nz</a></p><p id="1d11874a-58d8-80a5-9512-c4ac2da4570a" class=""><strong>Grape Variety:</strong></p><p id="1d11874a-58d8-807f-9e30-f436d5497557" class="">Merlot</p><p id="1d11874a-58d8-802d-8a34-f2a17273083e" class=""><strong>Vintage:</strong></p><p id="1d11874a-58d8-80f6-af85-d85e67e763a6" class="">2019<a href="https://www.wine-searcher.com/find/ajimu%2Bsparkling%2Bchard%2Bextra%2Bbrut%2Bvintage%2Bjapan/2019?srsltid=AfmBOoomZCXdDHE-Mofxl8ggoTcT7EJa8JtHUAqEIWDOMlobZYoF-Qi6&amp;utm_source=chatgpt.com">Wine-Searcher+4Wine-Searcher+4Vivino+4</a></p><p id="1d11874a-58d8-80b2-a199-dc91d20e9cbd" class=""><strong>Alcohol by Volume (ABV):</strong></p><p id="1d11874a-58d8-805f-8950-fbf4457ac44a" class="">12%<a href="https://www.wine-searcher.com/find/ajimu%2Bsparkling%2Bchard%2Bextra%2Bbrut%2Bvintage%2Bjapan/2019?srsltid=AfmBOoomZCXdDHE-Mofxl8ggoTcT7EJa8JtHUAqEIWDOMlobZYoF-Qi6&amp;utm_source=chatgpt.com">Wine-Searcher+1sankarahotel-spa.com+1</a></p><p id="1d11874a-58d8-80cf-9420-e5fcf056b3b7" class=""><strong>Volume:</strong></p><p id="1d11874a-58d8-8053-bb54-cd1b872c907e" class="">750ml<a href="https://www.regionalwines.co.nz/products/nautilus-methode-rose-16?srsltid=AfmBOorG6buPRfC_NHIc1WHmeEaHulr0tLyh2xQ2NBKNdP_IAuGrnlzv&amp;utm_source=chatgpt.com">Wine-Searcher+2regionalwines.co.nz+2sankarahotel-spa.com+2</a></p></details></li></ul><ul id="1d11874a-58d8-8034-8d75-e0d2190d2c67" class="toggle"><li><details open=""><summary><strong>Suntory Tomi Koshu 2022</strong>: An elegant sparkling Koshu wine with delicate bubbles. </summary><p id="1d11874a-58d8-80c6-905c-ecfa27ef1822" class=""><strong>General Description:</strong></p><p id="1d11874a-58d8-801c-936c-c1fc1aff5bc6" class="">Suntory Tomi Koshu 2022 is a distinguished Japanese white wine from Yamanashi Prefecture, crafted entirely from Koshu grapes, a variety indigenous to Japan. This inaugural vintage from Suntory&#x27;s flagship Tomi brand has garnered international acclaim, including the prestigious &quot;Best in Show&quot; at the Decanter World Wine Awards 2024—the first time a Japanese wine has received this honor. <a href="https://markets.businessinsider.com/news/stocks/suntory-from-farm-tomi-koshu-2022-1-wins-gold-medal-at-2024-international-wine-and-spirits-competition-1033415093?utm_source=chatgpt.com">Suntory+2markets.businessinsider.com+2Suntory+2</a><a href="https://www.suntory.com/news/article/14617E.html?utm_source=chatgpt.com">Suntory+1Suntory+1</a></p><p id="1d11874a-58d8-8066-bc87-ca3a71a514c6" class=""><strong>Winery:</strong></p><p id="1d11874a-58d8-808d-aac0-f66b63791dbe" class="">Suntory<a href="https://www.suntory.com/news/article/mt_items/14617E.pdf?utm_source=chatgpt.com">Suntory+1Suntory+1</a></p><p id="1d11874a-58d8-8072-a8e4-c8ac756f781c" class=""><strong>Region:</strong></p><p id="1d11874a-58d8-8078-94d0-e953c50d16dc" class="">Yamanashi Prefecture, Japan</p><p id="1d11874a-58d8-8082-9d5c-e3c40df8579e" class=""><strong>Grape Variety:</strong></p><p id="1d11874a-58d8-80b6-b4a9-d81140d4392b" class="">Koshu</p><p id="1d11874a-58d8-8016-a398-e1fe731dd026" class=""><strong>Vintage:</strong></p><p id="1d11874a-58d8-8079-b202-e9edf3cfd00f" class="">2022</p><p id="1d11874a-58d8-801c-809e-e1dd68d55d7f" class=""><strong>Alcohol by Volume (ABV):</strong></p><p id="1d11874a-58d8-8019-b15b-f2b73266cf24" class="">12%<a href="https://iwsc.net/results/detail/147154/tomi-koshu-2022?utm_source=chatgpt.com">IWSC+1Wine-Searcher+1</a></p><p id="1d11874a-58d8-804c-88e8-c9ac80cfaee3" class=""><strong>Volume:</strong></p><p id="1d11874a-58d8-8093-a794-c575fd464b0c" class="">750ml</p></details></li></ul><ul id="1d11874a-58d8-80da-b8a9-fedb8d741bfa" class="toggle"><li><details open=""><summary><strong>Keigetsu Nigori Junmai Daiginjo 50</strong>: A sparkling sake with a cloudy appearance and fruity notes.</summary><p id="1d11874a-58d8-80a3-98b8-cf10fbd343c0" class=""><strong>General Description:</strong></p><p id="1d11874a-58d8-80f1-b4e0-c02d061fbf95" class="">Keigetsu Nigori Junmai Daiginjo 50 is a distinguished Japanese sake from Kochi Prefecture, crafted by Tosa Brewery. This Nigori (unfiltered) version of their renowned CEL24 Junmai Daiginjo features a 50% rice polishing ratio, resulting in a cloudy appearance and a rich, aromatic profile. The sake is celebrated for its balance of fruity aromas and refreshing flavors, making it a standout choice for both sake enthusiasts and newcomers. <a href="https://sakechan.com/products/keigetsu-nigori-junmai-daiginjo-50?srsltid=AfmBOoq1VJsZ5jNmLIO2n-CWXz93mzDoZOTxWg30k-MjMS6rv2fLHpVl&amp;utm_source=chatgpt.com">The Art of Sake+3sakechan+3Harrogate Wines+3</a></p><p id="1d11874a-58d8-8002-bc33-c42c96e63dbd" class=""><strong>Brewery:</strong></p><p id="1d11874a-58d8-8015-8d6e-dd357f69705d" class="">Tosa Brewery<a href="https://sakechan.com/products/keigetsu-nigori-junmai-daiginjo-50?srsltid=AfmBOoq1VJsZ5jNmLIO2n-CWXz93mzDoZOTxWg30k-MjMS6rv2fLHpVl&amp;utm_source=chatgpt.com">sakechan</a></p><p id="1d11874a-58d8-80dc-b748-dec6de44fe06" class=""><strong>Region:</strong></p><p id="1d11874a-58d8-8049-adeb-e56399056edd" class="">Kochi Prefecture, Japan<a href="https://www.harrogatefinewinecompany.com/products/keigetsu-nigori-junmai-daiginjo-50-300ml?srsltid=AfmBOookniSQPp0WHFd0yDDm92e6umKGjmCZI_e99DuwQWnmzZ5Kniuc&amp;utm_source=chatgpt.com">Harrogate Wines</a></p><p id="1d11874a-58d8-8015-9a10-fb9429a2ca64" class=""><strong>Rice Polishing Ratio:</strong></p><p id="1d11874a-58d8-8045-8228-e4aa469cafa6" class="">50%</p><p id="1d11874a-58d8-80e7-8f85-c10b6274b376" class=""><strong>Alcohol by Volume (ABV):</strong></p><p id="1d11874a-58d8-8075-b853-d6e263d7c3b7" class="">15%<a href="https://www.harrogatefinewinecompany.com/products/keigetsu-nigori-junmai-daiginjo-50-300ml?srsltid=AfmBOookniSQPp0WHFd0yDDm92e6umKGjmCZI_e99DuwQWnmzZ5Kniuc&amp;utm_source=chatgpt.com">Harrogate Wines</a></p><p id="1d11874a-58d8-80e8-b351-cfb5db5f7180" class=""><strong>Volume:</strong></p><p id="1d11874a-58d8-8036-8035-ef3a458bd297" class="">720ml</p></details></li></ul><ul id="1d11874a-58d8-8081-b52e-d50c3cc8f05a" class="toggle"><li><details open=""><summary><strong>Grande Polaire Azuminoikeda Syrah Sparkling</strong>: A unique sparkling Syrah offering a twist on traditional sparkling wines.</summary><p id="1d11874a-58d8-805d-bd04-d491a9727868" class=""><strong>General Description:</strong></p><p id="1d11874a-58d8-8067-ab59-dbb9c047d524" class="">Grande Polaire Azuminoikeda Vineyard Syrah is a distinguished Japanese red wine crafted from Syrah grapes cultivated in the Azuminoikeda vineyard located in Nagano Prefecture. This wine exemplifies the unique terroir of the region, offering a harmonious blend of rich fruit flavors and subtle spice notes.</p><p id="1d11874a-58d8-80fb-b122-c53e6a2661c8" class=""><strong>Winery:</strong></p><p id="1d11874a-58d8-80f2-8bed-fd43bbc7ec98" class="">Sapporo Breweries<a href="https://cluboenologique.com/product/red-wine-sapporo-breweries-grande-polaire-azuminoikeda-syrah-nagano-2018-75cl/?utm_source=chatgpt.com">Club Oenologique</a></p><p id="1d11874a-58d8-804e-ac1a-c31d7d2516be" class=""><strong>Region:</strong></p><p id="1d11874a-58d8-804d-93d0-c524b6e4400c" class="">Azuminoikeda, Nagano Prefecture, Japan</p><p id="1d11874a-58d8-807a-a5e2-e5f62ba353ca" class=""><strong>Grape Variety:</strong></p><p id="1d11874a-58d8-8009-b6a4-f6eb170f5a83" class="">Syrah</p><p id="1d11874a-58d8-8097-9a5f-e30fc6cd84cb" class=""><strong>Vintage:</strong></p><p id="1d11874a-58d8-80b7-9a6a-f2240542e670" class="">Information not specified</p><p id="1d11874a-58d8-8051-84d3-d3d343f97be3" class=""><strong>Alcohol by Volume (ABV):</strong></p><p id="1d11874a-58d8-8055-a671-d640d398a15c" class="">13%<a href="https://cluboenologique.com/product/red-wine-sapporo-breweries-grande-polaire-azuminoikeda-syrah-nagano-2018-75cl/?utm_source=chatgpt.com">Vivino+2Club Oenologique+2Wine-Searcher+2</a></p><p id="1d11874a-58d8-8051-9c88-ca99d193e064" class=""><strong>Volume:</strong></p><p id="1d11874a-58d8-80d1-a0c4-d322dce9a967" class="">750ml</p></details></li></ul><p id="1d11874a-58d8-808b-9ac0-d90c206aed0f" class="">
+</p><h2 id="1d11874a-58d8-8013-9bd9-cc89244c6eb2" class="">Shochu </h2><ul id="1d11874a-58d8-80b0-8d11-c35599d569f7" class="toggle"><li><details open=""><summary><strong>Kuro Kirishima</strong>: A sweet potato shochu known for its rich, earthy flavor and popularity in Kyushu. </summary><p id="1d11874a-58d8-80ee-8369-fc800d37ae6e" class=""><strong>General Description:</strong></p><p id="1d11874a-58d8-80ad-974e-d6f727578f52" class="">Kuro Kirishima is a renowned Japanese shochu produced by Kirishima Shuzo in Miyazaki Prefecture. Crafted primarily from sweet potatoes, this honkaku (single-distilled) shochu utilizes black rice koji, imparting a distinctive flavor profile that has captivated consumers since its national launch in 1999. <a href="https://midorinoshima.com/en/132-shochu-kuro-kirishima.html?srsltid=AfmBOoqsrThLijHXLv1tMTvoOKyYz6f9YcQCG1RB6_ovNYYhPqMEassK&amp;utm_source=chatgpt.com">Astor Wines &amp; Spirits+4Midorinoshima+4kirishima-global.com+4</a><a href="https://yamatomagazine.home.blog/2019/11/28/kuro-kirishima-shochu-review-deceptively-complex-and-smooth-as-hell/?utm_source=chatgpt.com">88 Bamboo+3(no title)+3kirishima-global.com+3</a></p><p id="1d11874a-58d8-80ba-ad41-f2194363c31a" class=""><strong>Producer:</strong></p><p id="1d11874a-58d8-8025-beca-c8205b206ba9" class="">Kirishima Shuzo<a href="https://www.kirishima-global.com/co/en/collection/?utm_source=chatgpt.com">kirishima-global.com</a></p><p id="1d11874a-58d8-801e-89dd-d7d45abb3236" class=""><strong>Region:</strong></p><p id="1d11874a-58d8-8063-8262-dd2d5f734ec9" class="">Miyazaki Prefecture, Japan<a href="https://midorinoshima.com/en/132-shochu-kuro-kirishima.html?srsltid=AfmBOoqsrThLijHXLv1tMTvoOKyYz6f9YcQCG1RB6_ovNYYhPqMEassK&amp;utm_source=chatgpt.com">Wismettac Asian Foods, Inc.+4Midorinoshima+4Kuraichi+4</a></p><p id="1d11874a-58d8-80c5-a718-ed8e623690ef" class=""><strong>Ingredients:</strong></p><ul id="1d11874a-58d8-80ab-ba30-e7875903e778" class="bulleted-list"><li style="list-style-type:disc">Sweet Potatoes (84%)<a href="https://kuraichibk.com/products/kuro-kirishima?utm_source=chatgpt.com">Astor Wines &amp; Spirits+4Kuraichi+4Midorinoshima+4</a></li></ul><ul id="1d11874a-58d8-8017-a3cf-cb1d6f8f1621" class="bulleted-list"><li style="list-style-type:disc">Rice (16%)<a href="https://wismettacsake.com/products/kirishima-shuzo-kurokirishima-750ml?utm_source=chatgpt.com">Wismettac Asian Foods, Inc.</a></li></ul><p id="1d11874a-58d8-804f-bb65-d4019b05b166" class=""><strong>Alcohol by Volume (ABV):</strong></p><p id="1d11874a-58d8-80e6-b40f-d9e980c1863f" class="">24%</p><p id="1d11874a-58d8-80ea-bde6-e4d1ebdb6102" class=""><strong>Volume:</strong></p><p id="1d11874a-58d8-8095-a42f-f0072c311fcb" class="">750ml</p></details></li></ul><ul id="1d11874a-58d8-8090-b895-da6f3f1032d0" class="toggle"><li><details open=""><summary><mark class="highlight-yellow_background"><strong>Nikaido Oita Mugi Shochu</strong></mark>: A barley shochu offering a smooth and mellow taste.</summary><p id="1d11874a-58d8-80a4-8b7d-f9db6e5ce4c0" class=""><strong>General Description:</strong></p><p id="1d11874a-58d8-8039-b8b1-cea8c817eacb" class="">Nikaido Oita Mugi Shochu is a distinguished Japanese spirit produced by Nikaido Shuzou Co., Ltd., located in Oita Prefecture. Renowned for pioneering the use of 100% barley koji in shochu production, Nikaido offers a refined and versatile drinking experience. <a href="https://nikaidoshuzou.jp/news/20250325.php?utm_source=chatgpt.com">House of Nikaido+1House of Nikaido+1</a><a href="https://japanupmagazine.com/archives/12776?utm_source=chatgpt.com">Good Spirits News+2JapanUp!+2BevNET+2</a></p><p id="1d11874a-58d8-805e-8ce7-c78e4c831ef7" class=""><strong>Producer:</strong></p><p id="1d11874a-58d8-804f-bce5-ee4fc0a99d52" class="">Nikaido Shuzou Co., Ltd.</p><p id="1d11874a-58d8-8038-88e2-e920605caa3f" class=""><strong>Region:</strong></p><p id="1d11874a-58d8-80d0-aac2-e780bf395e0c" class="">Oita Prefecture, Japan</p><p id="1d11874a-58d8-80b2-bf9b-f7c5466611cb" class=""><strong>Ingredients:</strong></p><p id="1d11874a-58d8-80f8-9881-f9d7c2b606e2" class="">Barley<a href="https://umamimart.com/products/nikaido-900ml-barley-shochu?srsltid=AfmBOoq2gJ_DmEZDASe8K2EJ4-ljSrL5fYNuQ6xNlDV-28Yw6xDgGDvM&amp;utm_source=chatgpt.com">Umami Mart</a></p><p id="1d11874a-58d8-80e1-b316-ff93a047ceb7" class=""><strong>Alcohol by Volume (ABV):</strong></p><p id="1d11874a-58d8-8066-864a-c6cbd43c6623" class="">24%<a href="https://dallas.splashmags.com/index.php/2024/07/nikaido-oita-mugi-shochu/?utm_source=chatgpt.com">BevNET+3Splash Magazines+3Wine-Searcher+3</a></p><p id="1d11874a-58d8-80e4-8af0-fa13a7c75c6f" class=""><strong>Volume:</strong></p><p id="1d11874a-58d8-8093-8dc3-db2a70213b80" class="">900ml</p></details></li></ul><ul id="1d11874a-58d8-8022-93ec-df3f1034a7e3" class="toggle"><li><details open=""><summary><mark class="highlight-yellow_background"><strong>Naka Naka Barley Shochu</strong></mark>: A well-crafted barley shochu with a balanced flavor profile. </summary><p id="1d11874a-58d8-80d7-a717-d87832aa23b8" class=""><strong>General Description:</strong></p><p id="1d11874a-58d8-80da-a8a9-dd0e7bf2fab8" class="">Naka Naka is a distinguished barley shochu produced by Kuroki Honten Distillery in Miyazaki Prefecture, Japan. Renowned for its rich, full-bodied flavor profile, it offers a harmonious blend of traditional craftsmanship and modern distillation techniques.<a href="https://kanpai.us/nakanaka/?utm_source=chatgpt.com">Umami Mart+5Kanpai+5Lisa&#x27;s Liquor Barn+5</a></p><p id="1d11874a-58d8-8055-972e-dbff3265c458" class=""><strong>Producer:</strong></p><p id="1d11874a-58d8-8012-b7c4-fd8916c09cac" class="">Kuroki Honten Distillery</p><p id="1d11874a-58d8-801a-a925-ecf0d2bd9d2e" class=""><strong>Region:</strong></p><p id="1d11874a-58d8-80b8-af1d-d7358cd97032" class="">Miyazaki Prefecture, Japan</p><p id="1d11874a-58d8-803e-8a8f-d279917f9c6d" class=""><strong>Ingredients:</strong></p><p id="1d11874a-58d8-8025-98ec-d5689c78ef55" class="">100% Barley</p><p id="1d11874a-58d8-8048-8b29-e0f64f75831f" class=""><strong>Alcohol by Volume (ABV):</strong></p><p id="1d11874a-58d8-807c-857a-e1d60696f3db" class="">25%<a href="https://www.skurnik.com/sku/sweet-potato-shochu-kiroku-memory-kuroki-honten-distillery-2/?utm_source=chatgpt.com">amsterdamwine.com+2Skurnik Wines &amp; Spirits+2Kanpai+2</a></p><p id="1d11874a-58d8-80b9-a30c-d5bc5d9d6f1c" class=""><strong>Volume:</strong></p><p id="1d11874a-58d8-80db-b6bb-c5155e38ae87" class="">720ml</p></details></li></ul><ul id="1d11874a-58d8-8082-8162-fd3d132b89ca" class="toggle"><li><details open=""><summary><mark class="highlight-yellow_background"><strong>Mizu Saga Barley Shochu</strong></mark>: A premium shochu with a clean and crisp taste.</summary><p id="1d11874a-58d8-8099-a40f-c62acdb7a035" class=""><strong>General Description:</strong></p><p id="1d11874a-58d8-80aa-9405-eef20cf69380" class="">Mizu &#x27;Saga Barley&#x27; Shochu is a distinguished Japanese spirit handcrafted by Munemasa Shuzo Co. in Arita, Saga Prefecture. This shochu is single distilled from a blend of 67% locally harvested two-rowed barley and 33% black koji rice, utilizing the pure waters of Kurokami-yama (Black Hair Mountain). Bottled at 35% ABV, it offers a more concentrated flavor reminiscent of traditional shochus. <a href="https://www.bittersandbottles.com/products/mizu-saga-barley-shochu?srsltid=AfmBOopUZmI2Ce1FOys6CGbgKXN-0YkQD03KxUdTvMSKP1LmEWspA2Eu&amp;utm_source=chatgpt.com">Umami Mart+5Bitters &amp; Bottles+5Mash&amp;Grape+5</a><a href="https://www.mizushochu.com/saga-barley?utm_source=chatgpt.com">Umami Mart+4MIZUNOMAI+4DWS+4</a></p><p id="1d11874a-58d8-80c6-9956-dbab62d2978a" class=""><strong>Producer:</strong></p><p id="1d11874a-58d8-8029-9d7a-e5ac41390690" class="">Munemasa Shuzo Co.</p><p id="1d11874a-58d8-80b8-b9ed-d4530ae2dc15" class=""><strong>Region:</strong></p><p id="1d11874a-58d8-8045-9114-f27b33fc7ef7" class="">Arita, Saga Prefecture, Japan</p><p id="1d11874a-58d8-80eb-b6d9-f9ef4df814fd" class=""><strong>Ingredients:</strong></p><ul id="1d11874a-58d8-8038-8e0e-dadc54fbe7d6" class="bulleted-list"><li style="list-style-type:disc">Two-Rowed Barley (67%)<a href="https://www.mizushochu.com/saga-barley?utm_source=chatgpt.com">Umami Mart+4MIZUNOMAI+4Bitters &amp; Bottles+4</a></li></ul><ul id="1d11874a-58d8-800d-9972-c41bd4613de5" class="bulleted-list"><li style="list-style-type:disc">Black Koji Rice (33%)<a href="https://www.mizushochu.com/saga-barley?utm_source=chatgpt.com">Umami Mart+4MIZUNOMAI+4InternetWines.com+4</a></li></ul><p id="1d11874a-58d8-80bd-9e89-d0a59cb1822c" class=""><strong>Alcohol by Volume (ABV):</strong></p><p id="1d11874a-58d8-80cd-8aef-cd14397b7dfb" class="">35%</p><p id="1d11874a-58d8-80e6-94c0-c860cf5feaf0" class=""><strong>Volume:</strong></p><p id="1d11874a-58d8-806f-9285-d801ad8a8aab" class="">750ml</p></details></li></ul><ul id="1d11874a-58d8-8048-b719-e7c259712f2b" class="toggle"><li><details open=""><summary><mark class="highlight-yellow_background"><strong>Iichiko Special</strong></mark>: A high-quality barley shochu with a rich aroma and smooth finish.</summary><p id="1d11874a-58d8-8065-af6f-e67d0121af49" class=""><strong>General Description:</strong></p><p id="1d11874a-58d8-806e-ae23-f201f1ced5b4" class="">Iichiko Special is a premium Japanese shochu produced by Sanwa Shurui Co. in Oita Prefecture. Renowned for its rich, oaky aroma and mellow taste, this aged barley shochu offers a unique and sophisticated drinking experience.<a href="https://umamimart.com/products/iichiko-special-mugi-shochu-btl-720ml?srsltid=AfmBOopiCpMOqnx4sfBaaiJYwbr6fFxSfTWVR9c3_nR5ih94T5ohivOU&amp;utm_source=chatgpt.com">Umami Mart+1iichiko.com+1</a></p><p id="1d11874a-58d8-8053-bc2b-ddbff895f279" class=""><strong>Producer:</strong></p><p id="1d11874a-58d8-805e-9327-eaedea73b709" class="">Sanwa Shurui Co.</p><p id="1d11874a-58d8-8020-85b7-c29524f04d75" class=""><strong>Region:</strong></p><p id="1d11874a-58d8-8089-860b-de87b2406051" class="">Oita Prefecture, Japan<a href="https://www.iichiko.com/?utm_source=chatgpt.com">Umami Mart+4iichiko.com+4Great American Craft Spirits+4</a></p><p id="1d11874a-58d8-80ad-ba1e-e2c4ee3274f2" class=""><strong>Ingredients:</strong></p><p id="1d11874a-58d8-80f7-8d85-e187cc850f44" class="">100% Barley (Mugi)<a href="https://sakeinn.com/products/iichiko-special-mugi-shochu?srsltid=AfmBOoolVmRIDH6ISIuv1ER4Q4g1ok3yfWIjEe6iPW-__OYA6VQcsBJ5&amp;utm_source=chatgpt.com">Sake Inn</a></p><p id="1d11874a-58d8-8056-bcb1-e82f2607eb7c" class=""><strong>Alcohol by Volume (ABV):</strong></p><p id="1d11874a-58d8-80f3-82c8-c71a395978b4" class="">30%<a href="https://kuraichibk.com/products/iichiko-special?utm_source=chatgpt.com">Great American Craft Spirits+2Kuraichi+2&amp; SPIRITS+2</a></p><p id="1d11874a-58d8-80f4-82f1-c7c0441937d1" class=""><strong>Volume:</strong></p><p id="1d11874a-58d8-8037-9360-c4a102d868c0" class="">720ml</p></details></li></ul><p id="1d11874a-58d8-8002-9433-e79fe29e90fd" class="">
+</p><h2 id="1d11874a-58d8-8079-b603-d91013c0883f" class="">Sake</h2><ul id="1d11874a-58d8-808a-bb7c-d5368e39068e" class="toggle"><li><details open=""><summary><mark class="highlight-yellow_background"><strong>Hideyoshi Junmai Daiginjo</strong></mark>: An award-winning sake with a refined and elegant taste. </summary><p id="1d11874a-58d8-802e-af20-f6cba8f90f9a" class=""><strong>General Description:</strong></p><p id="1d11874a-58d8-80bb-96d7-f3071e9521c4" class="">Hideyoshi Junmai Daiginjo is a premium sake crafted by Suzuki Shuzoten in Akita Prefecture, Japan. This refined sake is produced using a blend of Yamadanishiki and Akita Sake Komachi rice, polished to 40%, resulting in a delicate and aromatic profile.<a href="https://www.metrowines.com/ontario/p/suzuki-shuzoten-hideyoshi-junmai-daiginjo-720ml-akita?utm_source=chatgpt.com">The Art of Sake+2Metropolitan Wines &amp; Sakes+2Hideyoshi+2</a></p><p id="1d11874a-58d8-80f7-b7e8-e03eb825a27e" class=""><strong>Producer:</strong></p><p id="1d11874a-58d8-8093-a0d5-fd17c62946d1" class="">Suzuki Shuzoten</p><p id="1d11874a-58d8-8016-b488-f501465f4a09" class=""><strong>Region:</strong></p><p id="1d11874a-58d8-80cb-8688-cf3dededac3b" class="">Akita Prefecture, Japan<a href="https://theartofsake.com/products/hideyoshi-junmai-daiginjo?srsltid=AfmBOooOpJqeVaUp6_gkGqYi14WCgI44O8ql3SWOFIS5K2_CPq5uUW0r&amp;utm_source=chatgpt.com">The Art of Sake</a></p><p id="1d11874a-58d8-805f-9af4-f153d2936c38" class=""><strong>Ingredients:</strong></p><ul id="1d11874a-58d8-8054-922f-d8de0c49e02f" class="bulleted-list"><li style="list-style-type:disc">Yamadanishiki Rice<a href="https://www.metrowines.com/ontario/p/suzuki-shuzoten-hideyoshi-junmai-daiginjo-720ml-akita?utm_source=chatgpt.com">Hideyoshi+3Metropolitan Wines &amp; Sakes+31855 The Bottle Shop Pte Ltd+3</a></li></ul><ul id="1d11874a-58d8-8049-8d91-d071a1a6e375" class="bulleted-list"><li style="list-style-type:disc">Akita Sake Komachi Rice<a href="https://www.hideyoshi.co.jp/en/products-list/regular/?utm_source=chatgpt.com">1855 The Bottle Shop Pte Ltd+5Hideyoshi+5Metropolitan Wines &amp; Sakes+5</a></li></ul><p id="1d11874a-58d8-808e-8589-f640bb66445b" class=""><strong>Rice Polishing Ratio:</strong></p><p id="1d11874a-58d8-8005-8da4-fb7dda91f872" class="">40%<a href="https://www.1855thebottleshop.com/products/hideyoshi-junmai-daiginjo-sake-720ml?utm_source=chatgpt.com">Metropolitan Wines &amp; Sakes+31855 The Bottle Shop Pte Ltd+3The Art of Sake+3</a></p><p id="1d11874a-58d8-8033-9b75-e1bb96c425d8" class=""><strong>Alcohol by Volume (ABV):</strong></p><p id="1d11874a-58d8-8059-afda-ca9dbc1f386b" class="">15%<a href="https://theartofsake.com/products/hideyoshi-junmai-daiginjo?srsltid=AfmBOooOpJqeVaUp6_gkGqYi14WCgI44O8ql3SWOFIS5K2_CPq5uUW0r&amp;utm_source=chatgpt.com">The Art of Sake+1The Art of Sake+1</a></p><p id="1d11874a-58d8-8038-b100-cc1058111340" class=""><strong>Volume Options:</strong></p><ul id="1d11874a-58d8-804e-87d7-fb886ef35be3" class="bulleted-list"><li style="list-style-type:disc">720ml</li></ul><ul id="1d11874a-58d8-8089-b982-de16bb27ebad" class="bulleted-list"><li style="list-style-type:disc">1800ml</li></ul></details></li></ul><ul id="1d11874a-58d8-80fb-a3ef-c2651cb227bd" class="toggle"><li><details open=""><summary><mark class="highlight-yellow_background"><strong>Hourai Junmai Ginjo Kaden Tezukuri</strong></mark>: A handcrafted sake offering a harmonious balance of flavors.</summary><p id="1d11874a-58d8-80d7-8fee-eb8a6cc36f18" class=""><strong>General Description:</strong></p><p id="1d11874a-58d8-804f-b358-d38978afa1f4" class="">Hourai Junmai Ginjo Kaden Tezukuri is a premium sake crafted by Watanabe Shuzo in Gifu Prefecture, Japan. The term &quot;Kaden Tezukuri&quot; translates to &quot;handcrafted,&quot; highlighting the artisanal techniques employed in its production. This Junmai Ginjo is made from Hidahomare rice, polished to 55%, resulting in a refined and elegant flavor profile.<a href="https://theartofsake.com/products/hourai-junmai-ginjo-kaden-tezukuri?srsltid=AfmBOoobvtrTL3gKGOI6YwMmYYoFADRM9yxC22ACPn_TsngzPoocj3ne&amp;utm_source=chatgpt.com">1855 The Bottle Shop Pte Ltd+2The Art of Sake+2Wine-Searcher+2</a><a href="https://www.liquorexpress.us/products/hourai-kaden-tezukuri-junmai-ginjo-sake-720ml?srsltid=AfmBOop7CQhAS-8OcJD0ZOhCpfzHOX9n9fNqJ2qw7JkHQIXOO8IlluVF&amp;utm_source=chatgpt.com">liquorexpress.us</a></p><p id="1d11874a-58d8-8069-92a4-c51bd4c291e7" class=""><strong>Producer:</strong></p><p id="1d11874a-58d8-8081-a1eb-cf7b640aa530" class="">Watanabe Shuzo</p><p id="1d11874a-58d8-80e1-b884-de7639a0ea66" class=""><strong>Region:</strong></p><p id="1d11874a-58d8-80f1-83cd-c9291fd90f8d" class="">Gifu Prefecture, Japan<a href="https://theartofsake.com/products/hourai-junmai-ginjo-kaden-tezukuri?srsltid=AfmBOoobvtrTL3gKGOI6YwMmYYoFADRM9yxC22ACPn_TsngzPoocj3ne&amp;utm_source=chatgpt.com">The Art of Sake+11855 The Bottle Shop Pte Ltd+1</a></p><p id="1d11874a-58d8-8080-a9a1-f0c2072c5a63" class=""><strong>Ingredients:</strong></p><ul id="1d11874a-58d8-8079-b8eb-fe7e0405a31c" class="bulleted-list"><li style="list-style-type:disc">Hidahomare Rice<a href="https://theartofsake.com/products/hourai-junmai-ginjo-kaden-tezukuri?srsltid=AfmBOoobvtrTL3gKGOI6YwMmYYoFADRM9yxC22ACPn_TsngzPoocj3ne&amp;utm_source=chatgpt.com">1855 The Bottle Shop Pte Ltd+2The Art of Sake+2Wine-Searcher+2</a></li></ul><p id="1d11874a-58d8-80fb-b0f5-d9a355726f70" class=""><strong>Rice Polishing Ratio:</strong></p><p id="1d11874a-58d8-802b-9477-d46f483f6963" class="">55%<a href="https://www.1855thebottleshop.com/products/hourai-junmai-ginjo-kaden-tezukuri-sake-720ml?utm_source=chatgpt.com">liquorexpress.us+31855 The Bottle Shop Pte Ltd+3The Art of Sake+3</a></p><p id="1d11874a-58d8-805f-b66b-e9440688bda0" class=""><strong>Alcohol by Volume (ABV):</strong></p><p id="1d11874a-58d8-808d-88e1-d7516972506f" class="">15%</p><p id="1d11874a-58d8-80ec-8bd8-fc25361928b1" class=""><strong>Volume Options:</strong></p><ul id="1d11874a-58d8-80fd-89db-c71dc8820752" class="bulleted-list"><li style="list-style-type:disc">720ml</li></ul><ul id="1d11874a-58d8-80d7-ba1b-ca7c467685d7" class="bulleted-list"><li style="list-style-type:disc">1800ml</li></ul></details></li></ul><ul id="1d11874a-58d8-802e-9659-f059b53a3f06" class="toggle"><li><details open=""><summary><mark class="highlight-yellow_background"><strong>Keigetsu Nigori Junmai Daiginjo 50</strong></mark>: A cloudy sake with fruity notes and a smooth texture.</summary><p id="1d11874a-58d8-8004-bc58-cf670f048419" class=""><strong>General Description:</strong></p><p id="1d11874a-58d8-8069-b5da-ec0bcd8d7dc8" class="">Keigetsu Nigori Junmai Daiginjo is a premium unfiltered sake produced by Tosa Brewery Co. in Kochi Prefecture, Japan. This sake is a nigori version of Keigetsu&#x27;s renowned Cel24 Junmai Daiginjo, offering a refreshing and aromatic experience. <a href="https://hedonism.co.uk/product/keigetsu-nigori-junmai-daiginjo?srsltid=AfmBOoquHVL0i17z0HyKoBUv6uQmSnekU4qGRlhMBROjJ5hZD7WPPgXw&amp;utm_source=chatgpt.com">Hedonism Wines+1CaskCartel.com+1</a><a href="https://caskcartel.com/products/keigetsu-nigori-junmai-daiginjo-720ml?utm_source=chatgpt.com">The Art of Sake+2CaskCartel.com+2Hedonism Wines+2</a></p><p id="1d11874a-58d8-8016-bf4e-ce5a92e38ee9" class=""><strong>Producer:</strong></p><p id="1d11874a-58d8-8047-ba4c-da61bc05b164" class="">Tosa Brewery Co.</p><p id="1d11874a-58d8-8037-b923-e1c278e47b39" class=""><strong>Region:</strong></p><p id="1d11874a-58d8-803d-9346-d643b662b9a0" class="">Kochi Prefecture, Japan<a href="https://caskcartel.com/products/keigetsu-nigori-junmai-daiginjo-720ml?utm_source=chatgpt.com">CaskCartel.com</a></p><p id="1d11874a-58d8-80fc-99db-dcbdcf35a493" class=""><strong>Ingredients:</strong></p><ul id="1d11874a-58d8-8088-a4a6-ebc2afefc89d" class="bulleted-list"><li style="list-style-type:disc">Rice</li></ul><ul id="1d11874a-58d8-80fc-ae15-fe12ca8de44c" class="bulleted-list"><li style="list-style-type:disc">Koji mold</li></ul><ul id="1d11874a-58d8-8083-b775-c4c067ef2fbe" class="bulleted-list"><li style="list-style-type:disc">Yeast<a href="https://www.truesake.com/products/keigetsu-junmai-daiginjo-50-nigori?utm_source=chatgpt.com">The Art of Sake+5True Sake+5Hedonism Wines+5</a></li></ul><ul id="1d11874a-58d8-80f2-a230-debbf51f1cce" class="bulleted-list"><li style="list-style-type:disc">Water<a href="https://drinkstore.ie/products/keigetsu-nigori-junmai-daiginjo?srsltid=AfmBOorchvLvw3b_wq38ZIkHCgxCC5H6YDzNjxpn5Bvp2CnM38NfOoFv&amp;utm_source=chatgpt.com">drinkstore.ie</a></li></ul><p id="1d11874a-58d8-8033-b4cf-e677f2663a32" class=""><strong>Rice Polishing Ratio:</strong></p><p id="1d11874a-58d8-8033-bf2b-c16ea19bdd09" class="">50%<a href="https://www.truesake.com/products/keigetsu-junmai-daiginjo-50-nigori?utm_source=chatgpt.com">drinkstore.ie+3True Sake+3CaskCartel.com+3</a></p><p id="1d11874a-58d8-8045-a139-efcf3d738b27" class=""><strong>Alcohol by Volume (ABV):</strong></p><p id="1d11874a-58d8-80ad-92fd-f1f27edb62a4" class="">15%<a href="https://www.truesake.com/products/keigetsu-junmai-daiginjo-50-nigori?utm_source=chatgpt.com">Hedonism Wines+2True Sake+2CaskCartel.com+2</a></p><p id="1d11874a-58d8-80cc-863e-d29e03c881b1" class=""><strong>Volume:</strong></p><p id="1d11874a-58d8-80bb-9a16-c9bf99899d92" class="">720ml</p></details></li></ul><ul id="1d11874a-58d8-80a6-a739-f19ca772f0d9" class="toggle"><li><details open=""><summary><mark class="highlight-yellow_background"><strong>Tomoé Barrel Selection Sémillon 2020</strong></mark><mark class="highlight-yellow_background">:</mark> A unique sake aged in barrels, offering complex flavors. </summary><p id="1d11874a-58d8-80e8-81f6-f13f27db5b26" class=""><strong>General Description:</strong></p><p id="1d11874a-58d8-80e0-a065-f227365160c7" class="">Tomoé Barrel Selection Sémillon 2020 is a distinguished white wine produced by Hiroshima Miyoshi Winery in Hiroshima Prefecture, Japan. Crafted from 100% Sémillon grapes, this wine undergoes barrel aging, imparting a unique depth and complexity to its flavor profile.<a href="https://www.internationalwinechallenge.com/fr/canopy/beverage_details?wid=186937&amp;utm_source=chatgpt.com">Wine-Searcher+6IWC+6IWSC+6</a></p><p id="1d11874a-58d8-8006-930f-f81619179aa7" class=""><strong>Producer:</strong></p><p id="1d11874a-58d8-80b0-b441-ddbabff5c3e4" class="">Hiroshima Miyoshi Winery</p><p id="1d11874a-58d8-803d-9121-d4d5f175e4ae" class=""><strong>Region:</strong></p><p id="1d11874a-58d8-8032-84e1-f733ab8f2fa6" class="">Hiroshima Prefecture, Japan<a href="https://www.wine-searcher.com/find/miyoshi%2Btomoe%2Bbarrel%2Bselect%2Bsemillon%2Bhiroshima%2Bjapan?srsltid=AfmBOooDI7N1Zp5E8fbEScWi23mfbbv1ls5lIBXfoPKeaV-gDImFB7Xt&amp;utm_source=chatgpt.com">Wine-Searcher+1Wine-Searcher+1</a></p><p id="1d11874a-58d8-808b-828a-f553152231e2" class=""><strong>Grape Variety:</strong></p><p id="1d11874a-58d8-8060-9cdd-c4d87e261270" class="">Sémillon</p><p id="1d11874a-58d8-8055-b09d-fc7400375f19" class=""><strong>Alcohol by Volume (ABV):</strong></p><p id="1d11874a-58d8-80fc-9d67-c08674b1f15a" class="">12.5%<a href="https://www.internationalwinechallenge.com/fr/canopy/beverage_details?wid=186937&amp;utm_source=chatgpt.com">IWC+1Club Oenologique+1</a></p><p id="1d11874a-58d8-8040-8ddb-f6dfed3141d7" class=""><strong>Volume:</strong></p><p id="1d11874a-58d8-8067-b657-d65dfbb27e58" class="">750ml</p></details></li></ul><ul id="1d11874a-58d8-8036-80d7-cff2414aafba" class="toggle"><li><details open=""><summary><strong>Dassai 23 Junmai Daiginjo</strong></summary><p id="1d11874a-58d8-802a-a4ee-d9f914d9c24b" class=""><strong>General Description:</strong></p><p id="1d11874a-58d8-8073-9eb2-cc381ddb3077" class="">Dassai 23 is one of Japan&#x27;s most acclaimed sakes, known for its luxurious and refined taste. The rice used is polished to an impressive 23%, resulting in an elegant, delicate sake with a smooth texture and complex flavors.</p><p id="1d11874a-58d8-8022-8677-dc2d64fb14fa" class=""><strong>Producer:</strong></p><p id="1d11874a-58d8-806f-be1a-fde2b91402c2" class="">Asahi Shuzo Co., Ltd.</p><p id="1d11874a-58d8-8065-8275-c132a8977b24" class=""><strong>Region:</strong></p><p id="1d11874a-58d8-80ef-89c8-c5488462edab" class="">Yamaguchi Prefecture, Japan</p><p id="1d11874a-58d8-80b1-9b32-edba5209ee43" class=""><strong>Grape Variety:</strong></p><p id="1d11874a-58d8-8011-a245-d63585c64c6a" class="">Rice (Sake Rice: Yamada Nishiki)</p><p id="1d11874a-58d8-8059-82d7-c80a6199c9c9" class=""><strong>ABV:</strong></p><p id="1d11874a-58d8-80aa-a43c-fddc6aa07f8b" class="">16%</p><p id="1d11874a-58d8-8014-9355-e219ad44d85f" class=""><strong>Volume:</strong></p><p id="1d11874a-58d8-80e3-b028-eea57b6924cc" class="">720ml</p></details></li></ul><p id="1d11874a-58d8-80df-a616-ecc8b7a37888" class="">
+</p><h2 id="1d11874a-58d8-806e-a8af-f7144a8e528c" class="">Spirits</h2><p id="1d11874a-58d8-8066-8f76-ea3a8cd9325f" class="">
+</p><p id="1d11874a-58d8-80af-b75f-fcd49974f117" class="">
+</p><p id="1d11874a-58d8-8043-9026-e0b672e96ac4" class="">
+</p><h2 id="1d11874a-58d8-80d2-91f6-d4328ece96a6" class="">Beer </h2><p id="1d11874a-58d8-8063-8a7d-ff1923af5057" class="">
+</p><p id="1d11874a-58d8-8003-b75c-e8d53e6e1f72" class="">
+</p><p id="1d11874a-58d8-80e5-9801-f380b513e1fb" class="">
+</p><p id="1d11874a-58d8-8061-a8de-e366c82d0af0" class="">
+</p><h2 id="1d11874a-58d8-80f7-9bb8-ed953538932d" class="">Liqueur</h2><p id="1d11874a-58d8-8085-b304-f68049ac522c" class="">
+</p><p id="1d11874a-58d8-80a7-9c30-c1f050b25727" class="">
+</p><p id="1d11874a-58d8-80a7-b8b3-f30915270923" class="">
+</p><h2 id="1d11874a-58d8-80cf-a8e3-e53e77065598" class="">Non Alcohol</h2><p id="1d11874a-58d8-809c-a2aa-c8d6d3dcd4a3" class="">
+</p><p id="1d11874a-58d8-8046-9bea-e2a2bc15e75f" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
