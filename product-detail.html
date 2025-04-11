@@ -3,12 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Detail - Nagatsuka Liquor Store</title>
+    <title>Yamazaki Distiller's Reserve - Nagatsuka Liquor Store</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Lalezar&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Rest of the file remains unchanged -->
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Nagatsuka Liquor Store</h1>
+                </a>
+            </div>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                    <a href="products.html" class="dropbtn">Products <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="products.html#all-products">All Products</a>
+                        <a href="products.html#best-sellers">Best Sellers</a>
+                        <a href="products.html#whisky">Whisky</a>
+                        <a href="products.html#wine">Wine</a>
+                        <a href="products.html#sparkling-wine">Sparkling Wine</a>
+                        <a href="products.html#shochu">Shochu</a>
+                        <a href="products.html#sake">Sake</a>
+                        <a href="products.html#spirits">Spirits</a>
+                        <a href="products.html#beer">Beer</a>
+                        <a href="products.html#liqueur">Liqueur</a>
+                        <a href="products.html#non-alcohol">Non Alcohol</a>
+                        <a href="products.html#food">Food & Snacks</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="about.html" class="dropbtn">About <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="about.html">Our Story</a>
+                        <a href="about.html#history">History</a>
+                        <a href="about.html#values">Values</a>
+                        <a href="about.html#events">Events</a>
+                    </div>
+                </div>
+                <a href="blog.html">Blog</a>
+                <div class="nav-actions">
+                    <div class="dropdown">
+                        <button class="dropbtn"><i class="fas fa-globe"></i></button>
+                        <div class="dropdown-content">
+                            <a href="#">English</a>
+                            <a href="#">日本語</a>
+                        </div>
+                    </div>
+                    <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                    <a href="login.html" class="login-btn">Login</a>
+                    <a href="signup.html" class="signup-btn">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+        <div class="product-detail-container">
+            <!-- Product Gallery -->
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img src="images/Yamazaki Distiller's ReserveOptimised 2.jpg" alt="Yamazaki Distiller's Reserve">
+                </div>
+                <div class="thumbnail-grid">
+                    <img src="images/Yamazaki Distiller's ReserveOptimised 2.jpg" alt="Yamazaki Distiller's Reserve - Front View" class="thumbnail">
+                    <img src="images/Yamazaki Distiller's ReserveOptimised 2.jpg" alt="Yamazaki Distiller's Reserve - Side View" class="thumbnail">
+                    <img src="images/Yamazaki Distiller's ReserveOptimised 2.jpg" alt="Yamazaki Distiller's Reserve - Label Detail" class="thumbnail">
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="product-info">
+                <h1>Yamazaki Distiller's Reserve</h1>
+                
+                <div class="product-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>(4.5/5)</span>
+                </div>
+
+                <div class="product-price">¥8,500</div>
+
+                <div class="product-description">
+                    <p>The Yamazaki Distiller's Reserve is a beautifully balanced single malt whisky that showcases the signature style of Japan's oldest distillery. This expression combines carefully selected malt whiskies aged in American oak, Spanish oak, and Japanese Mizunara oak casks, creating a complex and harmonious flavor profile.</p>
+                </div>
+
+                <div class="product-details">
+                    <ul>
+                        <li><strong>Brand:</strong> Suntory</li>
+                        <li><strong>Category:</strong> Japanese Whisky</li>
+                        <li><strong>Region:</strong> Yamazaki, Japan</li>
+                        <li><strong>ABV:</strong> 43%</li>
+                        <li><strong>Volume:</strong> 700ml</li>
+                        <li><strong>Aging:</strong> Multiple cask types</li>
+                        <li><strong>Color:</strong> Golden amber</li>
+                        <li><strong>Nose:</strong> Raspberry, white peach, and Mizunara oak spice</li>
+                        <li><strong>Palate:</strong> Coconut, cranberry, and cinnamon</li>
+                        <li><strong>Finish:</strong> Sweet ginger, Japanese oak, and subtle smoke</li>
+                    </ul>
+                </div>
+
+                <div class="product-actions">
+                    <div class="stock-info">
+                        <i class="fas fa-check-circle"></i>
+                        <span>In Stock</span>
+                    </div>
+                    <button class="favorite-btn"><i class="fas fa-heart"></i> Add to Favorites</button>
+                </div>
+
+                <div class="product-features">
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>Made at Japan's first and oldest malt whisky distillery</li>
+                        <li>Uses pure water from the surrounding mountains</li>
+                        <li>Combines whiskies aged in three types of casks</li>
+                        <li>Perfect balance of fruit and oak flavors</li>
+                        <li>Great for both sipping and cocktails</li>
+                    </ul>
+                </div>
+
+                <div class="product-recommendations">
+                    <h3>Recommended Food Pairings</h3>
+                    <ul>
+                        <li>Sushi and sashimi</li>
+                        <li>Grilled meats</li>
+                        <li>Dark chocolate</li>
+                        <li>Japanese desserts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Products -->
+        <div class="related-products">
+            <h2>You May Also Like</h2>
+            <div class="product-grid">
+                <div class="product-card" data-category="whisky">
+                    <a href="product-detail.html">
+                        <img src="images/Yamazaki Distiller's ReserveOptimised 2.jpg" alt="Yamazaki Distiller's Reserve" class="product-image">
+                        <div class="product-content">
+                            <span class="product-category">Japanese Whisky</span>
+                            <h3 class="product-title">Yamazaki Distiller's Reserve</h3>
+                            <p class="product-description">A beautifully balanced single malt whisky from Japan's oldest distillery.</p>
+                            <div class="product-price">¥8,500</div>
+                        </div>
+                    </a>
+                    <div class="product-actions">
+                        <a href="product-detail.html" class="view-product">View Product</a>
+                        <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="whisky">
+                    <a href="product-detail.html">
+                        <img src="images/Hakushu Distiller's ReserveOptimised.jpg" alt="Hakushu Distiller's Reserve" class="product-image">
+                        <div class="product-content">
+                            <span class="product-category">Japanese Whisky</span>
+                            <h3 class="product-title">Hakushu Distiller's Reserve</h3>
+                            <p class="product-description">A fresh and vibrant single malt from Suntory's mountain distillery.</p>
+                            <div class="product-price">¥7,800</div>
+                        </div>
+                    </a>
+                    <div class="product-actions">
+                        <a href="product-detail.html" class="view-product">View Product</a>
+                        <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="whisky">
+                    <a href="product-detail.html">
+                        <img src="images/Hibiki Japanese HarmonyOptimised.jpg" alt="Hibiki Japanese Harmony" class="product-image">
+                        <div class="product-content">
+                            <span class="product-category">Japanese Whisky</span>
+                            <h3 class="product-title">Hibiki Japanese Harmony</h3>
+                            <p class="product-description">A harmonious blend of malt and grain whiskies from Suntory's distilleries.</p>
+                            <div class="product-price">¥9,200</div>
+                        </div>
+                    </a>
+                    <div class="product-actions">
+                        <a href="product-detail.html" class="view-product">View Product</a>
+                        <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your trusted source for premium Japanese spirits since 1995.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@nagatsukaliquor.com</p>
+                <p>Phone: +81 75-123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nagatsuka Liquor Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
 </body>
 </html> 

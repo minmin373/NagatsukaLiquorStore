@@ -173,13 +173,12 @@
                     <button class="toggle-filter"><i class="fas fa-chevron-down"></i></button>
                 </div>
                 <div class="filter-content">
-                    <div class="price-range">
-                        <div class="price-slider-container">
-                            <input type="range" class="price-slider" min="0" max="100000" step="1000" value="50000">
-                            <div class="price-values">
-                                <span class="min-price">¥0</span>
-                                <span class="max-price">¥100,000</span>
-                            </div>
+                    <div class="price-slider-container">
+                        <div class="price-range-display">Price Range: ¥0 - ¥50,000</div>
+                        <div class="price-slider-wrapper">
+                            <div class="price-slider-track"></div>
+                            <input type="range" class="price-slider min-price" min="0" max="100000" step="1000" value="0">
+                            <input type="range" class="price-slider max-price" min="0" max="100000" step="1000" value="50000">
                         </div>
                     </div>
                 </div>
@@ -246,7 +245,7 @@
                     <h3>Sort By</h3>
                     <button class="toggle-sort"><i class="fas fa-chevron-down"></i></button>
                 </div>
-                <div class="sort-content">
+                <div class="sort-content" style="display: none;">
                     <div class="radio-group">
                         <label class="radio-item">
                             <input type="radio" name="sort" value="featured" checked>
@@ -286,30 +285,30 @@
             
             <div class="product-grid">
                 <!-- Sake Products -->
-                <div class="product-card">
-                    <a href="product-dassai23.html">
+                <div class="product-card" data-category="whisky">
+                    <a href="product-detail.html">
                         <img src="images/Yamazaki Distiller's ReserveOptimised 2.jpg" alt="Yamazaki Distiller's Reserve" class="product-image">
                         <div class="product-content">
-                            <div class="product-category">Whisky</div>
+                            <span class="product-category">Whisky</span>
                             <h3 class="product-title">Yamazaki Distiller's Reserve</h3>
-                            <p class="product-description">A single malt whisky with a delicate balance of fruit and Mizunara (Japanese oak) flavors.</p>
-                            <div class="product-price">¥12,000</div>
-                            <div class="product-actions">
-                                <button class="view-product">View Product</button>
-                                <button class="favorite-btn"><i class="fas fa-heart"></i></button>
-                            </div>
+                            <p class="product-description">A beautifully balanced Japanese single malt whisky from Suntory's oldest distillery.</p>
+                            <div class="product-price">¥8,500</div>
                         </div>
                     </a>
+                    <div class="product-actions">
+                        <a href="product-detail.html" class="view-product">View Details</a>
+                        <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                    </div>
                 </div>
                 <!-- Whisky Products -->
                 <div class="product-card">
-                    <a href="product-yamazaki12.html">
+                    <a href="product-nikka-barrel.html">
                         <img src="images/Nikka From The Barrel optimised.jpg" alt="Nikka From The Barrel" class="product-image">
                         <div class="product-content">
                             <div class="product-category">Whisky</div>
                             <h3 class="product-title">Nikka From The Barrel</h3>
                             <p class="product-description">A robust blend offering deep flavors and a high proof, reflecting Nikka's craftsmanship.</p>
-                            <div class="product-price">¥25,000</div>
+                            <div class="product-price">¥6,800</div>
                             <div class="product-actions">
                                 <button class="view-product">View Product</button>
                                 <button class="favorite-btn"><i class="fas fa-heart"></i></button>
@@ -319,12 +318,12 @@
                 </div>
                 <!-- Wine Products -->
                 <div class="product-card">
-                    <a href="product-margaux.html">
+                    <a href="product-taketsuru.html">
                         <img src="images/Taketsuru Pure Malt 2020 Optimised.jpg" alt="Taketsuru Pure Malt 2020" class="product-image">
                         <div class="product-content">
                             <div class="product-category">Whisky</div>
                             <h3 class="product-title">Taketsuru Pure Malt 2020</h3>
-                            <p class="product-description">A tribute to Masataka Taketsuru, featuring a blend of malts with rich and balanced notes. </p>
+                            <p class="product-description">A premium blended malt whisky that pays homage to Masataka Taketsuru, the father of Japanese whisky.</p>
                             <div class="product-price">¥85,000</div>
                             <div class="product-actions">
                                 <button class="view-product">View Product</button>
@@ -334,12 +333,12 @@
                     </a>
                 </div>
                 <div class="product-card">
-                    <a href="product-juyondai.html">
+                    <a href="product-chita.html">
                         <img src="images/The Chita Single Grain Optimised.jpg" alt="The Chita Single Grain" class="product-image">
                         <div class="product-content">
                             <div class="product-category">Whisky</div>
                             <h3 class="product-title">The Chita Single Grain</h3>
-                            <p class="product-description">A smooth and light whisky from the Chita distillery, known for its versatility. </p>
+                            <p class="product-description">A smooth and light whisky from the Chita distillery, known for its versatility.</p>
                             <div class="product-price">¥18,500</div>
                             <div class="product-actions">
                                 <button class="view-product">View Product</button>
@@ -349,7 +348,7 @@
                     </a>
                 </div>
                 <div class="product-card">
-                    <a href="product-hibiki21.html">
+                    <a href="product-kujira.html">
                         <img src="images/Kujira Inari optimised.jpg" alt="Kujira Inari" class="product-image">
                         <div class="product-content">
                             <div class="product-category">Whisky</div>
@@ -383,7 +382,7 @@
                     </a>
                 </div>
                 <div class="product-card">
-                    <a href="product-kubota.html">
+                    <a href="product-sapporo-syrah.html">
                         <img src="images/Sapporo Breweries Grande Polaire Azuminoikeda Syrah 2018 Optimised.jpg" alt="Sapporo Breweries Grande Polaire Azuminoikeda Syrah 2018" class="product-image">
                         <div class="product-content">
                             <div class="product-category">Wine</div>
@@ -398,7 +397,7 @@
                     </a>
                 </div>
                 <div class="product-card">
-                    <a href="product-hakkaisan.html">
+                    <a href="product-chateau-mercian.html">
                         <img src="images/Château Mercian Hokushin Chardonnay 2022 Optimised.jpg" alt="Château Mercian Hokushin Chardonnay 2022" class="product-image">
                         <div class="product-content">
                             <div class="product-category">Wine</div>
@@ -413,7 +412,7 @@
                     </a>
                 </div>
                 <div class="product-card">
-                    <a href="product-taketsuru.html">
+                    <a href="product-grace-akeno.html">
                         <img src="images/Grace Akeno Red 2019 Optimised.jpg" alt="Grace Akeno Red 2019" class="product-image">
                         <div class="product-content">
                             <div class="product-category">Wine</div>
@@ -443,19 +442,19 @@
                     </a>
                 </div>
                 <div class="product-card">
-                    <a href="product-drc.html">
-                        <img src="images/Nikaido Oita Mugi Shochu Optimised.jpg" alt="Nikaido Oita Mugi Shochu" class="product-image">
+                    <a href="product-nikaido-shochu.html">
+                        <img src="images/Nikaido Oita Mugi Shochu Optimised.jpg" alt="Nikaido Oita Mugi Shochu" class="product-image" onerror="this.src='images/placeholder.jpg'">
                         <div class="product-content">
                             <div class="product-category">Shochu</div>
                             <h3 class="product-title">Nikaido Oita Mugi Shochu</h3>
                             <p class="product-description">A barley shochu offering a smooth and mellow taste.</p>
                             <div class="product-price">¥450,000</div>
-                            <div class="product-actions">
-                                <button class="view-product">View Product</button>
-                                <button class="favorite-btn"><i class="fas fa-heart"></i></button>
-                            </div>
                         </div>
                     </a>
+                    <div class="product-actions">
+                        <button class="view-product">View Product</button>
+                        <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                    </div>
                 </div>
                 <div class="product-card">
                     <a href="product-petrus.html">
@@ -473,7 +472,7 @@
                     </a>
                 </div>
                 <div class="product-card">
-                    <a href="product-domperignon.html">
+                    <a href="product-mizu-saga.html">
                         <img src="images/Mizu Saga Barley Shochu Optimised.jpg" alt="Mizu Saga Barley Shochu" class="product-image">
                         <div class="product-content">
                             <div class="product-category">Shochu</div>
@@ -488,7 +487,7 @@
                     </a>
                 </div>
                 <div class="product-card">
-                    <a href="product-krug.html">
+                    <a href="product-hideyoshi.html">
                         <img src="images/Hideyoshi Junmai Daiginjo Optimised.jpg" alt="Hideyoshi Junmai Daiginjo" class="product-image">
                         <div class="product-content">
                             <div class="product-category">Sake</div>
@@ -503,7 +502,7 @@
                     </a>
                 </div>
                 <div class="product-card">
-                    <a href="product-morinokaze.html">
+                    <a href="product-hourai.html">
                         <img src="images/Hourai Junmai Ginjo Kaden Tezukuri Optimised.jpg" alt="Hourai Junmai Ginjo Kaden Tezukuri" class="product-image">
                         <div class="product-content">
                             <div class="product-category">Sake</div>
@@ -518,7 +517,7 @@
                     </a>
                 </div>
                 <div class="product-card">
-                    <a href="product-kuroki.html">
+                    <a href="product-keigetsu.html">
                         <img src="images/Keigetsu Nigori Junmai Daiginjo 50 Optimised.jpg" alt="Keigetsu Nigori Junmai Daiginjo 50" class="product-image">
                         <div class="product-content">
                             <div class="product-category">Sake</div>
@@ -533,7 +532,7 @@
                     </a>
                 </div>
                 <div class="product-card">
-                    <a href="product-hibiki17.html">
+                    <a href="product-tomoe.html">
                         <img src="images/Tomoé Barrel Selection Sémillon 2020 Optimised.jpg" alt="Tomoé Barrel Selection Sémillon 2020" class="product-image">
                         <div class="product-content">
                             <div class="product-category">Sake</div>
@@ -548,7 +547,7 @@
                     </a>
                 </div>
                 <div class="product-card">
-                    <a href="product-nikka-gin.html">
+                    <a href="product-dassai23.html">
                         <img src="images/Dassai 23 Junmai Daiginjo Optimised.jpg" alt="Dassai 23 Junmai Daiginjo" class="product-image">
                         <div class="product-content">
                             <div class="product-category">Sake</div>
@@ -611,5 +610,102 @@
     </button>
 
     <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkboxes = document.querySelectorAll('input[name="category"]');
+            const productCards = document.querySelectorAll('.product-card');
+            const filterHeaders = document.querySelectorAll('.filter-header');
+
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', filterProducts);
+            });
+
+            filterHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    content.style.display = content.style.display === 'none' ? 'block' : 'none';
+                });
+            });
+
+            // Price Range Filter
+            const minPriceSlider = document.querySelector('.min-price');
+            const maxPriceSlider = document.querySelector('.max-price');
+            const priceDisplay = document.querySelector('.price-range-display');
+            const priceTrack = document.querySelector('.price-slider-track');
+
+            function updatePriceFilter() {
+                const minPrice = parseInt(minPriceSlider.value);
+                const maxPrice = parseInt(maxPriceSlider.value);
+                
+                // Ensure min price doesn't exceed max price
+                if (minPrice > maxPrice) {
+                    minPriceSlider.value = maxPrice;
+                }
+                
+                // Ensure max price doesn't go below min price
+                if (maxPrice < minPrice) {
+                    maxPriceSlider.value = minPrice;
+                }
+                
+                // Update the track background
+                const minPercent = (minPrice / 100000) * 100;
+                const maxPercent = (maxPrice / 100000) * 100;
+                priceTrack.style.background = `linear-gradient(to right, 
+                    #ddd ${minPercent}%, 
+                    #8B4513 ${minPercent}%, 
+                    #8B4513 ${maxPercent}%, 
+                    #ddd ${maxPercent}%
+                )`;
+                
+                priceDisplay.textContent = `Price Range: ¥${minPrice.toLocaleString()} - ¥${maxPrice.toLocaleString()}`;
+                
+                productCards.forEach(card => {
+                    const priceElement = card.querySelector('.product-price');
+                    if (priceElement) {
+                        const price = parseInt(priceElement.textContent.replace(/[^0-9]/g, ''));
+                        if (price >= minPrice && price <= maxPrice) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+            }
+
+            minPriceSlider.addEventListener('input', updatePriceFilter);
+            maxPriceSlider.addEventListener('input', updatePriceFilter);
+
+            // Initialize the price track
+            updatePriceFilter();
+
+            // Update filterProducts function to include price range
+            function filterProducts() {
+                const selectedCategories = Array.from(document.querySelectorAll('.category-checkbox:checked'))
+                    .map(checkbox => checkbox.value);
+                const minPrice = parseInt(minPriceSlider.value);
+                const maxPrice = parseInt(maxPriceSlider.value);
+                
+                productCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    const priceElement = card.querySelector('.product-price');
+                    const price = priceElement ? parseInt(priceElement.textContent.replace(/[^0-9]/g, '')) : 0;
+                    
+                    const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(category);
+                    const matchesPrice = price >= minPrice && price <= maxPrice;
+                    
+                    if (matchesCategory && matchesPrice) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+        });
+
+        document.querySelector('.sort-header').addEventListener('click', function() {
+            const sortContent = document.querySelector('.sort-content');
+            sortContent.style.display = sortContent.style.display === 'none' ? 'block' : 'none';
+        });
+    </script>
 </body>
 </html> 
