@@ -387,24 +387,27 @@ function initializeFAQ() {
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
         const answer = item.querySelector('.faq-answer');
-        const icon = question.querySelector('i');
         
-        // Add click event listener to the question
-        question.addEventListener('click', function() {
-            // Toggle the current item
-            const isActive = item.classList.contains('active');
-            
-            if (isActive) {
-                // Close the current item
-                item.classList.remove('active');
-                answer.style.maxHeight = '0';
-                icon.style.transform = 'rotate(0deg)';
-            } else {
-                // Open the current item
+        // Initially hide all answers
+        answer.style.display = 'none';
+        
+        question.addEventListener('click', () => {
+            // Toggle the current answer
+            if (answer.style.display === 'none') {
+                answer.style.display = 'block';
                 item.classList.add('active');
-                answer.style.maxHeight = answer.scrollHeight + 'px';
-                icon.style.transform = 'rotate(180deg)';
+            } else {
+                answer.style.display = 'none';
+                item.classList.remove('active');
             }
+            
+            // Close other answers
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.querySelector('.faq-answer').style.display = 'none';
+                    otherItem.classList.remove('active');
+                }
+            });
         });
     });
 }
@@ -442,56 +445,5 @@ document.addEventListener('DOMContentLoaded', function() {
             top: 0,
             behavior: 'smooth'
         });
-    });
-});
-
-// Hamburger Menu Functionality
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburgerBtn = document.querySelector('.hamburger-menu');
-    const navLinks = document.querySelector('.nav-links');
-    const dropdowns = document.querySelectorAll('.dropdown');
-
-    // Toggle menu on hamburger click
-    if (hamburgerBtn && navLinks) {
-        hamburgerBtn.addEventListener('click', (e) => {
-            e.stopPropagation(); // Prevent event from bubbling
-            hamburgerBtn.classList.toggle('active');
-            navLinks.classList.toggle('active');
-            document.body.classList.toggle('menu-open');
-        });
-    }
-
-    // Handle dropdowns
-    dropdowns.forEach(dropdown => {
-        const dropdownBtn = dropdown.querySelector('.dropbtn');
-        const dropdownContent = dropdown.querySelector('.dropdown-content');
-
-        if (dropdownBtn && dropdownContent) {
-            dropdownBtn.addEventListener('click', (e) => {
-                if (window.innerWidth <= 768) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    // Close other dropdowns
-                    dropdowns.forEach(other => {
-                        if (other !== dropdown && other.classList.contains('active')) {
-                            other.classList.remove('active');
-                        }
-                    });
-                    
-                    dropdown.classList.toggle('active');
-                }
-            });
-        }
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!navLinks.contains(e.target) && !hamburgerBtn.contains(e.target)) {
-            hamburgerBtn.classList.remove('active');
-            navLinks.classList.remove('active');
-            document.body.classList.remove('menu-open');
-            dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
-        }
     });
 });
