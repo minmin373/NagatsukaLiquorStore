@@ -14,6 +14,7 @@
         <div class="nav-container">
             <div class="logo">
                 <a href="index.html">
+                    <img src="images/Logo Colour.png" alt="Nagatsuka Liquor Store Logo" class="nav-logo">
                     <h1>Nagatsuka Liquor Store</h1>
                 </a>
             </div>
@@ -40,26 +41,29 @@
                     <a href="about.html" class="dropbtn">About <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
                         <a href="about.html">Our Story</a>
-                        <a href="about.html#history">History</a>
                         <a href="about.html#values">Values</a>
                         <a href="about.html#events">Events</a>
                     </div>
                 </div>
                 <a href="blog.html">Blog</a>
                 <div class="dropdown">
-                    <a href="contact.html" class="dropbtn">Contact</a>
+                    <a href="contact.html" class="dropbtn">Contact <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="contact.html">Contact Us</a>
+                        <a href="contact.html#faq">FAQ</a>
+                    </div>
                 </div>
                 <div class="nav-actions">
                     <div class="dropdown">
                         <button class="dropbtn"><i class="fas fa-globe"></i></button>
                         <div class="dropdown-content">
-                            <a href="favorites.html">English</a>
-                            <a href="favorites-jp.html">日本語</a>
+                            <a href="index.html">English</a>
+                            <a href="index-jp.html">日本語</a>
                         </div>
                     </div>
-                    <a href="favorites.html" class="favorite-btn"><i class="fas fa-heart"></i></a>
-                    <a href="login.html" class="login-btn" style="background: none; border: 1px solid var(--forest-green); color: var(--forest-green);">Login</a>
-                    <a href="signup.html" class="signup-btn" style="background-color: var(--forest-green); border: none; color: var(--white);">Sign Up</a>
+                    <a href="favorites.html" class="favorite-btn" style="color: var(--forest-green);"><i class="fas fa-heart"></i></a>
+                    <a href="login.html" class="login-btn">Login</a>
+                    <a href="signup.html" class="signup-btn">Sign Up</a>
                 </div>
             </div>
         </div>
@@ -82,55 +86,56 @@
                 <a href="products.html" class="browse-btn">Browse Products</a>
             </div>
 
-            <!-- Favorites Grid (will be populated when items are added) -->
+            <!-- Favorites Grid (will be populated dynamically) -->
             <div class="favorites-grid">
-                <!-- Example Favorite Item -->
-                <div class="favorite-item">
-                    <div class="favorite-image">
-                        <img src="images/sake1.jpg" alt="Dassai 23">
-                        <button class="remove-favorite"><i class="fas fa-times"></i></button>
-                    </div>
-                    <div class="favorite-details">
-                        <h3>Dassai 23</h3>
-                        <p class="category">Sake</p>
-                        <p class="price">¥12,800</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                </div>
+                <!-- Items will be added here by JavaScript -->
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
+    <footer class="footer">
+        <div class="footer-container">
             <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Address: [Store Address]</p>
-                <p>Phone: [Phone Number]</p>
-                <p>Email: [Email]</p>
-            </div>
-            <div class="footer-section">
-                <h3>Follow Us</h3>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                </div>
+                <h3>Nagatsuka Liquor Store</h3>
+                <p>Your trusted source for premium Japanese spirits and beverages.</p>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="products.html">Products</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="about.html">About Us</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 5 Chome-5-1 Showacho, Akishima, Tokyo 196-0015, Japan</p>
+                <p><i class="fas fa-clock"></i> Monday to Saturday 10:00-20:00</p>
+                <p><i class="fas fa-clock"></i> Sunday 10:00-19:00</p>
+                <p><i class="fas fa-clock"></i> Monday Closed</p>
+                <p><i class="fas fa-phone"></i> +81 42 541 0128</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/shinichi_nagatsuka.saketen/"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Nagatsuka Liquor Store. All rights reserved.</p>
+            <p>&copy; 2025 Nagatsuka Liquor Store. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>

@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Lalezar&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/logo brown.png">
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -16,6 +17,7 @@
         <div class="nav-container">
             <div class="logo">
                 <a href="index.html">
+                    <img src="images/Logo Colour.png" alt="Nagatsuka Liquor Store Logo" class="nav-logo">
                     <h1>Nagatsuka Liquor Store</h1>
                 </a>
             </div>
@@ -25,7 +27,7 @@
                 <span></span>
             </div>
             <div class="nav-links">
-                <a href="index.html">Home</a>
+                <a href="index.html" style="color: var(--forest-green); font-weight: bold;">Home</a>
                 <div class="dropdown">
                     <a href="products.html" class="dropbtn">Products <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
@@ -55,8 +57,8 @@
                 <div class="dropdown">
                     <a href="contact.html" class="dropbtn">Contact <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
-                        <a href="contact.html">Location</a>
-                        <a href="contact.html#contact-form">Contact Form</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="contact.html#faq">FAQ</a>
                     </div>
                 </div>
                 <div class="nav-actions">
@@ -123,80 +125,60 @@
                     <i class="fas fa-wine-bottle"></i>
                 </div>
                 <h3>Sake</h3>
-                <p>Premium Japanese rice wine</p>
-                <span class="category-count">50+ Products</span>
             </a>
             <a href="products.html#whisky" class="category-card">
                 <div class="category-icon">
                     <i class="fas fa-glass-whiskey"></i>
                 </div>
                 <h3>Whisky</h3>
-                <p>Japanese & International</p>
-                <span class="category-count">30+ Products</span>
             </a>
             <a href="products.html#wine" class="category-card">
                 <div class="category-icon">
                     <i class="fas fa-wine-glass"></i>
                 </div>
                 <h3>Wine</h3>
-                <p>Fine wines from around the world</p>
-                <span class="category-count">100+ Products</span>
             </a>
             <a href="products.html#sparkling-wine" class="category-card">
                 <div class="category-icon">
                     <i class="fas fa-glass-cheers"></i>
                 </div>
                 <h3>Sparkling Wine</h3>
-                <p>Champagne & sparkling varieties</p>
-                <span class="category-count">25+ Products</span>
             </a>
             <a href="products.html#beer" class="category-card">
                 <div class="category-icon">
                     <i class="fas fa-beer"></i>
                 </div>
                 <h3>Beer</h3>
-                <p>Craft & Premium beers</p>
-                <span class="category-count">40+ Products</span>
             </a>
             <a href="products.html#spirits" class="category-card">
                 <div class="category-icon">
                     <i class="fas fa-glass-martini-alt"></i>
                 </div>
                 <h3>Spirits</h3>
-                <p>Premium spirits collection</p>
-                <span class="category-count">60+ Products</span>
             </a>
             <a href="products.html#shochu" class="category-card">
                 <div class="category-icon">
                     <i class="fas fa-glass-martini"></i>
                 </div>
                 <h3>Shochu</h3>
-                <p>Traditional Japanese spirits</p>
-                <span class="category-count">25+ Products</span>
             </a>
-            <a href="products.html#non-alcohol" class="category-card">
+            <a href="products.html?category=non-alcohol" class="category-card">
                 <div class="category-icon">
-                    <i class="fas fa-glass-water"></i>
+                    <i class="fas fa-beer"></i>
                 </div>
                 <h3>Non-Alcohol</h3>
-                <p>Non-alcoholic beverages</p>
-                <span class="category-count">20+ Products</span>
             </a>
             <a href="products.html#food" class="category-card">
                 <div class="category-icon">
                     <i class="fas fa-utensils"></i>
                 </div>
                 <h3>Food & Snacks</h3>
-                <p>Complements for your drinks</p>
-                <span class="category-count">35+ Products</span>
             </a>
             <div class="category-card">
                 <div class="category-icon">
                     <i class="fas fa-glass-martini-alt"></i>
                 </div>
                 <h3>Liqueur</h3>
-                <p>Sweet and flavorful spirits</p>
-                <span class="category-count">8 items</span>
             </div>
         </div>
     </section>
@@ -207,10 +189,10 @@
         <div class="product-grid">
             <div class="product-card">
                 <a href="product-dassai23.html">
-                    <img src="dassai 23.png" alt="Dassai 23" class="product-image">
+                    <img src="images/Dassai 23 Junmai Daiginjo Optimised.jpg" alt="Dassai 23 Junmai Daiginjo" class="product-image">
                     <div class="product-content">
                         <div class="product-category">Sake</div>
-                        <h3 class="product-title">Dassai 23</h3>
+                        <h3 class="product-title">Dassai 23 Junmai Daiginjo</h3>
                         <p class="product-description">Premium Junmai Daiginjo sake with a refined, elegant taste.</p>
                         <div class="product-price">¥12,000</div>
                         <div class="product-actions">
@@ -221,28 +203,13 @@
                 </a>
             </div>
             <div class="product-card">
-                <a href="product-yamazaki12.html">
-                    <img src="images/yamazaki-12-year-old-japanese-whisky.jpg" alt="Yamazaki 12 Years" class="product-image">
-                    <div class="product-content">
-                        <div class="product-category">Whisky</div>
-                        <h3 class="product-title">Yamazaki 12 Years</h3>
-                        <p class="product-description">Single malt whisky with notes of dried fruit and spices.</p>
-                        <div class="product-price">¥25,000</div>
-                        <div class="product-actions">
-                            <button class="view-product">View Product</button>
-                            <button class="favorite-btn"><i class="fas fa-heart"></i></button>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="product-card">
-                <a href="product-morinokaze.html">
-                    <img src="images/morinokaze.jfif" alt="Mori no Kaze" class="product-image">
+                <a href="product-nakanaka.html">
+                    <img src="images/Naka Naka Barley Shochu Optimised.jpg" alt="Naka Naka Barley Shochu" class="product-image">
                     <div class="product-content">
                         <div class="product-category">Shochu</div>
-                        <h3 class="product-title">Mori no Kaze</h3>
-                        <p class="product-description">Premium barley shochu with a smooth, clean finish.</p>
-                        <div class="product-price">¥8,000</div>
+                        <h3 class="product-title">Naka Naka Barley Shochu</h3>
+                        <p class="product-description">A premium barley shochu with a smooth, balanced flavor.</p>
+                        <div class="product-price">¥3,500</div>
                         <div class="product-actions">
                             <button class="view-product">View Product</button>
                             <button class="favorite-btn"><i class="fas fa-heart"></i></button>
@@ -251,13 +218,28 @@
                 </a>
             </div>
             <div class="product-card">
-                <a href="product-wine.html">
-                    <img src="images/chateau margaux 2015.png" alt="Château Margaux 2015" class="product-image">
+                <a href="product-taketsuru.html">
+                    <img src="images/Taketsuru Pure Malt 2020 Optimised.jpg" alt="Taketsuru Pure Malt 2020" class="product-image">
+                    <div class="product-content">
+                        <div class="product-category">Whisky</div>
+                        <h3 class="product-title">Taketsuru Pure Malt 2020</h3>
+                        <p class="product-description">A masterful blend of malts with rich, balanced notes.</p>
+                        <div class="product-price">¥15,000</div>
+                        <div class="product-actions">
+                            <button class="view-product">View Product</button>
+                            <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="product-card">
+                <a href="product-chateau-mercian.html">
+                    <img src="images/Château Mercian Hokushin Chardonnay 2022 Optimised.jpg" alt="Château Mercian Hokushin Chardonnay 2022" class="product-image">
                     <div class="product-content">
                         <div class="product-category">Wine</div>
-                        <h3 class="product-title">Château Margaux 2015</h3>
-                        <p class="product-description">Elegant Bordeaux wine with complex flavors and a long finish.</p>
-                        <div class="product-price">¥45,000</div>
+                        <h3 class="product-title">Château Mercian Hokushin Chardonnay 2022</h3>
+                        <p class="product-description">An elegant Chardonnay showcasing Hokushin's terroir.</p>
+                        <div class="product-price">¥5,500</div>
                         <div class="product-actions">
                             <button class="view-product">View Product</button>
                             <button class="favorite-btn"><i class="fas fa-heart"></i></button>
@@ -306,7 +288,7 @@
             </div>
             <div class="event-card">
                 <div class="event-image">
-                    <img src="images/winetasting image.png" alt="Wine & Food Pairing Workshop">
+                    <img src="images/winetasting image Optimised.jpg" alt="Wine & Food Pairing Workshop">
                     <div class="event-date">
                         <span class="day">22</span>
                         <span class="month">Mar</span>
@@ -326,7 +308,7 @@
             </div>
             <div class="event-card">
                 <div class="event-image">
-                    <img src="images/whisky.png" alt="Japanese Whisky Tasting">
+                    <img src="images/whisky optimised.jpg" alt="Japanese Whisky Tasting">
                     <div class="event-date">
                         <span class="day">29</span>
                         <span class="month">Mar</span>
@@ -419,10 +401,72 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq">
+    <section class="faq" id="faq">
         <h2>Frequently Asked Questions</h2>
         <div class="faq-container">
-            <!-- FAQ items will be added here -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What are your store hours?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Our store is open from 10:00 AM to 8:00 PM, Monday through Saturday. We are closed on Sundays and national holidays.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Do you offer delivery services?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we offer delivery services within Tokyo. Delivery fees vary based on location and order amount. Free delivery is available for orders over ¥10,000.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Can I return or exchange products?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We accept returns and exchanges within 7 days of purchase, provided the product is unopened and in its original packaging. Please bring your receipt for any returns or exchanges.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Do you offer gift wrapping services?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we offer complimentary gift wrapping services for all purchases. We have a variety of wrapping paper and ribbon options available.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How can I track my order?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Once your order is shipped, you will receive a tracking number via email. You can use this number to track your package on our delivery partner's website.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Do you offer international shipping?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we offer international shipping to select countries. Shipping costs and delivery times vary depending on the destination. Please contact us for specific details about shipping to your country.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Can I pre-order limited edition products?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we accept pre-orders for limited edition products. Please contact us in advance to secure your order. A deposit may be required for certain high-value items.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -461,7 +505,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Nagatsuka Liquor Store. All rights reserved.</p>
+            <p>&copy; 2025 Nagatsuka Liquor Store. All rights reserved.</p>
         </div>
     </footer>
 

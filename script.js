@@ -224,43 +224,101 @@ document.addEventListener('DOMContentLoaded', function() {
     document.head.appendChild(style);
 
     // Hamburger Menu Functionality
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const hamburger = document.querySelector('.hamburger-menu');
     const navLinks = document.querySelector('.nav-links');
     const dropdowns = document.querySelectorAll('.dropdown');
 
     // Toggle hamburger menu
-    hamburgerMenu.addEventListener('click', function() {
-        this.classList.toggle('active');
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
         navLinks.classList.toggle('active');
     });
 
-    // Close menu when clicking outside
-    document.addEventListener('click', function(event) {
-        if (!hamburgerMenu.contains(event.target) && !navLinks.contains(event.target)) {
-            hamburgerMenu.classList.remove('active');
-            navLinks.classList.remove('active');
-        }
-    });
-
-    // Handle dropdown menus in mobile view
+    // Handle dropdowns in mobile menu
     dropdowns.forEach(dropdown => {
-        const dropbtn = dropdown.querySelector('.dropbtn');
-        const dropdownContent = dropdown.querySelector('.dropdown-content');
-
-        dropbtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            dropdownContent.classList.toggle('show');
-        });
-    });
-
-    // Close dropdowns when clicking outside
-    window.addEventListener('click', function() {
-        document.querySelectorAll('.dropdown-content').forEach(dropdown => {
-            if (dropdown.classList.contains('show')) {
-                dropdown.classList.remove('show');
+        const dropdownBtn = dropdown.querySelector('.dropbtn');
+        
+        dropdownBtn.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                dropdown.classList.toggle('active');
+                
+                // Close other dropdowns
+                dropdowns.forEach(otherDropdown => {
+                    if (otherDropdown !== dropdown) {
+                        otherDropdown.classList.remove('active');
+                    }
+                });
             }
         });
     });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+            dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+        }
+    });
+
+    // Favorites functionality
+    const favoritesGrid = document.querySelector('.favorites-grid');
+    const emptyState = document.querySelector('.empty-state');
+    
+    // Function to update favorites display
+    function updateFavoritesDisplay() {
+        const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+        
+        if (favorites.length === 0) {
+            favoritesGrid.style.display = 'none';
+            emptyState.style.display = 'block';
+        } else {
+            favoritesGrid.style.display = 'grid';
+            emptyState.style.display = 'none';
+            
+            // Clear existing items
+            favoritesGrid.innerHTML = '';
+            
+            // Add each favorite item
+            favorites.forEach((item, index) => {
+                const favoriteItem = document.createElement('div');
+                favoriteItem.className = 'favorite-item';
+                favoriteItem.innerHTML = `
+                    <div class="favorite-image">
+                        <img src="${item.image}" alt="${item.name}">
+                        <button class="remove-favorite" data-index="${index}"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="favorite-details">
+                        <h3>${item.name}</h3>
+                        <p class="category">${item.category}</p>
+                        <p class="price">${item.price}</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                `;
+                favoritesGrid.appendChild(favoriteItem);
+            });
+            
+            // Add event listeners to remove buttons
+            document.querySelectorAll('.remove-favorite').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = this.getAttribute('data-index');
+                    removeFromFavorites(index);
+                });
+            });
+        }
+    }
+    
+    // Function to remove item from favorites
+    function removeFromFavorites(index) {
+        const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+        favorites.splice(index, 1);
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+        updateFavoritesDisplay();
+    }
+    
+    // Initial display update
+    updateFavoritesDisplay();
 });
 
 // Dropdown functionality
@@ -323,45 +381,30 @@ function initializeSearch() {
 
 // FAQ Accordion
 function initializeFAQ() {
-    const faqItems = [
-        {
-            question: "What types of products do you offer?",
-            answer: "We offer a wide selection of premium Japanese liquor including sake, wine, beer, and spirits. Our collection features both traditional and modern varieties."
-        },
-        {
-            question: "Do you ship internationally?",
-            answer: "Currently, we only serve customers in Japan. However, we welcome international visitors to our store in Tokyo."
-        },
-        {
-            question: "Can I make reservations for tastings?",
-            answer: "Yes, we offer tasting events and reservations. Please contact us for more information about upcoming events."
-        }
-    ];
-    
-    const faqContainer = document.querySelector('.faq-container');
+    // Get all FAQ items
+    const faqItems = document.querySelectorAll('.faq-item');
     
     faqItems.forEach(item => {
-        const faqItem = document.createElement('div');
-        faqItem.className = 'faq-item';
-        faqItem.innerHTML = `
-            <div class="faq-question">
-                <h3>${item.question}</h3>
-                <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-                <p>${item.answer}</p>
-            </div>
-        `;
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        const icon = question.querySelector('i');
         
-        faqContainer.appendChild(faqItem);
-        
-        // Add click event to toggle answer
-        faqItem.querySelector('.faq-question').addEventListener('click', () => {
-            const answer = faqItem.querySelector('.faq-answer');
-            const icon = faqItem.querySelector('.fa-chevron-down');
+        // Add click event listener to the question
+        question.addEventListener('click', function() {
+            // Toggle the current item
+            const isActive = item.classList.contains('active');
             
-            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-            icon.style.transform = answer.style.display === 'block' ? 'rotate(180deg)' : 'rotate(0)';
+            if (isActive) {
+                // Close the current item
+                item.classList.remove('active');
+                answer.style.maxHeight = '0';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                // Open the current item
+                item.classList.add('active');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+            }
         });
     });
 }

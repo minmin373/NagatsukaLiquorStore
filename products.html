@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Lalezar&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/logo brown.png">
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -14,6 +15,7 @@
         <div class="nav-container">
             <div class="logo">
                 <a href="index.html">
+                    <img src="images/Logo Colour.png" alt="Nagatsuka Liquor Store Logo" class="nav-logo">
                     <h1>Nagatsuka Liquor Store</h1>
                 </a>
             </div>
@@ -25,7 +27,7 @@
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <div class="dropdown">
-                    <a href="products.html" class="dropbtn">Products <i class="fas fa-chevron-down"></i></a>
+                    <a href="products.html" class="dropbtn" style="color: var(--forest-green); font-weight: bold;">Products <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
                         <a href="products.html#all-products">All Products</a>
                         <a href="products.html#best-sellers">Best Sellers</a>
@@ -45,25 +47,24 @@
                     <a href="about.html" class="dropbtn">About <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
                         <a href="about.html">Our Story</a>
-                        <a href="about.html#history">History</a>
                         <a href="about.html#values">Values</a>
                         <a href="about.html#events">Events</a>
                     </div>
                 </div>
                 <a href="blog.html">Blog</a>
                 <div class="dropdown">
-                    <button class="dropbtn">Contact <i class="fas fa-chevron-down"></i></button>
+                    <a href="contact.html" class="dropbtn">Contact <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
-                        <a href="contact.html">Location</a>
-                        <a href="contact.html#contact-form">Contact Form</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="contact.html#faq">FAQ</a>
                     </div>
                 </div>
                 <div class="nav-actions">
                     <div class="dropdown">
                         <button class="dropbtn"><i class="fas fa-globe"></i></button>
                         <div class="dropdown-content">
-                            <a href="#">English</a>
-                            <a href="#">日本語</a>
+                            <a href="index.html">English</a>
+                            <a href="index-jp.html">日本語</a>
                         </div>
                     </div>
                     <a href="favorites.html" class="favorite-btn"><i class="fas fa-heart"></i></a>
@@ -184,26 +185,21 @@
                 </div>
             </div>
 
-            <div class="filter-group">
-                <div class="filter-header">
-                    <h3>Alcohol Content</h3>
-                    <button class="toggle-filter"><i class="fas fa-chevron-down"></i></button>
-                </div>
+            <div class="filter-section">
+                <h3 class="filter-header">Alcohol Content</h3>
                 <div class="filter-content">
-                    <div class="checkbox-group">
-                        <label class="checkbox-item">
-                            <input type="checkbox" name="alcohol" value="low">
-                            <span>Low (5-10%)</span>
-                        </label>
-                        <label class="checkbox-item">
-                            <input type="checkbox" name="alcohol" value="medium">
-                            <span>Medium (10-15%)</span>
-                        </label>
-                        <label class="checkbox-item">
-                            <input type="checkbox" name="alcohol" value="high">
-                            <span>High (15%+)</span>
-                        </label>
-                    </div>
+                    <label class="filter-option">
+                        <input type="checkbox" name="alcohol" value="low">
+                        <span>Low (5-10%)</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="alcohol" value="medium">
+                        <span>Medium (11-20%)</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="alcohol" value="high">
+                        <span>High (21%+)</span>
+                    </label>
                 </div>
             </div>
 
@@ -285,23 +281,7 @@
             
             <div class="product-grid">
                 <!-- Sake Products -->
-                <div class="product-card" data-category="whisky">
-                    <a href="product-detail.html">
-                        <img src="images/Yamazaki Distiller's ReserveOptimised 2.jpg" alt="Yamazaki Distiller's Reserve" class="product-image">
-                        <div class="product-content">
-                            <span class="product-category">Whisky</span>
-                            <h3 class="product-title">Yamazaki Distiller's Reserve</h3>
-                            <p class="product-description">A beautifully balanced Japanese single malt whisky from Suntory's oldest distillery.</p>
-                            <div class="product-price">¥8,500</div>
-                        </div>
-                    </a>
-                    <div class="product-actions">
-                        <a href="product-detail.html" class="view-product">View Details</a>
-                        <button class="favorite-btn"><i class="far fa-heart"></i></button>
-                    </div>
-                </div>
-                <!-- Whisky Products -->
-                <div class="product-card">
+                <div class="product-card" data-category="whisky" data-alcohol="high">
                     <a href="product-nikka-barrel.html">
                         <img src="images/Nikka From The Barrel optimised.jpg" alt="Nikka From The Barrel" class="product-image">
                         <div class="product-content">
@@ -316,8 +296,8 @@
                         </div>
                     </a>
                 </div>
-                <!-- Wine Products -->
-                <div class="product-card">
+                <!-- Whisky Products -->
+                <div class="product-card" data-category="whisky" data-alcohol="high">
                     <a href="product-taketsuru.html">
                         <img src="images/Taketsuru Pure Malt 2020 Optimised.jpg" alt="Taketsuru Pure Malt 2020" class="product-image">
                         <div class="product-content">
@@ -332,7 +312,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-category="whisky" data-alcohol="high">
                     <a href="product-chita.html">
                         <img src="images/The Chita Single Grain Optimised.jpg" alt="The Chita Single Grain" class="product-image">
                         <div class="product-content">
@@ -347,7 +327,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-category="whisky" data-alcohol="high">
                     <a href="product-kujira.html">
                         <img src="images/Kujira Inari optimised.jpg" alt="Kujira Inari" class="product-image">
                         <div class="product-content">
@@ -363,16 +343,13 @@
                     </a>
                 </div>
 
-
-
-
-                <div class="product-card">
-                    <a href="product-opusone.html">
+                <div class="product-card" data-category="wine" data-alcohol="medium">
+                    <a href="product-takahata.html">
                         <img src="images/Takahata Winery Oura Chardonnay 2022 Optimised.jpg" alt="Takahata Winery Oura Chardonnay 2022" class="product-image">
                         <div class="product-content">
                             <div class="product-category">Wine</div>
                             <h3 class="product-title">Takahata Winery Oura Chardonnay 2022</h3>
-                            <p class="product-description">An award-winning Japanese Chardonnay with elegant fruit flavours. </p>
+                            <p class="product-description">An award-winning Japanese Chardonnay with elegant fruit flavours.</p>
                             <div class="product-price">¥65,000</div>
                             <div class="product-actions">
                                 <button class="view-product">View Product</button>
@@ -381,7 +358,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-category="wine" data-alcohol="medium">
                     <a href="product-sapporo-syrah.html">
                         <img src="images/Sapporo Breweries Grande Polaire Azuminoikeda Syrah 2018 Optimised.jpg" alt="Sapporo Breweries Grande Polaire Azuminoikeda Syrah 2018" class="product-image">
                         <div class="product-content">
@@ -396,7 +373,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-category="wine" data-alcohol="medium">
                     <a href="product-chateau-mercian.html">
                         <img src="images/Château Mercian Hokushin Chardonnay 2022 Optimised.jpg" alt="Château Mercian Hokushin Chardonnay 2022" class="product-image">
                         <div class="product-content">
@@ -411,7 +388,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-category="wine" data-alcohol="medium">
                     <a href="product-grace-akeno.html">
                         <img src="images/Grace Akeno Red 2019 Optimised.jpg" alt="Grace Akeno Red 2019" class="product-image">
                         <div class="product-content">
@@ -426,7 +403,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-category="wine" data-alcohol="medium">
                     <a href="product-karuizawa.html">
                         <img src="images/Takahiko Yoichi-Nobori Aihara Passetoutgrain 2021 Optimised.jpg" alt="Takahiko Yoichi-Nobori Aihara Passetoutgrain 2021" class="product-image">
                         <div class="product-content">
@@ -441,7 +418,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-category="shochu" data-alcohol="high">
                     <a href="product-nikaido-shochu.html">
                         <img src="images/Nikaido Oita Mugi Shochu Optimised.jpg" alt="Nikaido Oita Mugi Shochu" class="product-image" onerror="this.src='images/placeholder.jpg'">
                         <div class="product-content">
@@ -456,7 +433,7 @@
                         <button class="favorite-btn"><i class="fas fa-heart"></i></button>
                     </div>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-category="shochu" data-alcohol="high">
                     <a href="product-petrus.html">
                         <img src="images/Naka Naka Barley Shochu Optimised.jpg" alt="Naka Naka Barley Shochu" class="product-image">
                         <div class="product-content">
@@ -471,7 +448,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-category="shochu" data-alcohol="high">
                     <a href="product-mizu-saga.html">
                         <img src="images/Mizu Saga Barley Shochu Optimised.jpg" alt="Mizu Saga Barley Shochu" class="product-image">
                         <div class="product-content">
@@ -486,7 +463,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-category="sake" data-alcohol="medium">
                     <a href="product-hideyoshi.html">
                         <img src="images/Hideyoshi Junmai Daiginjo Optimised.jpg" alt="Hideyoshi Junmai Daiginjo" class="product-image">
                         <div class="product-content">
@@ -501,7 +478,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-category="sake" data-alcohol="medium">
                     <a href="product-hourai.html">
                         <img src="images/Hourai Junmai Ginjo Kaden Tezukuri Optimised.jpg" alt="Hourai Junmai Ginjo Kaden Tezukuri" class="product-image">
                         <div class="product-content">
@@ -516,7 +493,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-category="sake" data-alcohol="medium">
                     <a href="product-keigetsu.html">
                         <img src="images/Keigetsu Nigori Junmai Daiginjo 50 Optimised.jpg" alt="Keigetsu Nigori Junmai Daiginjo 50" class="product-image">
                         <div class="product-content">
@@ -531,7 +508,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-category="sake" data-alcohol="medium">
                     <a href="product-tomoe.html">
                         <img src="images/Tomoé Barrel Selection Sémillon 2020 Optimised.jpg" alt="Tomoé Barrel Selection Sémillon 2020" class="product-image">
                         <div class="product-content">
@@ -546,7 +523,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="product-card">
+                <div class="product-card" data-category="sake" data-alcohol="medium">
                     <a href="product-dassai23.html">
                         <img src="images/Dassai 23 Junmai Daiginjo Optimised.jpg" alt="Dassai 23 Junmai Daiginjo" class="product-image">
                         <div class="product-content">
@@ -600,7 +577,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Nagatsuka Liquor Store. All rights reserved.</p>
+            <p>&copy; 2025 Nagatsuka Liquor Store. All rights reserved.</p>
         </div>
     </footer>
 
@@ -613,13 +590,11 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const checkboxes = document.querySelectorAll('input[name="category"]');
+            const alcoholCheckboxes = document.querySelectorAll('input[name="alcohol"]');
             const productCards = document.querySelectorAll('.product-card');
             const filterHeaders = document.querySelectorAll('.filter-header');
 
-            checkboxes.forEach(checkbox => {
-                checkbox.addEventListener('change', filterProducts);
-            });
-
+            // Add click event to filter headers
             filterHeaders.forEach(header => {
                 header.addEventListener('click', function() {
                     const content = this.nextElementSibling;
@@ -632,6 +607,10 @@
             const maxPriceSlider = document.querySelector('.max-price');
             const priceDisplay = document.querySelector('.price-range-display');
             const priceTrack = document.querySelector('.price-slider-track');
+
+            // Set initial values to maximum range
+            minPriceSlider.value = 0;
+            maxPriceSlider.value = 100000;
 
             function updatePriceFilter() {
                 const minPrice = parseInt(minPriceSlider.value);
@@ -659,17 +638,7 @@
                 
                 priceDisplay.textContent = `Price Range: ¥${minPrice.toLocaleString()} - ¥${maxPrice.toLocaleString()}`;
                 
-                productCards.forEach(card => {
-                    const priceElement = card.querySelector('.product-price');
-                    if (priceElement) {
-                        const price = parseInt(priceElement.textContent.replace(/[^0-9]/g, ''));
-                        if (price >= minPrice && price <= maxPrice) {
-                            card.style.display = 'block';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    }
-                });
+                filterProducts();
             }
 
             minPriceSlider.addEventListener('input', updatePriceFilter);
@@ -678,33 +647,48 @@
             // Initialize the price track
             updatePriceFilter();
 
-            // Update filterProducts function to include price range
+            // Filter Function
             function filterProducts() {
-                const selectedCategories = Array.from(document.querySelectorAll('.category-checkbox:checked'))
+                const selectedCategories = Array.from(document.querySelectorAll('input[name="category"]:checked'))
+                    .map(checkbox => checkbox.value);
+                const selectedAlcohol = Array.from(document.querySelectorAll('input[name="alcohol"]:checked'))
                     .map(checkbox => checkbox.value);
                 const minPrice = parseInt(minPriceSlider.value);
                 const maxPrice = parseInt(maxPriceSlider.value);
                 
                 productCards.forEach(card => {
                     const category = card.getAttribute('data-category');
+                    const alcohol = card.getAttribute('data-alcohol');
                     const priceElement = card.querySelector('.product-price');
                     const price = priceElement ? parseInt(priceElement.textContent.replace(/[^0-9]/g, '')) : 0;
                     
                     const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(category);
+                    const matchesAlcohol = selectedAlcohol.length === 0 || selectedAlcohol.includes(alcohol);
                     const matchesPrice = price >= minPrice && price <= maxPrice;
                     
-                    if (matchesCategory && matchesPrice) {
+                    if (matchesCategory && matchesAlcohol && matchesPrice) {
                         card.style.display = 'block';
                     } else {
                         card.style.display = 'none';
                     }
                 });
             }
-        });
 
-        document.querySelector('.sort-header').addEventListener('click', function() {
-            const sortContent = document.querySelector('.sort-content');
-            sortContent.style.display = sortContent.style.display === 'none' ? 'block' : 'none';
+            // Add change event to category checkboxes
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', filterProducts);
+            });
+
+            // Add change event to alcohol checkboxes
+            alcoholCheckboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', filterProducts);
+            });
+
+            // Sort Options
+            document.querySelector('.sort-header').addEventListener('click', function() {
+                const sortContent = document.querySelector('.sort-content');
+                sortContent.style.display = sortContent.style.display === 'none' ? 'block' : 'none';
+            });
         });
     </script>
 </body>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品一覧 - 永塚酒店</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Lalezar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/Logo Colour.png">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index-jp.html">
+                    <img src="images/Logo Colour.png" alt="永塚酒店ロゴ" class="nav-logo">
+                    <h1>永塚酒店</h1>
+                </a>
+            </div>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links">
+                <a href="index-jp.html">ホーム</a>
+                <div class="dropdown">
+                    <a href="products-jp.html" class="dropbtn">商品 <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="products-jp.html">全商品</a>
+                        <a href="products-jp.html#best-sellers">ベストセラー</a>
+                        <a href="products-jp.html#whisky">ウイスキー</a>
+                        <a href="products-jp.html#wine">ワイン</a>
+                        <a href="products-jp.html#sparkling-wine">スパークリングワイン</a>
+                        <a href="products-jp.html#shochu">焼酎</a>
+                        <a href="products-jp.html#sake">日本酒</a>
+                        <a href="products-jp.html#spirits">スピリッツ</a>
+                        <a href="products-jp.html#beer">ビール</a>
+                        <a href="products-jp.html#liqueur">リキュール</a>
+                        <a href="products-jp.html#non-alcohol">ノンアルコール</a>
+                        <a href="products-jp.html#food">食品・スナック</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="about-jp.html" class="dropbtn">会社概要 <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="about-jp.html">会社案内</a>
+                        <a href="about-jp.html#history">沿革</a>
+                        <a href="about-jp.html#values">企業理念</a>
+                    </div>
+                </div>
+                <a href="blog-jp.html">ブログ</a>
+                <div class="dropdown">
+                    <a href="contact-jp.html" class="dropbtn">お問い合わせ <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="contact-jp.html">お問い合わせ</a>
+                        <a href="contact-jp.html#faq">よくある質問</a>
+                    </div>
+                </div>
+                <div class="nav-actions">
+                    <div class="dropdown">
+                        <button class="dropbtn"><i class="fas fa-globe"></i></button>
+                        <div class="dropdown-content">
+                            <a href="index.html">English</a>
+                            <a href="index-jp.html">日本語</a>
+                        </div>
+                    </div>
+                    <a href="favorites-jp.html" class="favorite-btn"><i class="fas fa-heart"></i></a>
+                    <a href="login-jp.html" class="login-btn">ログイン</a>
+                    <a href="signup-jp.html" class="signup-btn">新規登録</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Header -->
+    <header class="products-header">
+        <h1>商品一覧</h1>
+        <p>プレミアムな日本酒のセレクションをご覧ください</p>
+    </header>
+
+    <!-- Search Bar -->
+    <section class="search-container">
+        <div class="search-bar">
+            <input type="text" placeholder="商品を検索...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </section>
+
+    <!-- Keywords Section -->
+    <section class="keywords-section">
+        <div class="keywords-container">
+            <div class="keywords-header">
+                <h3>人気キーワード</h3>
+                <button class="clear-keywords">すべてクリア</button>
+            </div>
+            <div class="keywords-grid">
+                <button class="keyword-tag">プレミアム日本酒</button>
+                <button class="keyword-tag">限定品</button>
+                <button class="keyword-tag">受賞歴あり</button>
+                <button class="keyword-tag">ヴィンテージ</button>
+                <button class="keyword-tag">ベストセラー</button>
+                <button class="keyword-tag">新商品</button>
+                <button class="keyword-tag">ギフトセット</button>
+                <button class="keyword-tag">季節限定</button>
+                <button class="keyword-tag">オーガニック</button>
+                <button class="keyword-tag">地酒</button>
+                <button class="keyword-tag">希少品</button>
+                <button class="keyword-tag">スタッフおすすめ</button>
+            </div>
+            <div class="selected-keywords">
+                <span class="selected-tag">プレミアム日本酒 <i class="fas fa-times"></i></span>
+                <span class="selected-tag">ヴィンテージ <i class="fas fa-times"></i></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Layout with Sidebar -->
+    <div class="products-layout">
+        <!-- Left Sidebar Filters -->
+        <aside class="filters-sidebar">
+            <div class="filter-group">
+                <div class="filter-header">
+                    <h3>カテゴリー</h3>
+                    <button class="toggle-filter"><i class="fas fa-chevron-down"></i></button>
+                </div>
+                <div class="filter-content">
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="category" value="sake">
+                            <span>日本酒</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="category" value="wine">
+                            <span>ワイン</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="category" value="beer">
+                            <span>ビール</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="category" value="spirits">
+                            <span>スピリッツ</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="category" value="whisky">
+                            <span>ウイスキー</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="category" value="shochu">
+                            <span>焼酎</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="category" value="liqueur">
+                            <span>リキュール</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="category" value="non-alcohol">
+                            <span>ノンアルコール</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="category" value="food">
+                            <span>食品・スナック</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <div class="filter-header">
+                    <h3>価格帯</h3>
+                    <button class="toggle-filter"><i class="fas fa-chevron-down"></i></button>
+                </div>
+                <div class="filter-content">
+                    <div class="price-slider-container">
+                        <div class="price-range-display">価格帯: ¥0 - ¥50,000</div>
+                        <div class="price-slider-wrapper">
+                            <div class="price-slider-track"></div>
+                            <input type="range" class="price-slider min-price" min="0" max="100000" step="1000" value="0">
+                            <input type="range" class="price-slider max-price" min="0" max="100000" step="1000" value="50000">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <div class="filter-header">
+                    <h3>アルコール度数</h3>
+                    <button class="toggle-filter"><i class="fas fa-chevron-down"></i></button>
+                </div>
+                <div class="filter-content">
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="alcohol" value="low">
+                            <span>低め (5-10%)</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="alcohol" value="medium">
+                            <span>中程度 (10-15%)</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="alcohol" value="high">
+                            <span>高め (15%以上)</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <div class="filter-header">
+                    <h3>料理との相性</h3>
+                    <button class="toggle-filter"><i class="fas fa-chevron-down"></i></button>
+                </div>
+                <div class="filter-content">
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="food" value="sushi">
+                            <span>寿司</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="food" value="sashimi">
+                            <span>刺身</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="food" value="tempura">
+                            <span>天ぷら</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="food" value="grilled">
+                            <span>焼き物</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <button class="apply-filters-btn">フィルターを適用</button>
+        </aside>
+
+        <!-- Product Grid -->
+        <section class="product-section">
+            <!-- Sort Options -->
+            <div class="sort-options-container">
+                <div class="sort-header">
+                    <h3>並び替え</h3>
+                    <button class="toggle-sort"><i class="fas fa-chevron-down"></i></button>
+                </div>
+                <div class="sort-content" style="display: none;">
+                    <div class="radio-group">
+                        <label class="radio-item">
+                            <input type="radio" name="sort" value="popular">
+                            <span>人気順</span>
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="sort" value="price-low">
+                            <span>価格の安い順</span>
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="sort" value="price-high">
+                            <span>価格の高い順</span>
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="sort" value="newest">
+                            <span>新着順</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-grid">
+                <!-- Product cards will be dynamically loaded here -->
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="prev-page"><i class="fas fa-chevron-left"></i></button>
+                <div class="page-numbers">
+                    <button class="page-number active">1</button>
+                    <button class="page-number">2</button>
+                    <button class="page-number">3</button>
+                    <span class="page-ellipsis">...</span>
+                    <button class="page-number">10</button>
+                </div>
+                <button class="next-page"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>永塚酒店</h3>
+                <p>プレミアムな日本酒と飲料の信頼できる供給源です。</p>
+            </div>
+            <div class="footer-section">
+                <h3>クイックリンク</h3>
+                <ul>
+                    <li><a href="products-jp.html">商品</a></li>
+                    <li><a href="about-jp.html">会社概要</a></li>
+                    <li><a href="blog-jp.html">ブログ</a></li>
+                    <li><a href="contact-jp.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>お問い合わせ</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 〒196-0015 東京都昭島市昭和町5-5-1</p>
+                <p><i class="fas fa-clock"></i> 月曜日から土曜日 10:00-20:00</p>
+                <p><i class="fas fa-clock"></i> 日曜日 10:00-19:00</p>
+                <p><i class="fas fa-clock"></i> 月曜日 定休日</p>
+                <p><i class="fas fa-phone"></i> +81 42 541 0128</p>
+            </div>
+            <div class="footer-section">
+                <h3>フォローする</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/shinichi_nagatsuka.saketen/"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 永塚酒店. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html> 

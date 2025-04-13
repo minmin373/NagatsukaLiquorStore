@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>会社概要 - 永塚酒店</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Figtree:wght@400;500;600;700&family=Lalezar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Lalezar&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/logo brown.png">
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -14,10 +15,17 @@
         <div class="nav-container">
             <div class="logo">
                 <a href="index-jp.html">
+                    <img src="images/Logo Colour.png" alt="永塚酒店ロゴ" class="nav-logo">
                     <h1>永塚酒店</h1>
                 </a>
             </div>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <div class="nav-links">
+                <a href="index-jp.html">ホーム</a>
                 <div class="dropdown">
                     <a href="products-jp.html" class="dropbtn">商品 <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
@@ -41,24 +49,22 @@
                         <a href="about-jp.html">会社案内</a>
                         <a href="about-jp.html#history">沿革</a>
                         <a href="about-jp.html#values">企業理念</a>
-                        <a href="about-jp.html#events">イベント</a>
                     </div>
                 </div>
                 <a href="blog-jp.html">ブログ</a>
                 <div class="dropdown">
                     <a href="contact-jp.html" class="dropbtn">お問い合わせ <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
-                        <a href="contact-jp.html">店舗案内</a>
-                        <a href="contact-jp.html#contact-form">お問い合わせフォーム</a>
+                        <a href="contact-jp.html">お問い合わせ</a>
+                        <a href="contact-jp.html#faq">よくある質問</a>
                     </div>
                 </div>
                 <div class="nav-actions">
-                    <button class="search-btn"><i class="fas fa-search"></i></button>
                     <div class="dropdown">
                         <button class="dropbtn"><i class="fas fa-globe"></i></button>
                         <div class="dropdown-content">
-                            <a href="about.html">English</a>
-                            <a href="about-jp.html">日本語</a>
+                            <a href="index.html">English</a>
+                            <a href="index-jp.html">日本語</a>
                         </div>
                     </div>
                     <a href="favorites-jp.html" class="favorite-btn"><i class="fas fa-heart"></i></a>
@@ -77,89 +83,59 @@
         </div>
     </section>
 
-    <!-- Our Story Section -->
-    <section class="our-story">
-        <div class="container">
-            <h2>私たちの物語</h2>
-            <div class="story-content">
-                <div class="story-text">
-                    <p>永塚酒店は1927年、創業者・永塚一郎によって設立されました。当時、日本酒の品質は大きく変動していましたが、私たちは最高級の日本酒のみを提供することを誓いました。</p>
-                    <p>創業以来、私たちは以下の信念を貫いてきました：</p>
-                    <ul>
-                        <li>最高品質の商品のみを提供する</li>
-                        <li>伝統と革新の調和を大切にする</li>
-                        <li>お客様との信頼関係を築く</li>
-                    </ul>
-                </div>
-                <div class="story-image">
-                    <img src="images/store-front.jpg" alt="永塚酒店の店舗">
+    <!-- History Section -->
+    <section class="history-section">
+        <h2>沿革</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="year">1927</div>
+                <div class="event">
+                    <h3>創業</h3>
+                    <p>田中町で永塚義三郎と静が食品や日用品を売る小さな屋台から始めました。占い師の助言に従い、酒類販売に転換しましたが、第二次世界大戦中は営業を一時中断しました。</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- History Section -->
-    <section id="history" class="history">
-        <div class="container">
-            <h2>沿革</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="year">1927</div>
-                    <div class="content">
-                        <h3>創業</h3>
-                        <p>永塚一郎が東京にて永塚酒店を創業</p>
-                    </div>
+            <div class="timeline-item">
+                <div class="year">1945</div>
+                <div class="event">
+                    <h3>戦後の再開</h3>
+                    <p>戦後、戸別訪問販売を再開しました。永塚義三郎は配達と支払いの正確な時間厳守と信頼できるサービスで地域全体に知られるようになりました。</p>
                 </div>
-                <div class="timeline-item">
-                    <div class="year">1950</div>
-                    <div class="content">
-                        <h3>本店舗の設立</h3>
-                        <p>現在の本店舗を設立し、事業を拡大</p>
-                    </div>
+            </div>
+            <div class="timeline-item">
+                <div class="year">1953</div>
+                <div class="event">
+                    <h3>戦略的成長</h3>
+                    <p>より戦略的な場所に店舗を移転し、取り扱い商品を拡大しました。1974年、義三郎の息子である清が事業を引き継ぎ、1990年代には新たな競争の課題に直面しました。</p>
                 </div>
-                <div class="timeline-item">
-                    <div class="year">1980</div>
-                    <div class="content">
-                        <h3>ワイン部門の開設</h3>
-                        <p>最高級のワインを取り扱い始める</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="year">2000</div>
-                    <div class="content">
-                        <h3>オンラインストアの開設</h3>
-                        <p>インターネットを通じた販売を開始</p>
-                    </div>
+            </div>
+            <div class="timeline-item">
+                <div class="year">1998</div>
+                <div class="event">
+                    <h3>現代のルネサンス</h3>
+                    <p>信一のリーダーシップの下、店舗は専門店に変貌しました。「永塚バー」や「永塚マルシェ」などの新しい体験を導入し、顧客との新たな関係を築きました。</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Values Section -->
-    <section id="values" class="values">
-        <div class="container">
-            <h2>企業理念</h2>
-            <div class="values-grid">
-                <div class="value-card">
-                    <i class="fas fa-medal"></i>
-                    <h3>品質第一</h3>
-                    <p>最高級の商品のみを提供し、品質への妥協を許しません。</p>
-                </div>
-                <div class="value-card">
-                    <i class="fas fa-handshake"></i>
-                    <h3>信頼関係</h3>
-                    <p>お客様との信頼関係を大切にし、長期的な関係構築を目指します。</p>
-                </div>
-                <div class="value-card">
-                    <i class="fas fa-history"></i>
-                    <h3>伝統の継承</h3>
-                    <p>日本の伝統的な酒文化を守り、次世代に伝えていきます。</p>
-                </div>
-                <div class="value-card">
-                    <i class="fas fa-lightbulb"></i>
-                    <h3>革新</h3>
-                    <p>新しい技術やアイデアを取り入れ、常に進化を続けます。</p>
-                </div>
+    <section class="values-section">
+        <h2>企業理念</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <i class="fas fa-medal"></i>
+                <h3>品質</h3>
+                <p>最高級の商品のみをお客様にお届けするよう、慎重に商品を選定しています。</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-handshake"></i>
+                <h3>信頼</h3>
+                <p>誠実さと透明性を通じて、お客様との永続的な関係を築いています。</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-globe"></i>
+                <h3>伝統</h3>
+                <p>日本の酒文化を守りながら、グローバルな影響も取り入れています。</p>
             </div>
         </div>
     </section>
@@ -170,7 +146,7 @@
         <div class="events-grid">
             <div class="event-card">
                 <div class="event-image">
-                    <img src="images/sake-tasting.jpg" alt="日本酒試飲会">
+                    <img src="images/sake.event.jpg" alt="日本酒試飲会">
                     <div class="event-date">
                         <span class="day">15</span>
                         <span class="month">3月</span>
@@ -186,7 +162,7 @@
             </div>
             <div class="event-card">
                 <div class="event-image">
-                    <img src="images/wine-workshop.jpg" alt="ワインワークショップ">
+                    <img src="images/winetasting image Optimised.jpg" alt="ワインワークショップ">
                     <div class="event-date">
                         <span class="day">22</span>
                         <span class="month">3月</span>
@@ -202,7 +178,7 @@
             </div>
             <div class="event-card">
                 <div class="event-image">
-                    <img src="images/whisky-tasting.jpg" alt="ウイスキー試飲会">
+                    <img src="images/whisky optimised.jpg" alt="ウイスキー試飲会">
                     <div class="event-date">
                         <span class="day">29</span>
                         <span class="month">3月</span>
@@ -224,22 +200,11 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
+    <footer class="footer">
+        <div class="footer-container">
             <div class="footer-section">
-                <h3>お問い合わせ</h3>
-                <p>住所：[店舗住所]</p>
-                <p>電話：[電話番号]</p>
-                <p>メール：[メールアドレス]</p>
-            </div>
-            <div class="footer-section">
-                <h3>フォローする</h3>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/shinichi_nagatsuka.saketen/"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
+                <h3>永塚酒店</h3>
+                <p>プレミアムな日本酒と飲料の信頼できる供給源です。</p>
             </div>
             <div class="footer-section">
                 <h3>クイックリンク</h3>
@@ -250,11 +215,33 @@
                     <li><a href="contact-jp.html">お問い合わせ</a></li>
                 </ul>
             </div>
+            <div class="footer-section">
+                <h3>お問い合わせ</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 〒196-0015 東京都昭島市昭和町5-5-1</p>
+                <p><i class="fas fa-clock"></i> 月曜日から土曜日 10:00-20:00</p>
+                <p><i class="fas fa-clock"></i> 日曜日 10:00-19:00</p>
+                <p><i class="fas fa-clock"></i> 月曜日 定休日</p>
+                <p><i class="fas fa-phone"></i> +81 42 541 0128</p>
+            </div>
+            <div class="footer-section">
+                <h3>フォローする</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/shinichi_nagatsuka.saketen/"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2024 永塚酒店. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
