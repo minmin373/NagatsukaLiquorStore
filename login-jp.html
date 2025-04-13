@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <!-- Basic Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ログイン - 永塚酒店</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>ログイン - 長塚酒店 | 東京のプレミアム日本酒専門店</title>
+    <meta name="description" content="長塚酒店のアカウントにログインして、プレミアムな日本酒やスピリッツをお楽しみください。">
+    <meta name="keywords" content="長塚酒店, ログイン, 日本酒専門店, 東京の酒屋, アカウント">
+    <meta name="author" content="長塚酒店">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="ログイン - 長塚酒店 | 東京のプレミアム日本酒専門店">
+    <meta property="og:description" content="長塚酒店のアカウントにログインして、プレミアムな日本酒やスピリッツをお楽しみください。">
+    <meta property="og:image" content="images/Logo Colour.png">
+    <meta property="og:url" content="https://nagatsukaliquorstore.com/login-jp.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ログイン - 長塚酒店 | 東京のプレミアム日本酒専門店">
+    <meta name="twitter:description" content="長塚酒店のアカウントにログインして、プレミアムな日本酒やスピリッツをお楽しみください。">
+    <meta name="twitter:image" content="images/Logo Colour.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nagatsukaliquorstore.com/login-jp.html">
+    
+    <!-- External Resources -->
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Figtree:wght@400;500;600;700&family=Lalezar&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/logo brown.png">
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -14,14 +40,21 @@
         <div class="nav-container">
             <div class="logo">
                 <a href="index-jp.html">
-                    <h1>永塚酒店</h1>
+                    <img src="images/Logo Colour.png" alt="長塚酒店ロゴ" class="nav-logo">
+                    <h1 class="vertical-text">長<br>塚<br>酒<br>店</h1>
                 </a>
             </div>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <div class="nav-links">
+                <a href="index-jp.html">ホーム</a>
                 <div class="dropdown">
                     <a href="products-jp.html" class="dropbtn">商品 <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
-                        <a href="products-jp.html">全商品</a>
+                        <a href="products-jp.html#all-products">全商品</a>
                         <a href="products-jp.html#best-sellers">ベストセラー</a>
                         <a href="products-jp.html#whisky">ウイスキー</a>
                         <a href="products-jp.html#wine">ワイン</a>
@@ -39,20 +72,19 @@
                     <a href="about-jp.html" class="dropbtn">会社概要 <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
                         <a href="about-jp.html">会社案内</a>
-                        <a href="about-jp.html#history">沿革</a>
                         <a href="about-jp.html#values">企業理念</a>
+                        <a href="about-jp.html#events">イベント情報</a>
                     </div>
                 </div>
                 <a href="blog-jp.html">ブログ</a>
                 <div class="dropdown">
                     <a href="contact-jp.html" class="dropbtn">お問い合わせ <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
-                        <a href="contact-jp.html">店舗案内</a>
-                        <a href="contact-jp.html#contact-form">お問い合わせフォーム</a>
+                        <a href="contact-jp.html">お問い合わせ</a>
+                        <a href="contact-jp.html#faq">よくある質問</a>
                     </div>
                 </div>
                 <div class="nav-actions">
-                    <button class="search-btn"><i class="fas fa-search"></i></button>
                     <div class="dropdown">
                         <button class="dropbtn"><i class="fas fa-globe"></i></button>
                         <div class="dropdown-content">
@@ -69,63 +101,55 @@
     </nav>
 
     <!-- Login Section -->
-    <section class="login-section">
-        <div class="container">
-            <div class="login-container">
-                <h2>ログイン</h2>
-                <form class="login-form">
-                    <div class="form-group">
-                        <label for="email">メールアドレス</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">パスワード</label>
-                        <input type="password" id="password" name="password" required>
-                    </div>
-                    <div class="form-options">
-                        <label class="remember-me">
-                            <input type="checkbox" name="remember">
-                            <span>ログイン状態を保持する</span>
-                        </label>
-                        <a href="#" class="forgot-password">パスワードをお忘れの方</a>
-                    </div>
-                    <button type="submit" class="login-submit-btn">ログイン</button>
-                </form>
-                <div class="social-login">
-                    <p>または</p>
-                    <div class="social-buttons">
-                        <button class="social-btn google">
-                            <i class="fab fa-google"></i>
-                            Googleでログイン
-                        </button>
-                        <button class="social-btn facebook">
-                            <i class="fab fa-facebook-f"></i>
-                            Facebookでログイン
-                        </button>
-                    </div>
+    <section class="auth-section">
+        <div class="auth-container">
+            <div class="auth-header">
+                <h1>ようこそ</h1>
+                <p>アカウントにログインしてください</p>
+            </div>
+            <form class="auth-form">
+                <div class="form-group">
+                    <label for="email">メールアドレス</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
-                <div class="signup-link">
-                    <p>アカウントをお持ちでない方は<a href="signup-jp.html">新規登録</a></p>
+                <div class="form-group">
+                    <label for="password">パスワード</label>
+                    <input type="password" id="password" name="password" required>
                 </div>
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" name="remember">
+                        ログイン状態を保持する
+                    </label>
+                    <a href="#" class="forgot-password">パスワードをお忘れの方</a>
+                </div>
+                <button type="submit" class="auth-btn">ログイン</button>
+            </form>
+            <div class="social-login">
+                <p>または</p>
+                <div class="social-buttons">
+                    <button class="social-btn google">
+                        <i class="fab fa-google"></i>
+                        Google
+                    </button>
+                    <button class="social-btn facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        Facebook
+                    </button>
+                </div>
+            </div>
+            <div class="auth-footer">
+                <p>アカウントをお持ちでない方は<a href="signup-jp.html">新規登録</a></p>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
             <div class="footer-section">
-                <h3>お問い合わせ</h3>
-                <p>住所：[店舗住所]</p>
-                <p>電話：[電話番号]</p>
-                <p>メール：[メールアドレス]</p>
-            </div>
-            <div class="footer-section">
-                <h3>フォローする</h3>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                </div>
+                <h3>長塚酒店</h3>
+                <p>プレミアムな日本酒とスピリッツの信頼できる供給源。</p>
             </div>
             <div class="footer-section">
                 <h3>クイックリンク</h3>
@@ -136,11 +160,33 @@
                     <li><a href="contact-jp.html">お問い合わせ</a></li>
                 </ul>
             </div>
+            <div class="footer-section">
+                <h3>お問い合わせ</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 〒196-0015 東京都昭島市昭和町5-5-1</p>
+                <p><i class="fas fa-clock"></i> 火曜日～土曜日 10:00-20:00</p>
+                <p><i class="fas fa-clock"></i> 日曜日 10:00-19:00</p>
+                <p><i class="fas fa-clock"></i> 月曜日 定休日</p>
+                <p><i class="fas fa-phone"></i> 042-541-0128</p>
+            </div>
+            <div class="footer-section">
+                <h3>フォローする</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/shinichi_nagatsuka.saketen/"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 永塚酒店. All rights reserved.</p>
+            <p>&copy; 2025 長塚酒店. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>

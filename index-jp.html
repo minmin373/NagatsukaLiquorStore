@@ -1,13 +1,144 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <!-- Basic Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
     <title>長塚酒店 - プレミアム日本酒</title>
+    <meta name="description" content="長塚酒店は東京で最高級の日本酒、ウイスキー、ワインを提供する専門店です。">
+    <meta name="keywords" content="長塚酒店, 日本酒, ウイスキー, ワイン, 東京, 酒屋">
+    <meta name="author" content="長塚酒店">
+    <meta name="robots" content="index, follow">
+    
+    <!-- External Resources -->
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Figtree:wght@400;500;600;700&family=Lalezar&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/png" href="images/logo brown.png">
+    
+    <!-- Responsive Styles -->
+    <style>
+        /* Mobile Navigation Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 1rem;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                z-index: 1000;
+            }
+            
+            .nav-links.active {
+                display: block;
+            }
+            
+            .nav-links a {
+                display: block;
+                padding: 0.5rem 0;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                width: 100%;
+            }
+            
+            .hamburger-menu {
+                display: block;
+                cursor: pointer;
+            }
+            
+            .hamburger-menu span {
+                display: block;
+                width: 25px;
+                height: 3px;
+                background: #333;
+                margin: 5px 0;
+                transition: 0.3s;
+            }
+            
+            .hamburger-menu.active span:nth-child(1) {
+                transform: rotate(45deg);
+            }
+            
+            .hamburger-menu.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .hamburger-menu.active span:nth-child(3) {
+                transform: rotate(-45deg);
+            }
+            
+            /* Responsive Grid Layouts */
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .product-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Responsive Typography */
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            h2 {
+                font-size: 1.3rem;
+            }
+            
+            h3 {
+                font-size: 1.1rem;
+            }
+            
+            /* Responsive Spacing */
+            .section-title {
+                padding: 1rem;
+            }
+            
+            .product-card, .event-card, .blog-card {
+                margin: 0.5rem;
+            }
+        }
+        
+        /* Tablet Styles */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .category-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .events-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -535,9 +666,27 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <!-- JavaScript -->
     <script src="script.js"></script>
     <script>
-        // Carousel functionality
+        // Hamburger Menu Functionality
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburgerMenu.addEventListener('click', () => {
+            hamburgerMenu.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburgerMenu.contains(e.target) && !navLinks.contains(e.target)) {
+                hamburgerMenu.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+        
+        // Existing Carousel functionality
         const carousel = document.querySelector('.carousel');
         const slides = document.querySelectorAll('.carousel-slide');
         const prevBtn = document.querySelector('.carousel-btn.prev');
