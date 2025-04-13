@@ -1,36 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nagatsuka Liquor Store - Premium Japanese Liquor</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Nagatsuka Liquor Store - Premium Japanese Spirits & Beverages</title>
+    <meta name="description" content="Discover premium Japanese spirits, sake, whisky, and more at Nagatsuka Liquor Store. Your trusted source for authentic Japanese beverages in Tokyo.">
+    <meta name="keywords" content="Japanese liquor, sake, whisky, shochu, wine, spirits, Tokyo liquor store, premium alcohol, Japanese beverages">
+    <meta name="author" content="Nagatsuka Liquor Store">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags for Social Media Sharing -->
+    <meta property="og:title" content="Nagatsuka Liquor Store - Premium Japanese Spirits & Beverages">
+    <meta property="og:description" content="Discover premium Japanese spirits, sake, whisky, and more at Nagatsuka Liquor Store. Your trusted source for authentic Japanese beverages in Tokyo.">
+    <meta property="og:image" content="images/Logo Colour.png">
+    <meta property="og:url" content="https://nagatsukaliquorstore.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nagatsuka Liquor Store - Premium Japanese Spirits & Beverages">
+    <meta name="twitter:description" content="Discover premium Japanese spirits, sake, whisky, and more at Nagatsuka Liquor Store. Your trusted source for authentic Japanese beverages in Tokyo.">
+    <meta name="twitter:image" content="images/Logo Colour.png">
+    
+    <!-- Canonical URL to prevent duplicate content -->
+    <link rel="canonical" href="https://nagatsukaliquorstore.com">
+    
+    <!-- External Resources -->
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Lalezar&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/png" href="images/logo brown.png">
 </head>
 <body>
-    <!-- Navigation Bar -->
+    <!-- Navigation Bar with Responsive Design -->
     <nav class="navbar">
         <div class="nav-container">
+            <!-- Logo Section -->
             <div class="logo">
                 <a href="index.html">
                     <img src="images/Logo Colour.png" alt="Nagatsuka Liquor Store Logo" class="nav-logo">
                     <h1>Nagatsuka Liquor Store</h1>
                 </a>
             </div>
+            
+            <!-- Hamburger Menu for Mobile -->
             <div class="hamburger-menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
+            
+            <!-- Navigation Links with Dropdowns -->
             <div class="nav-links">
                 <a href="index.html" style="color: var(--forest-green); font-weight: bold;">Home</a>
+                
+                <!-- Products Dropdown -->
                 <div class="dropdown">
                     <a href="products.html" class="dropbtn">Products <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
+                        <!-- Product Categories -->
                         <a href="products.html#all-products">All Products</a>
                         <a href="products.html#best-sellers">Best Sellers</a>
                         <a href="products.html#whisky">Whisky</a>
@@ -45,6 +76,8 @@
                         <a href="products.html#food">Food & Snacks</a>
                     </div>
                 </div>
+                
+                <!-- About Dropdown -->
                 <div class="dropdown">
                     <a href="about.html" class="dropbtn">About <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
@@ -53,7 +86,11 @@
                         <a href="about.html#events">Events</a>
                     </div>
                 </div>
+                
+                <!-- Blog Link -->
                 <a href="blog.html">Blog</a>
+                
+                <!-- Contact Dropdown -->
                 <div class="dropdown">
                     <a href="contact.html" class="dropbtn">Contact <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
@@ -61,7 +98,10 @@
                         <a href="contact.html#faq">FAQ</a>
                     </div>
                 </div>
+                
+                <!-- User Actions -->
                 <div class="nav-actions">
+                    <!-- Language Selector -->
                     <div class="dropdown">
                         <button class="dropbtn"><i class="fas fa-globe"></i></button>
                         <div class="dropdown-content">
@@ -69,6 +109,7 @@
                             <a href="index-jp.html">日本語</a>
                         </div>
                     </div>
+                    <!-- User Account Actions -->
                     <a href="favorites.html" class="favorite-btn"><i class="fas fa-heart"></i></a>
                     <a href="login.html" class="login-btn">Login</a>
                     <a href="signup.html" class="signup-btn">Sign Up</a>
@@ -77,26 +118,25 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Carousel -->
     <section class="hero">
         <div class="carousel">
             <div class="carousel-container">
-                <!-- Slide 1 -->
+                <!-- Carousel Slides -->
                 <div class="carousel-slide active">
                     <img src="images/webbanner1.png" alt="Nagatsuka Liquor Store Banner">
                     <a href="about.html#events" class="hero-cta-button">Learn More</a>
                 </div>
-                <!-- Slide 2 -->
                 <div class="carousel-slide">
                     <img src="images/hero-bg.jpg" alt="Premium Japanese Liquor">
                     <a href="about.html#events" class="hero-cta-button">Learn More</a>
                 </div>
-                <!-- Slide 3 -->
                 <div class="carousel-slide">
                     <img src="images/hero-bg2.jpg" alt="Sake Tasting Event">
                     <a href="about.html#events" class="hero-cta-button">Learn More</a>
                 </div>
             </div>
+            
             <!-- Carousel Controls -->
             <button class="carousel-btn prev" aria-label="Previous slide">
                 <i class="fas fa-chevron-left"></i>
@@ -104,6 +144,7 @@
             <button class="carousel-btn next" aria-label="Next slide">
                 <i class="fas fa-chevron-right"></i>
             </button>
+            
             <!-- Carousel Indicators -->
             <div class="carousel-indicators">
                 <button class="indicator active" aria-label="Go to slide 1"></button>
@@ -113,13 +154,14 @@
         </div>
     </section>
 
-    <!-- Look for a Product Section -->
+    <!-- Product Categories Section -->
     <section class="product-categories">
         <div class="section-title">
             <h2>Look for a Product</h2>
             <p>Browse through our extensive collection of premium beverages</p>
         </div>
         <div class="category-grid">
+            <!-- Category Cards with Icons -->
             <a href="products.html#sake" class="category-card">
                 <div class="category-icon">
                     <i class="fas fa-wine-bottle"></i>
@@ -183,10 +225,11 @@
         </div>
     </section>
 
-    <!-- Featured Products -->
+    <!-- Featured Products Section -->
     <section class="featured-products">
         <h2>Featured Products</h2>
         <div class="product-grid">
+            <!-- Product Cards -->
             <div class="product-card">
                 <a href="product-dassai23.html">
                     <img src="images/Dassai 23 Junmai Daiginjo Optimised.jpg" alt="Dassai 23 Junmai Daiginjo" class="product-image">
@@ -266,6 +309,7 @@
     <section class="events-section">
         <h2>Upcoming Events</h2>
         <div class="events-grid">
+            <!-- Event Cards -->
             <div class="event-card">
                 <div class="event-image">
                     <img src="images/sake.event.jpg" alt="Sake Tasting Evening">
@@ -337,6 +381,7 @@
     <section class="blog">
         <h2>Latest from Our Blog</h2>
         <div class="blog-grid">
+            <!-- Blog Cards -->
             <a href="blog-post-sake-tasting.html" class="blog-card">
                 <img src="images/Japanese Sake Small.jpg" alt="Sake Tasting Guide" class="blog-image">
                 <div class="blog-content">
@@ -373,6 +418,7 @@
             <h2>Get in Touch</h2>
             <p>Have questions about our products or services? We'd love to hear from you.</p>
             <form class="contact-form">
+                <!-- Form Fields -->
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
@@ -404,6 +450,7 @@
     <section class="faq" id="faq">
         <h2>Frequently Asked Questions</h2>
         <div class="faq-container">
+            <!-- FAQ Items -->
             <div class="faq-item">
                 <div class="faq-question">
                     <h3>What are your store hours?</h3>
@@ -463,9 +510,10 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer class="footer">
         <div class="footer-container">
+            <!-- Footer Sections -->
             <div class="footer-section">
                 <h3>Nagatsuka Liquor Store</h3>
                 <p>Your trusted source for premium Japanese spirits and beverages.</p>
@@ -507,6 +555,7 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <!-- JavaScript for Interactive Features -->
     <script>
         // Hamburger Menu Toggle
         const hamburger = document.querySelector('.hamburger-menu');
