@@ -16,7 +16,7 @@
             <div class="logo">
                 <a href="index-jp.html">
                     <img src="images/Logo Colour.png" alt="長塚酒店ロゴ" class="nav-logo">
-                    <h1>長塚<br>酒店</h1>
+                    <h1 class="vertical-text">長<br>塚<br>酒<br>店</h1>
                 </a>
             </div>
             <div class="hamburger-menu">
@@ -73,64 +73,181 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Carousel -->
     <section class="hero">
-        <div class="hero-content">
-            <h2>プレミアム日本酒の世界へようこそ</h2>
-            <p>1927年創業以来、最高級の日本酒、ワイン、スピリッツをお届けしています</p>
-            <a href="products-jp.html" class="cta-button">商品を見る</a>
+        <div class="carousel">
+            <div class="carousel-container">
+                <!-- Carousel Slides -->
+                <div class="carousel-slide active">
+                    <img src="images/webbanner1.png" alt="長塚酒店バナー">
+                    <a href="about-jp.html#events" class="hero-cta-button">詳しく見る</a>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/hero-bg.jpg" alt="プレミアム日本酒">
+                    <a href="about-jp.html#events" class="hero-cta-button">詳しく見る</a>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/hero-bg2.jpg" alt="日本酒テイスティングイベント">
+                    <a href="about-jp.html#events" class="hero-cta-button">詳しく見る</a>
+                </div>
+            </div>
+            
+            <!-- Carousel Controls -->
+            <button class="carousel-btn prev" aria-label="前のスライド">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn next" aria-label="次のスライド">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+                <button class="indicator active" aria-label="スライド1へ"></button>
+                <button class="indicator" aria-label="スライド2へ"></button>
+                <button class="indicator" aria-label="スライド3へ"></button>
+            </div>
         </div>
     </section>
 
-    <!-- Featured Products -->
+    <!-- Product Categories Section -->
+    <section class="product-categories">
+        <div class="section-title">
+            <h2>商品カテゴリー</h2>
+            <p>プレミアムな飲料の豊富な品揃えをご覧ください</p>
+        </div>
+        <div class="category-grid">
+            <!-- Category Cards with Icons -->
+            <a href="products-jp.html#sake" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-wine-bottle"></i>
+                </div>
+                <h3>日本酒</h3>
+            </a>
+            <a href="products-jp.html#whisky" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-glass-whiskey"></i>
+                </div>
+                <h3>ウイスキー</h3>
+            </a>
+            <a href="products-jp.html#wine" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-wine-glass"></i>
+                </div>
+                <h3>ワイン</h3>
+            </a>
+            <a href="products-jp.html#sparkling-wine" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-glass-cheers"></i>
+                </div>
+                <h3>スパークリングワイン</h3>
+            </a>
+            <a href="products-jp.html#beer" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-beer"></i>
+                </div>
+                <h3>ビール</h3>
+            </a>
+            <a href="products-jp.html#spirits" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-glass-martini-alt"></i>
+                </div>
+                <h3>スピリッツ</h3>
+            </a>
+            <a href="products-jp.html#shochu" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-glass-martini"></i>
+                </div>
+                <h3>焼酎</h3>
+            </a>
+            <a href="products-jp.html#non-alcohol" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-beer"></i>
+                </div>
+                <h3>ノンアルコール</h3>
+            </a>
+            <a href="products-jp.html#food" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3>食品・スナック</h3>
+            </a>
+            <a href="products-jp.html#liqueur" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-glass-martini-alt"></i>
+                </div>
+                <h3>リキュール</h3>
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
     <section class="featured-products">
         <h2>おすすめ商品</h2>
         <div class="product-grid">
+            <!-- Product Cards -->
             <div class="product-card">
-                <a href="products-jp.html#sake">
-                    <img src="images/sake1.jpg" alt="プレミアム日本酒" class="product-image">
+                <a href="product-dassai23-jp.html">
+                    <img src="images/Dassai 23 Junmai Daiginjo Optimised.jpg" alt="獺祭 23 純米大吟醸" class="product-image">
                     <div class="product-content">
                         <div class="product-category">日本酒</div>
-                        <h3 class="product-title">獺祭 二割三分</h3>
-                        <p class="product-description">精米歩合23%の最高級純米大吟醸酒。繊細な香りと上品な味わい。</p>
-                        <div class="product-price">¥12,800</div>
+                        <h3 class="product-title">獺祭 23 純米大吟醸</h3>
+                        <p class="product-description">洗練された優雅な味わいの最高級純米大吟醸酒。</p>
+                        <div class="product-price">¥12,000</div>
                         <div class="product-actions">
-                            <button class="add-to-cart">カートに追加</button>
+                            <button class="view-product">商品を見る</button>
                             <button class="favorite-btn"><i class="fas fa-heart"></i></button>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="product-card">
-                <a href="products-jp.html#whisky">
-                    <img src="images/whisky1.jpg" alt="日本産ウイスキー" class="product-image">
-                    <div class="product-content">
-                        <div class="product-category">ウイスキー</div>
-                        <h3 class="product-title">山崎 12年</h3>
-                        <p class="product-description">モミ樽の香りと桃、パイナップルの風味が特徴的なシングルモルト。</p>
-                        <div class="product-price">¥15,500</div>
-                        <div class="product-actions">
-                            <button class="add-to-cart">カートに追加</button>
-                            <button class="favorite-btn"><i class="fas fa-heart"></i></button>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="product-card">
-                <a href="products-jp.html#shochu">
-                    <img src="images/shochu1.jpg" alt="プレミアム焼酎" class="product-image">
+                <a href="product-nakanaka-jp.html">
+                    <img src="images/Naka Naka Barley Shochu Optimised.jpg" alt="中々 麦焼酎" class="product-image">
                     <div class="product-content">
                         <div class="product-category">焼酎</div>
-                        <h3 class="product-title">森の風</h3>
-                        <p class="product-description">樽熟成された芋焼酎。独特の風味と深い味わい。</p>
-                        <div class="product-price">¥8,900</div>
+                        <h3 class="product-title">中々 麦焼酎</h3>
+                        <p class="product-description">なめらかでバランスの取れた味わいのプレミアム麦焼酎。</p>
+                        <div class="product-price">¥3,500</div>
                         <div class="product-actions">
-                            <button class="add-to-cart">カートに追加</button>
+                            <button class="view-product">商品を見る</button>
                             <button class="favorite-btn"><i class="fas fa-heart"></i></button>
                         </div>
                     </div>
                 </a>
             </div>
+            <div class="product-card">
+                <a href="product-taketsuru-jp.html">
+                    <img src="images/Taketsuru Pure Malt 2020 Optimised.jpg" alt="竹鶴 ピュアモルト 2020" class="product-image">
+                    <div class="product-content">
+                        <div class="product-category">ウイスキー</div>
+                        <h3 class="product-title">竹鶴 ピュアモルト 2020</h3>
+                        <p class="product-description">豊かでバランスの取れた味わいの贅沢なモルトブレンド。</p>
+                        <div class="product-price">¥15,000</div>
+                        <div class="product-actions">
+                            <button class="view-product">商品を見る</button>
+                            <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="product-card">
+                <a href="product-chateau-mercian-jp.html">
+                    <img src="images/Château Mercian Hokushin Chardonnay 2022 Optimised.jpg" alt="シャトー・メルシャン 北信シャルドネ 2022" class="product-image">
+                    <div class="product-content">
+                        <div class="product-category">ワイン</div>
+                        <h3 class="product-title">シャトー・メルシャン 北信シャルドネ 2022</h3>
+                        <p class="product-description">北信地域のテロワールを表現したエレガントなシャルドネ。</p>
+                        <div class="product-price">¥5,500</div>
+                        <div class="product-actions">
+                            <button class="view-product">商品を見る</button>
+                            <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="see-more-container">
+            <a href="products-jp.html" class="see-more-btn">商品をもっと見る <i class="fas fa-arrow-right"></i></a>
         </div>
     </section>
 
@@ -147,9 +264,10 @@
     <section class="events-section">
         <h2>今後のイベント</h2>
         <div class="events-grid">
+            <!-- Event Cards -->
             <div class="event-card">
                 <div class="event-image">
-                    <img src="images/sake-tasting.jpg" alt="日本酒テイスティング会">
+                    <img src="images/sake.event.jpg" alt="日本酒テイスティング会">
                     <div class="event-date">
                         <span class="day">15</span>
                         <span class="month">3月</span>
@@ -169,7 +287,7 @@
             </div>
             <div class="event-card">
                 <div class="event-image">
-                    <img src="images/wine-pairing.jpg" alt="ワインと料理のペアリングワークショップ">
+                    <img src="images/winetasting image Optimised.jpg" alt="ワインと料理のペアリングワークショップ">
                     <div class="event-date">
                         <span class="day">22</span>
                         <span class="month">3月</span>
@@ -189,7 +307,7 @@
             </div>
             <div class="event-card">
                 <div class="event-image">
-                    <img src="images/whisky-tasting.jpg" alt="日本産ウイスキーテイスティング">
+                    <img src="images/whisky optimised.jpg" alt="日本産ウイスキーテイスティング">
                     <div class="event-date">
                         <span class="day">29</span>
                         <span class="month">3月</span>
@@ -216,79 +334,244 @@
 
     <!-- Blog Section -->
     <section class="blog">
-        <h2>最新のブログ記事</h2>
+        <h2>ブログ最新記事</h2>
         <div class="blog-grid">
-            <div class="blog-card">
-                <img src="images/blog1.jpg" alt="日本酒造りの工程" class="blog-image">
+            <!-- Blog Cards -->
+            <a href="blog-post-sake-tasting.html" class="blog-card">
+                <img src="images/Japanese Sake Small.jpg" alt="日本酒テイスティングガイド" class="blog-image">
                 <div class="blog-content">
-                    <div class="blog-date">2024年3月15日</div>
-                    <h3 class="blog-title">日本酒造りの技：伝統の旅</h3>
-                    <p class="blog-excerpt">日本酒造りの繊細な工程と、数百年の伝統が織りなす特別な世界をご紹介します。</p>
-                    <a href="#" class="read-more">続きを読む <i class="fas fa-arrow-right"></i></a>
+                    <div class="blog-date">2024年3月20日</div>
+                    <h3 class="blog-title">日本酒テイスティング完全ガイド</h3>
+                    <p class="blog-excerpt">専門家のように日本酒を味わい、楽しむ方法を学びましょう。適切なグラスの選び方から、異なる味わいの特徴の見分け方まで。</p>
+                    <span class="read-more">続きを読む <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+            <a href="blog-post-sake-pairing.html" class="blog-card">
+                <img src="images/Sake Pairing Small.jpg" alt="ワインと料理のペアリング" class="blog-image">
+                <div class="blog-content">
+                    <div class="blog-date">2024年3月20日</div>
+                    <h3 class="blog-title">和食にぴったりのワインペアリング</h3>
+                    <p class="blog-excerpt">伝統的な和食とワインの組み合わせの芸術を発見し、食事体験を向上させましょう。</p>
+                    <span class="read-more">続きを読む <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+            <a href="blog-post-japanese-whisky.html" class="blog-card">
+                <img src="images/Whisky Small.jpg" alt="日本ウイスキー" class="blog-image">
+                <div class="blog-content">
+                    <div class="blog-date">2024年3月20日</div>
+                    <h3 class="blog-title">日本ウイスキー：新たなスター</h3>
+                    <p class="blog-excerpt">日本ウイスキーの人気の高まりと、スピリッツの世界でユニークな存在である理由を探ります。</p>
+                    <span class="read-more">続きを読む <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="form-container">
+            <h2>お問い合わせ</h2>
+            <p>商品やサービスについてご質問がございましたら、お気軽にお問い合わせください。</p>
+            <form class="contact-form">
+                <!-- Form Fields -->
+                <div class="form-group">
+                    <label for="name">お名前</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">メールアドレス</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">件名</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">件名を選択</option>
+                        <option value="products">商品について</option>
+                        <option value="services">サービスについて</option>
+                        <option value="events">イベントについて</option>
+                        <option value="other">その他</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">メッセージ</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">メッセージを送信</button>
+            </form>
+        </div>
+        <div class="info-grid">
+            <div class="info-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="info-card-content">
+                    <h3>店舗所在地</h3>
+                    <p>〒196-0015 東京都昭島市昭和町5-5-1</p>
+                    <p>火曜日～土曜日 10:00-20:00</p>
+                    <p>日曜日 10:00-19:00</p>
+                    <p>月曜日 定休日</p>
                 </div>
             </div>
-            <div class="blog-card">
-                <img src="images/blog2.jpg" alt="ウイスキーテイスティングガイド" class="blog-image">
-                <div class="blog-content">
-                    <div class="blog-date">2024年3月10日</div>
-                    <h3 class="blog-title">日本産ウイスキーテイスティング入門</h3>
-                    <p class="blog-excerpt">日本産ウイスキーの繊細な味わいと香りを、プロのように楽しむ方法をご紹介。</p>
-                    <a href="#" class="read-more">続きを読む <i class="fas fa-arrow-right"></i></a>
+            <div class="info-card">
+                <i class="fas fa-phone"></i>
+                <div class="info-card-content">
+                    <h3>電話番号</h3>
+                    <p>042-541-0128</p>
                 </div>
             </div>
-            <div class="blog-card">
-                <img src="images/blog3.jpg" alt="季節の日本酒" class="blog-image">
-                <div class="blog-content">
-                    <div class="blog-date">2024年3月5日</div>
-                    <h3 class="blog-title">季節の日本酒：春の選りすぐり</h3>
-                    <p class="blog-excerpt">春にぴったりの日本酒を厳選してご紹介。季節に合わせた味わいをお楽しみください。</p>
-                    <a href="#" class="read-more">続きを読む <i class="fas fa-arrow-right"></i></a>
+            <div class="info-card">
+                <i class="fas fa-envelope"></i>
+                <div class="info-card-content">
+                    <h3>メールアドレス</h3>
+                    <p>info@nagatsuka-liquor.com</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq">
+    <section class="faq" id="faq">
         <h2>よくあるご質問</h2>
         <div class="faq-container">
-            <!-- FAQ items will be added here -->
+            <!-- FAQ Items -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>営業時間を教えてください</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>月曜日から土曜日は午前10時から午後8時まで営業しております。日曜日と祝日は休業日となります。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>配送サービスはありますか？</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>はい、東京都内での配送サービスを承っております。配送料は地域と注文金額により異なります。1万円以上のご注文で送料無料となります。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>返品・交換は可能ですか？</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>商品の返品・交換は、未開封・商品到着後7日以内であれば承ります。その際はレシートをご持参ください。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>ギフトラッピングは可能ですか？</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>はい、全商品を対象に無料でギフトラッピングを承っております。包装紙やリボンは各種ご用意がございます。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>注文の配送状況を確認できますか？</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>商品発送後、追跡番号をメールにてお送りいたします。配送業者のウェブサイトで荷物の追跡が可能です。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>海外発送は可能ですか？</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>はい、一部の国への海外発送を承っております。配送料金と配送期間は配送先により異なります。詳細については、お気軽にお問い合わせください。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>限定商品の予約は可能ですか？</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>はい、限定商品のご予約を承っております。高額商品の場合は、予約金をお預かりする場合がございます。詳細は事前にお問い合わせください。</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
+    <footer class="footer">
+        <div class="footer-container">
             <div class="footer-section">
-                <h3>お問い合わせ</h3>
-                <p>住所：[店舗住所]</p>
-                <p>電話：[電話番号]</p>
-                <p>メール：[メールアドレス]</p>
-            </div>
-            <div class="footer-section">
-                <h3>フォローする</h3>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/shinichi_nagatsuka.saketen/"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
+                <h3>長塚酒店</h3>
+                <p>プレミアムな日本のお酒と飲料のご提供を通じて、お客様に信頼されるお店を目指しています。</p>
             </div>
             <div class="footer-section">
                 <h3>クイックリンク</h3>
                 <ul>
-                    <li><a href="products-jp.html">商品</a></li>
+                    <li><a href="products-jp.html">商品一覧</a></li>
                     <li><a href="about-jp.html">会社概要</a></li>
                     <li><a href="blog-jp.html">ブログ</a></li>
                     <li><a href="contact-jp.html">お問い合わせ</a></li>
                 </ul>
             </div>
+            <div class="footer-section">
+                <h3>お問い合わせ</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 〒196-0015 東京都昭島市昭和町5丁目5-1</p>
+                <p><i class="fas fa-clock"></i> 月曜日～土曜日 10:00-20:00</p>
+                <p><i class="fas fa-clock"></i> 日曜日 10:00-19:00</p>
+                <p><i class="fas fa-clock"></i> 月曜日定休</p>
+                <p><i class="fas fa-phone"></i> 042-541-0128</p>
+            </div>
+            <div class="footer-section">
+                <h3>フォローする</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/shinichi_nagatsuka.saketen/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 長塚酒店. All rights reserved.</p>
+            <p>&copy; 2024 長塚酒店 - All rights reserved</p>
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="トップへ戻る">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script src="script.js"></script>
+    <script>
+        // Carousel functionality
+        const carousel = document.querySelector('.carousel');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const prevBtn = document.querySelector('.carousel-btn.prev');
+        const nextBtn = document.querySelector('.carousel-btn.next');
+        const indicators = document.querySelectorAll('.carousel-indicators .indicator');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle('active', i === index);
+            });
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            showSlide((currentSlide + 1) % slides.length);
+        }
+
+        function prevSlide() {
+            showSlide((currentSlide - 1 + slides.length) % slides.length);
+        }
+
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => showSlide(index));
+        });
+
+        // Auto-advance slides every 5 seconds
+        setInterval(nextSlide, 5000);
+    </script>
 </body>
 </html> 

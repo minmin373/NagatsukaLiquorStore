@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>お問い合わせ - 永塚酒店</title>
+    <title>お問い合わせ - 長塚酒店 | 東京のプレミアム日本酒専門店</title>
+    <meta name="description" content="長塚酒店へのお問い合わせはこちらから。商品に関するご質問、イベントのご予約、その他のお問い合わせはお気軽にご連絡ください。">
+    <meta name="keywords" content="長塚酒店, お問い合わせ, 日本酒専門店, 東京の酒屋, 日本酒販売, ウイスキー専門店, よくある質問">
+    <meta name="author" content="長塚酒店">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="お問い合わせ - 長塚酒店 | 東京のプレミアム日本酒専門店">
+    <meta property="og:description" content="長塚酒店へのお問い合わせはこちらから。商品に関するご質問、イベントのご予約、その他のお問い合わせはお気軽にご連絡ください。">
+    <meta property="og:image" content="images/Logo Colour.png">
+    <meta property="og:url" content="https://nagatsukaliquorstore.com/contact-jp.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="お問い合わせ - 長塚酒店 | 東京のプレミアム日本酒専門店">
+    <meta name="twitter:description" content="長塚酒店へのお問い合わせはこちらから。商品に関するご質問、イベントのご予約、その他のお問い合わせはお気軽にご連絡ください。">
+    <meta name="twitter:image" content="images/Logo Colour.png">
+    <link rel="canonical" href="https://nagatsukaliquorstore.com/contact-jp.html">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Figtree:wght@400;500;600;700&family=Lalezar&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/logo brown.png">
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -14,14 +29,21 @@
         <div class="nav-container">
             <div class="logo">
                 <a href="index-jp.html">
-                    <h1>永塚酒店</h1>
+                    <img src="images/Logo Colour.png" alt="長塚酒店ロゴ" class="nav-logo">
+                    <h1 class="vertical-text">長<br>塚<br>酒<br>店</h1>
                 </a>
             </div>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <div class="nav-links">
+                <a href="index-jp.html">ホーム</a>
                 <div class="dropdown">
                     <a href="products-jp.html" class="dropbtn">商品 <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
-                        <a href="products-jp.html">全商品</a>
+                        <a href="products-jp.html#all-products">全商品</a>
                         <a href="products-jp.html#best-sellers">ベストセラー</a>
                         <a href="products-jp.html#whisky">ウイスキー</a>
                         <a href="products-jp.html#wine">ワイン</a>
@@ -39,25 +61,24 @@
                     <a href="about-jp.html" class="dropbtn">会社概要 <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
                         <a href="about-jp.html">会社案内</a>
-                        <a href="about-jp.html#history">沿革</a>
                         <a href="about-jp.html#values">企業理念</a>
+                        <a href="about-jp.html#events">イベント情報</a>
                     </div>
                 </div>
                 <a href="blog-jp.html">ブログ</a>
                 <div class="dropdown">
-                    <a href="contact-jp.html" class="dropbtn">お問い合わせ <i class="fas fa-chevron-down"></i></a>
+                    <a href="contact-jp.html" class="dropbtn" style="color: var(--forest-green); font-weight: bold;">お問い合わせ <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
-                        <a href="contact-jp.html">店舗案内</a>
-                        <a href="contact-jp.html#contact-form">お問い合わせフォーム</a>
+                        <a href="contact-jp.html">お問い合わせ</a>
+                        <a href="contact-jp.html#faq">よくある質問</a>
                     </div>
                 </div>
                 <div class="nav-actions">
-                    <button class="search-btn"><i class="fas fa-search"></i></button>
                     <div class="dropdown">
                         <button class="dropbtn"><i class="fas fa-globe"></i></button>
                         <div class="dropdown-content">
-                            <a href="contact.html">English</a>
-                            <a href="contact-jp.html">日本語</a>
+                            <a href="index.html">English</a>
+                            <a href="index-jp.html">日本語</a>
                         </div>
                     </div>
                     <a href="favorites-jp.html" class="favorite-btn"><i class="fas fa-heart"></i></a>
@@ -73,93 +94,132 @@
         <div class="contact-hero-content">
             <h1>お問い合わせ</h1>
             <p>ご質問やご相談はお気軽にお問い合わせください</p>
+            <div class="contact-cta-buttons">
+                <a href="#contact-form" class="cta-button">お問い合わせフォーム</a>
+                <a href="#faq" class="cta-button secondary">よくある質問</a>
+            </div>
         </div>
     </section>
 
-    <!-- Location Section -->
-    <section class="location">
-        <div class="container">
-            <h2>店舗案内</h2>
-            <div class="location-content">
-                <div class="location-info">
-                    <h3>永塚酒店 本店</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 〒100-0001 東京都千代田区千代田1-1-1</p>
-                    <p><i class="fas fa-phone"></i> 03-1234-5678</p>
-                    <p><i class="fas fa-envelope"></i> info@nagatsuka-liquor.com</p>
-                    <div class="business-hours">
-                        <h4>営業時間</h4>
-                        <p>平日: 10:00 - 20:00</p>
-                        <p>土日祝: 11:00 - 19:00</p>
-                    </div>
+    <!-- Contact Form and Information -->
+    <section class="contact-form-section">
+        <div class="form-container">
+            <h2>メッセージを送信</h2>
+            <iframe id="JotFormIFrame-250968855902874" title="お問い合わせフォーム" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allowfullscreen="true" allow="geolocation; microphone; camera" frameborder="0" scrolling="no" style="min-width:100%;height:539px;border:none;" src="https://form.jotform.com/250968855902874"></iframe>
+        </div>
+        <div class="info-grid">
+            <div class="info-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="info-card-content">
+                    <h3>店舗案内</h3>
+                    <p>〒196-0015 東京都昭島市昭和町5-5-1</p>
+                    <p>火曜日から土曜日 10:00-20:00</p>
+                    <p>日曜日 10:00-19:00</p>
+                    <p>月曜日 定休日</p>
                 </div>
-                <div class="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.828030555028!2d139.7529353152582!3d35.68123597999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857628235d%3A0xcdd8aef709a2b520!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1647841234567!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-phone"></i>
+                <div class="info-card-content">
+                    <h3>お電話</h3>
+                    <p>+81 42 541 0128</p>
+                </div>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-envelope"></i>
+                <div class="info-card-content">
+                    <h3>メール</h3>
+                    <p>info@nagatsuka-liquor.com</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Form Section -->
-    <section id="contact-form" class="contact-form">
-        <div class="container">
-            <h2>お問い合わせフォーム</h2>
-            <iframe id="JotFormIFrame-250968855902874" title="お問い合わせフォーム" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allowfullscreen="true" allow="geolocation; microphone; camera" frameborder="0" scrolling="no" style="min-width:100%;height:539px;border:none;" src="https://form.jotform.com/250968855902874"></iframe>
+    <!-- Map Section -->
+    <section class="map-section">
+        <h2>アクセス</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.828030555028!2d139.7529353152582!3d35.68123597999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857628235d%3A0xcdd8aef709a2b520!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1647841234567!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq">
-        <div class="container">
-            <h2>よくあるご質問</h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>配送について</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>全国配送に対応しております。配送料金は地域によって異なります。</p>
-                    </div>
+    <section class="faq-section">
+        <h2>よくあるご質問</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>配送について</h3>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>支払い方法</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>クレジットカード、銀行振込、代金引換に対応しております。</p>
-                    </div>
+                <div class="faq-answer">
+                    <p>国内配送と国際配送の両方に対応しております。国内配送は通常2-3営業日でお届けします。国際配送は地域によって異なります。10,000円以上のご注文で国内配送料無料となります。</p>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>返品・交換について</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>商品到着後7日以内に限り、未開封の商品の返品・交換を承っております。</p>
-                    </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>ギフト包装サービスはありますか？</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>はい、すべてのご注文に無料でギフト包装サービスをご提供しています。ギフトに添えるメッセージを追加でき、伝統的な和紙の包装紙からお選びいただけます。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>支払い方法について</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>主要なクレジットカード（Visa、MasterCard、American Express）、PayPay、LINE Pay、銀行振込に対応しています。国際注文の場合は、PayPalや各種現地決済方法もご利用いただけます。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>返品ポリシーについて</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>商品到着後14日以内に限り、未開封で元の包装のままの商品の返品を承ります。商品に欠陥がない限り、返品の送料はお客様のご負担となります。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>日本酒の試飲会は開催していますか？</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>はい、当店では定期的に日本酒の試飲会を開催しています。プレミアム日本酒の試飲、醸造工程についての説明、料理とのペアリング提案などが含まれます。今後の試飲会のスケジュールはイベントページをご確認ください。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>海外へのアルコール配送は可能ですか？</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>はい、特定の国へのアルコールの国際配送が可能です。ただし、アルコールの国際配送は現地の税関規制や関税の対象となります。お客様の国への配送の詳細については、お問い合わせください。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>卸売りや大量購入の割引はありますか？</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>はい、卸売りや大量購入には特別価格をご用意しています。卸売りのお問い合わせやカスタム見積もりについては、営業担当まで直接ご連絡ください。イベントや法人ギフトにも特別料金を設定しています。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>会員プログラムへの参加方法は？</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>当社のウェブサイトでアカウントを作成するか、店舗で登録することで会員プログラムに参加できます。会員は購入時にポイントを獲得し、特別商品の先行予約や試飲会への招待など、特典を受けることができます。</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
+    <footer class="footer">
+        <div class="footer-container">
             <div class="footer-section">
-                <h3>お問い合わせ</h3>
-                <p>住所：[店舗住所]</p>
-                <p>電話：[電話番号]</p>
-                <p>メール：[メールアドレス]</p>
-            </div>
-            <div class="footer-section">
-                <h3>フォローする</h3>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/shinichi_nagatsuka.saketen/"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
+                <h3>長塚酒店</h3>
+                <p>プレミアムな日本酒と飲料の信頼できる供給源です。</p>
             </div>
             <div class="footer-section">
                 <h3>クイックリンク</h3>
@@ -170,11 +230,33 @@
                     <li><a href="contact-jp.html">お問い合わせ</a></li>
                 </ul>
             </div>
+            <div class="footer-section">
+                <h3>お問い合わせ</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 〒196-0015 東京都昭島市昭和町5-5-1</p>
+                <p><i class="fas fa-clock"></i> 月曜日から土曜日 10:00-20:00</p>
+                <p><i class="fas fa-clock"></i> 日曜日 10:00-19:00</p>
+                <p><i class="fas fa-clock"></i> 月曜日 定休日</p>
+                <p><i class="fas fa-phone"></i> +81 42 541 0128</p>
+            </div>
+            <div class="footer-section">
+                <h3>フォローする</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/shinichi_nagatsuka.saketen/"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 永塚酒店. All rights reserved.</p>
+            <p>&copy; 2024 長塚酒店. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>

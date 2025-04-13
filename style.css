@@ -3955,7 +3955,6 @@ footer {
     line-height: 1.6;
     margin-top: 1rem;
 }
-
 .map-section h2 {
     text-align: center;
     margin-bottom: 2rem;
@@ -3978,4 +3977,20 @@ footer {
     width: 100px;
     height: 3px;
     background-color: var(--warm-orange);
+}
+
+/* Vertical Text for Japanese Logo */
+.vertical-text {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    letter-spacing: 0.2em;
+    line-height: 1.2;
+    margin-left: 0;
+    font-size: 1.2rem;
+}
+
+/* Adjust logo container for vertical text */
+.logo a {
+    display: flex;
+    align-items: center;
 }

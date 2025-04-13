@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ブログ - 永塚酒店</title>
+    <title>ブログ - 長塚酒店</title>
+    <meta name="description" content="日本酒、ウイスキー、ワインなどに関する専門家の洞察を探る。長塚酒店の専門家によるテイスティングノート、業界ニュース、ヒントをご覧ください。">
+    <meta name="keywords" content="日本酒ブログ, ウイスキーブログ, 酒類店ブログ, 日本酒ニュース, アルコールテイスティング, 酒類店の洞察">
+    <meta name="author" content="長塚酒店">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="ブログ - 日本酒・飲料の洞察 | 長塚酒店">
+    <meta property="og:description" content="日本酒、ウイスキー、ワインなどに関する専門家の洞察を探る。長塚酒店の専門家によるテイスティングノート、業界ニュース、ヒントをご覧ください。">
+    <meta property="og:image" content="images/Logo Colour.png">
+    <meta property="og:url" content="https://nagatsukaliquorstore.com/blog-jp.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ブログ - 日本酒・飲料の洞察 | 長塚酒店">
+    <meta name="twitter:description" content="日本酒、ウイスキー、ワインなどに関する専門家の洞察を探る。長塚酒店の専門家によるテイスティングノート、業界ニュース、ヒントをご覧ください。">
+    <meta name="twitter:image" content="images/Logo Colour.png">
+    <link rel="canonical" href="https://nagatsukaliquorstore.com/blog-jp.html">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Figtree:wght@400;500;600;700&family=Lalezar&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/logo brown.png">
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -14,8 +29,8 @@
         <div class="nav-container">
             <div class="logo">
                 <a href="index-jp.html">
-                    <img src="images/Logo Colour.png" alt="Nagatsuka Liquor Store Logo" class="nav-logo">
-                    <h1>Nagatsuka Liquor Store</h1>
+                    <img src="images/Logo Colour.png" alt="長塚酒店ロゴ" class="nav-logo">
+                    <h1 class="vertical-text">長<br>塚<br>酒<br>店</h1>
                 </a>
             </div>
             <div class="hamburger-menu">
@@ -39,24 +54,22 @@
                         <a href="products-jp.html#beer">ビール</a>
                         <a href="products-jp.html#liqueur">リキュール</a>
                         <a href="products-jp.html#non-alcohol">ノンアルコール</a>
-                        <a href="products-jp.html#food">食品・おつまみ</a>
+                        <a href="products-jp.html#food">食品・スナック</a>
                     </div>
                 </div>
                 <div class="dropdown">
-                    <a href="about-jp.html" class="dropbtn">会社案内 <i class="fas fa-chevron-down"></i></a>
+                    <a href="about-jp.html" class="dropbtn">会社概要 <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
                         <a href="about-jp.html">会社案内</a>
                         <a href="about-jp.html#values">企業理念</a>
-                        <a href="about-jp.html#events">沿革</a>
+                        <a href="about-jp.html#events">イベント情報</a>
                     </div>
                 </div>
-                <a href="blog-jp.html">ブログ</a>
-                <div class="dropdown">
-                    <a href="contact-jp.html" class="dropbtn">お問い合わせ <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-content">
-                        <a href="contact-jp.html">お問い合わせ</a>
-                        <a href="contact-jp.html#faq">よくある質問</a>
-                    </div>
+                <a href="blog-jp.html" style="color: var(--forest-green); font-weight: bold;">ブログ</a>
+                <a href="contact-jp.html" class="dropbtn">お問い合わせ <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="contact-jp.html">お問い合わせ</a>
+                    <a href="contact-jp.html#faq">よくある質問</a>
                 </div>
                 <div class="nav-actions">
                     <div class="dropdown">
@@ -74,120 +87,113 @@
         </div>
     </nav>
 
-    <!-- Blog Hero Section -->
-    <section class="blog-hero">
-        <div class="blog-hero-content">
-            <h1>ブログ</h1>
-            <p>日本酒、ワイン、スピリッツに関する最新情報とおすすめ情報をお届けします</p>
+    <!-- Blog Header -->
+    <header class="blog-header">
+        <h1>ブログ</h1>
+        <p>日本酒、ワイン、スピリッツに関する最新情報とおすすめ情報をお届けします</p>
+        <div class="blog-search">
+            <input type="text" placeholder="記事を検索...">
+            <button><i class="fas fa-search"></i></button>
         </div>
-    </section>
+    </header>
 
     <!-- Blog Categories -->
     <section class="blog-categories">
-        <div class="container">
-            <div class="category-filters">
-                <button class="category-btn active">すべて</button>
-                <button class="category-btn">日本酒</button>
-                <button class="category-btn">ウイスキー</button>
-                <button class="category-btn">ワイン</button>
-                <button class="category-btn">焼酎</button>
-                <button class="category-btn">おすすめ情報</button>
-            </div>
+        <div class="category-filters">
+            <button class="category-btn active">すべて</button>
+            <button class="category-btn">日本酒</button>
+            <button class="category-btn">ワイン</button>
+            <button class="category-btn">スピリッツ</button>
+            <button class="category-btn">ビール</button>
+            <button class="category-btn">イベント</button>
         </div>
     </section>
 
     <!-- Blog Posts Grid -->
-    <section class="blog-posts">
-        <div class="container">
-            <div class="blog-grid">
-                <!-- Featured Post -->
-                <div class="blog-card featured">
-                    <img src="images/blog1.jpg" alt="日本酒造りの工程" class="blog-image">
-                    <div class="blog-content">
-                        <div class="blog-category">日本酒</div>
-                        <div class="blog-date">2024年3月15日</div>
-                        <h3 class="blog-title">日本酒造りの技：伝統の旅</h3>
-                        <p class="blog-excerpt">日本酒造りの繊細な工程と、数百年の伝統が織りなす特別な世界をご紹介します。</p>
-                        <a href="#" class="read-more">続きを読む <i class="fas fa-arrow-right"></i></a>
-                    </div>
+    <section class="blog">
+        <div class="blog-grid">
+            <!-- Blog Post 1 -->
+            <a href="blog-post-sake-tasting-jp.html" class="blog-card">
+                <div class="blog-image">
+                    <img src="images/Japanese Sake Small.jpg" alt="日本酒テイスティングガイド">
                 </div>
-
-                <!-- Regular Posts -->
-                <div class="blog-card">
-                    <img src="images/blog2.jpg" alt="ウイスキーテイスティングガイド" class="blog-image">
-                    <div class="blog-content">
-                        <div class="blog-category">ウイスキー</div>
-                        <div class="blog-date">2024年3月10日</div>
-                        <h3 class="blog-title">日本産ウイスキーテイスティング入門</h3>
-                        <p class="blog-excerpt">日本産ウイスキーの繊細な味わいと香りを、プロのように楽しむ方法をご紹介。</p>
-                        <a href="#" class="read-more">続きを読む <i class="fas fa-arrow-right"></i></a>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="date">2024年3月15日</span>
+                        <span class="category">日本酒</span>
                     </div>
+                    <h3 class="blog-title">日本酒テイスティング完全ガイド</h3>
+                    <p class="blog-excerpt">日本酒の種類、適切なテイスティング方法、繊細な味わいの楽しみ方を学びましょう。</p>
+                    <span class="read-more">続きを読む <i class="fas fa-arrow-right"></i></span>
                 </div>
+            </a>
 
-                <div class="blog-card">
-                    <img src="images/blog3.jpg" alt="季節の日本酒" class="blog-image">
-                    <div class="blog-content">
-                        <div class="blog-category">日本酒</div>
-                        <div class="blog-date">2024年3月5日</div>
-                        <h3 class="blog-title">季節の日本酒：春の選りすぐり</h3>
-                        <p class="blog-excerpt">春にぴったりの日本酒を厳選してご紹介。季節に合わせた味わいをお楽しみください。</p>
-                        <a href="#" class="read-more">続きを読む <i class="fas fa-arrow-right"></i></a>
+            <!-- Blog Post 2 -->
+            <a href="blog-post-wine-pairing-jp.html" class="blog-card">
+                <div class="blog-image">
+                    <img src="images/Sake Pairing Small.jpg" alt="ワインペアリング">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="date">2024年3月10日</span>
+                        <span class="category">ワイン</span>
                     </div>
+                    <h3 class="blog-title">和食に合うワインの選び方</h3>
+                    <p class="blog-excerpt">寿司から天ぷらまで、お気に入りの和食にぴったりのワインを見つけましょう。</p>
+                    <span class="read-more">続きを読む <i class="fas fa-arrow-right"></i></span>
                 </div>
+            </a>
 
-                <div class="blog-card">
-                    <img src="images/blog4.jpg" alt="ワインペアリング" class="blog-image">
-                    <div class="blog-content">
-                        <div class="blog-category">ワイン</div>
-                        <div class="blog-date">2024年3月1日</div>
-                        <h3 class="blog-title">和食とワインのペアリングガイド</h3>
-                        <p class="blog-excerpt">日本料理に合わせるワインの選び方と、おすすめの組み合わせをご紹介します。</p>
-                        <a href="#" class="read-more">続きを読む <i class="fas fa-arrow-right"></i></a>
+            <!-- Blog Post 3 -->
+            <a href="blog-post-japanese-whisky-jp.html" class="blog-card">
+                <div class="blog-image">
+                    <img src="images/Whisky Small.jpg" alt="日本ウイスキー">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="date">2024年3月5日</span>
+                        <span class="category">ウイスキー</span>
                     </div>
+                    <h3 class="blog-title">日本のウイスキー：新たな時代の幕開け</h3>
+                    <p class="blog-excerpt">日本ウイスキーが世界的なセンセーションとなった理由を探ります。</p>
+                    <span class="read-more">続きを読む <i class="fas fa-arrow-right"></i></span>
                 </div>
-            </div>
+            </a>
 
-            <!-- Pagination -->
-            <div class="pagination">
-                <a href="#" class="active">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#" class="next">次へ <i class="fas fa-chevron-right"></i></a>
-            </div>
+            <!-- Blog Post 4 -->
+            <a href="blog-post-craft-beer-jp.html" class="blog-card">
+                <div class="blog-image">
+                    <img src="images/Craft Beer Small.jpg" alt="クラフトビール">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="date">2024年3月1日</span>
+                        <span class="category">ビール</span>
+                    </div>
+                    <h3 class="blog-title">日本のクラフトビール革命</h3>
+                    <p class="blog-excerpt">日本のクラフトビールシーンを探検。地元の醸造所、ユニークな原料、試すべき最高のクラフトビールをご紹介。</p>
+                    <span class="read-more">続きを読む <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
         </div>
     </section>
 
     <!-- Newsletter Section -->
-    <section class="newsletter">
-        <div class="container">
-            <h2>ニュースレター登録</h2>
-            <p>最新のブログ記事やおすすめ商品情報をお届けします</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="メールアドレスを入力">
-                <button type="submit">登録する</button>
-            </form>
-        </div>
+    <section class="newsletter-section">
+        <h2>ニュースレターを購読</h2>
+        <p>最新の記事、イベント、商品情報をお届けします</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="メールアドレスを入力">
+            <button type="submit">購読する</button>
+        </form>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
+    <footer class="footer">
+        <div class="footer-container">
             <div class="footer-section">
-                <h3>お問い合わせ</h3>
-                <p>住所：[店舗住所]</p>
-                <p>電話：[電話番号]</p>
-                <p>メール：[メールアドレス]</p>
-            </div>
-            <div class="footer-section">
-                <h3>フォローする</h3>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/shinichi_nagatsuka.saketen/"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
+                <h3>長塚酒店</h3>
+                <p>プレミアムな日本酒と飲料の信頼できる供給源です。</p>
             </div>
             <div class="footer-section">
                 <h3>クイックリンク</h3>
@@ -198,11 +204,33 @@
                     <li><a href="contact-jp.html">お問い合わせ</a></li>
                 </ul>
             </div>
+            <div class="footer-section">
+                <h3>お問い合わせ</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 〒196-0015 東京都昭島市昭和町5-5-1</p>
+                <p><i class="fas fa-clock"></i> 月曜日から土曜日 10:00-20:00</p>
+                <p><i class="fas fa-clock"></i> 日曜日 10:00-19:00</p>
+                <p><i class="fas fa-clock"></i> 月曜日 定休日</p>
+                <p><i class="fas fa-phone"></i> +81 42 541 0128</p>
+            </div>
+            <div class="footer-section">
+                <h3>フォローする</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/shinichi_nagatsuka.saketen/"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 永塚酒店. All rights reserved.</p>
+            <p>&copy; 2024 長塚酒店. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>商品一覧 - 永塚酒店</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Lalezar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Figtree:wght@400;500;600;700&family=Lalezar&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/png" href="images/Logo Colour.png">
 </head>
@@ -15,8 +15,8 @@
         <div class="nav-container">
             <div class="logo">
                 <a href="index-jp.html">
-                    <img src="images/Logo Colour.png" alt="永塚酒店ロゴ" class="nav-logo">
-                    <h1>永塚酒店</h1>
+                    <img src="images/Logo Colour.png" alt="長塚酒店ロゴ" class="nav-logo">
+                    <h1 class="vertical-text">長<br>塚<br>酒<br>店</h1>
                 </a>
             </div>
             <div class="hamburger-menu">
@@ -27,9 +27,9 @@
             <div class="nav-links">
                 <a href="index-jp.html">ホーム</a>
                 <div class="dropdown">
-                    <a href="products-jp.html" class="dropbtn">商品 <i class="fas fa-chevron-down"></i></a>
+                    <a href="products-jp.html" class="dropbtn" style="color: var(--forest-green); font-weight: bold;">商品 <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
-                        <a href="products-jp.html">全商品</a>
+                        <a href="products-jp.html#all-products">全商品</a>
                         <a href="products-jp.html#best-sellers">ベストセラー</a>
                         <a href="products-jp.html#whisky">ウイスキー</a>
                         <a href="products-jp.html#wine">ワイン</a>
@@ -47,17 +47,15 @@
                     <a href="about-jp.html" class="dropbtn">会社概要 <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
                         <a href="about-jp.html">会社案内</a>
-                        <a href="about-jp.html#history">沿革</a>
                         <a href="about-jp.html#values">企業理念</a>
+                        <a href="about-jp.html#events">イベント情報</a>
                     </div>
                 </div>
                 <a href="blog-jp.html">ブログ</a>
-                <div class="dropdown">
-                    <a href="contact-jp.html" class="dropbtn">お問い合わせ <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-content">
-                        <a href="contact-jp.html">お問い合わせ</a>
-                        <a href="contact-jp.html#faq">よくある質問</a>
-                    </div>
+                <a href="contact-jp.html" class="dropbtn">お問い合わせ <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="contact-jp.html">お問い合わせ</a>
+                    <a href="contact-jp.html#faq">よくある質問</a>
                 </div>
                 <div class="nav-actions">
                     <div class="dropdown">
@@ -270,20 +268,268 @@
 
             <!-- Product Grid -->
             <div class="product-grid">
-                <!-- Product cards will be dynamically loaded here -->
-            </div>
-
-            <!-- Pagination -->
-            <div class="pagination">
-                <button class="prev-page"><i class="fas fa-chevron-left"></i></button>
-                <div class="page-numbers">
-                    <button class="page-number active">1</button>
-                    <button class="page-number">2</button>
-                    <button class="page-number">3</button>
-                    <span class="page-ellipsis">...</span>
-                    <button class="page-number">10</button>
+                <!-- Whisky Products -->
+                <div class="product-card" data-category="whisky" data-alcohol="high">
+                    <a href="product-nikka-barrel-jp.html">
+                        <img src="images/Nikka From The Barrel optimised.jpg" alt="ニッカ フロム・ザ・バレル" class="product-image">
+                        <div class="product-content">
+                            <div class="product-category">ウイスキー</div>
+                            <h3 class="product-title">ニッカ フロム・ザ・バレル</h3>
+                            <p class="product-description">深みのある味わいと高いアルコール度数を特徴とする、ニッカの職人技が光るブレンドウイスキー。</p>
+                            <div class="product-price">¥6,800</div>
+                            <div class="product-actions">
+                                <button class="view-product">商品を見る</button>
+                                <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <button class="next-page"><i class="fas fa-chevron-right"></i></button>
+                <div class="product-card" data-category="whisky" data-alcohol="high">
+                    <a href="product-taketsuru-jp.html">
+                        <img src="images/Taketsuru Pure Malt 2020 Optimised.jpg" alt="竹鶴 ピュアモルト 2020" class="product-image">
+                        <div class="product-content">
+                            <div class="product-category">ウイスキー</div>
+                            <h3 class="product-title">竹鶴 ピュアモルト 2020</h3>
+                            <p class="product-description">日本ウイスキーの父、竹鶴政孝に敬意を表したプレミアムなモルトブレンドウイスキー。</p>
+                            <div class="product-price">¥85,000</div>
+                            <div class="product-actions">
+                                <button class="view-product">商品を見る</button>
+                                <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-category="whisky" data-alcohol="high">
+                    <a href="product-chita-jp.html">
+                        <img src="images/The Chita Single Grain Optimised.jpg" alt="ザ・チタ シングルグレーン" class="product-image">
+                        <div class="product-content">
+                            <div class="product-category">ウイスキー</div>
+                            <h3 class="product-title">ザ・チタ シングルグレーン</h3>
+                            <p class="product-description">チタ蒸留所のスムーズで軽やかな味わいが特徴の、汎用性の高いウイスキー。</p>
+                            <div class="product-price">¥18,500</div>
+                            <div class="product-actions">
+                                <button class="view-product">商品を見る</button>
+                                <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-category="whisky" data-alcohol="high">
+                    <a href="product-kujira-jp.html">
+                        <img src="images/Kujira Inari optimised.jpg" alt="クジラ イナリ" class="product-image">
+                        <div class="product-content">
+                            <div class="product-category">ウイスキー</div>
+                            <h3 class="product-title">クジラ イナリ</h3>
+                            <p class="product-description">伝統と革新の味わいが調和したユニークなウイスキー。</p>
+                            <div class="product-price">¥45,000</div>
+                            <div class="product-actions">
+                                <button class="view-product">商品を見る</button>
+                                <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Wine Products -->
+                <div class="product-card" data-category="wine" data-alcohol="medium">
+                    <a href="product-takahata-jp.html">
+                        <img src="images/Takahata Winery Oura Chardonnay 2022 Optimised.jpg" alt="高畠ワイナリー 大浦シャルドネ 2022" class="product-image">
+                        <div class="product-content">
+                            <div class="product-category">ワイン</div>
+                            <h3 class="product-title">高畠ワイナリー 大浦シャルドネ 2022</h3>
+                            <p class="product-description">エレガントな果実味が特徴の受賞歴のある日本産シャルドネ。</p>
+                            <div class="product-price">¥65,000</div>
+                            <div class="product-actions">
+                                <button class="view-product">商品を見る</button>
+                                <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-category="wine" data-alcohol="medium">
+                    <a href="product-sapporo-syrah-jp.html">
+                        <img src="images/Sapporo Breweries Grande Polaire Azuminoikeda Syrah 2018 Optimised.jpg" alt="サッポロビール グランポレール 安曇野池田シラー 2018" class="product-image">
+                        <div class="product-content">
+                            <div class="product-category">ワイン</div>
+                            <h3 class="product-title">サッポロビール グランポレール 安曇野池田シラー 2018</h3>
+                            <p class="product-description">北信のテロワールを反映した洗練されたシャルドネ。</p>
+                            <div class="product-price">¥15,000</div>
+                            <div class="product-actions">
+                                <button class="view-product">商品を見る</button>
+                                <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-category="wine" data-alcohol="medium">
+                    <a href="product-chateau-mercian-jp.html">
+                        <img src="images/Château Mercian Hokushin Chardonnay 2022 Optimised.jpg" alt="シャトー・メルシャン 北信シャルドネ 2022" class="product-image">
+                        <div class="product-content">
+                            <div class="product-category">ワイン</div>
+                            <h3 class="product-title">シャトー・メルシャン 北信シャルドネ 2022</h3>
+                            <p class="product-description">北信のテロワールを反映した洗練されたシャルドネ。</p>
+                            <div class="product-price">¥7,500</div>
+                            <div class="product-actions">
+                                <button class="view-product">商品を見る</button>
+                                <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-category="wine" data-alcohol="medium">
+                    <a href="product-grace-akeno-jp.html">
+                        <img src="images/Grace Akeno Red 2019 Optimised.jpg" alt="グレイス 明野レッド 2019" class="product-image">
+                        <div class="product-content">
+                            <div class="product-category">ワイン</div>
+                            <h3 class="product-title">グレイス 明野レッド 2019</h3>
+                            <p class="product-description">調和の取れた味わいが特徴の注目の赤ワイン。</p>
+                            <div class="product-price">¥12,500</div>
+                            <div class="product-actions">
+                                <button class="view-product">商品を見る</button>
+                                <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-category="wine" data-alcohol="medium">
+                    <a href="product-karuizawa-jp.html">
+                        <img src="images/Takahiko Yoichi-Nobori Aihara Passetoutgrain 2021 Optimised.jpg" alt="高彦 余市登 相原パストゥトグラン 2021" class="product-image">
+                        <div class="product-content">
+                            <div class="product-category">ワイン</div>
+                            <h3 class="product-title">高彦 余市登 相原パストゥトグラン 2021</h3>
+                            <p class="product-description">北海道のブドウ畑の味わいを感じるユニークな赤ブレンド。</p>
+                            <div class="product-price">¥280,000</div>
+                            <div class="product-actions">
+                                <button class="view-product">商品を見る</button>
+                                <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Shochu Products -->
+                <div class="product-card" data-category="shochu" data-alcohol="high">
+                    <a href="product-nikaido-shochu-jp.html">
+                        <img src="images/Nikaido Oita Mugi Shochu Optimised.jpg" alt="二階堂 大分麦焼酎" class="product-image">
+                        <div class="product-content">
+                            <div class="product-category">焼酎</div>
+                            <h3 class="product-title">二階堂 大分麦焼酎</h3>
+                            <p class="product-description">スムーズでまろやかな味わいの麦焼酎。</p>
+                            <div class="product-price">¥450,000</div>
+                            <div class="product-actions">
+                                <button class="view-product">商品を見る</button>
+                                <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-category="shochu" data-alcohol="high">
+                    <a href="product-petrus-jp.html">
+                        <img src="images/Naka Naka Barley Shochu Optimised.jpg" alt="中々 麦焼酎" class="product-image">
+                        <div class="product-content">
+                            <div class="product-category">焼酎</div>
+                            <h3 class="product-title">中々 麦焼酎</h3>
+                            <p class="product-description">バランスの取れた味わいの丁寧に造られた麦焼酎。</p>
+                            <div class="product-price">¥380,000</div>
+                            <div class="product-actions">
+                                <button class="view-product">商品を見る</button>
+                                <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-category="shochu" data-alcohol="high">
+                    <a href="product-mizu-saga-jp.html">
+                        <img src="images/Mizu Saga Barley Shochu Optimised.jpg" alt="水佐賀 麦焼酎" class="product-image">
+                        <div class="product-content">
+                            <div class="product-category">焼酎</div>
+                            <h3 class="product-title">水佐賀 麦焼酎</h3>
+                            <p class="product-description">クリーンで爽やかな味わいのプレミアム焼酎。</p>
+                            <div class="product-price">¥32,000</div>
+                            <div class="product-actions">
+                                <button class="view-product">商品を見る</button>
+                                <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Sake Products -->
+                <div class="product-card" data-category="sake" data-alcohol="medium">
+                    <a href="product-hideyoshi-jp.html">
+                        <img src="images/Hideyoshi Junmai Daiginjo Optimised.jpg" alt="秀吉 純米大吟醸" class="product-image">
+                        <div class="product-content">
+                            <div class="product-category">日本酒</div>
+                            <h3 class="product-title">秀吉 純米大吟醸</h3>
+                            <p class="product-description">洗練された優雅な味わいの受賞歴のある日本酒。</p>
+                            <div class="product-price">¥45,000</div>
+                            <div class="product-actions">
+                                <button class="view-product">商品を見る</button>
+                                <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-category="sake" data-alcohol="medium">
+                    <a href="product-hourai-jp.html">
+                        <img src="images/Hourai Junmai Ginjo Kaden Tezukuri Optimised.jpg" alt="蓬莱 純米吟醸 花伝手作り" class="product-image">
+                        <div class="product-content">
+                            <div class="product-category">日本酒</div>
+                            <h3 class="product-title">蓬莱 純米吟醸 花伝手作り</h3>
+                            <p class="product-description">手作りで造られた、調和の取れた味わいの日本酒。</p>
+                            <div class="product-price">¥8,900</div>
+                            <div class="product-actions">
+                                <button class="view-product">商品を見る</button>
+                                <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-category="sake" data-alcohol="medium">
+                    <a href="product-keigetsu-jp.html">
+                        <img src="images/Keigetsu Nigori Junmai Daiginjo 50 Optimised.jpg" alt="桂月 にごり純米大吟醸50" class="product-image">
+                        <div class="product-content">
+                            <div class="product-category">日本酒</div>
+                            <h3 class="product-title">桂月 にごり純米大吟醸50</h3>
+                            <p class="product-description">フルーティな香りとスムーズな口当たりの濁り酒。</p>
+                            <div class="product-price">¥7,500</div>
+                            <div class="product-actions">
+                                <button class="view-product">商品を見る</button>
+                                <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-category="sake" data-alcohol="medium">
+                    <a href="product-tomoe-jp.html">
+                        <img src="images/Tomoé Barrel Selection Sémillon 2020 Optimised.jpg" alt="巴 バレルセレクション セミヨン 2020" class="product-image">
+                        <div class="product-content">
+                            <div class="product-category">日本酒</div>
+                            <h3 class="product-title">巴 バレルセレクション セミヨン 2020</h3>
+                            <p class="product-description">樽で熟成された、複雑な味わいのユニークな日本酒。</p>
+                            <div class="product-price">¥35,000</div>
+                            <div class="product-actions">
+                                <button class="view-product">商品を見る</button>
+                                <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card" data-category="sake" data-alcohol="medium">
+                    <a href="product-dassai23-jp.html">
+                        <img src="images/Dassai 23 Junmai Daiginjo Optimised.jpg" alt="獺祭 23 純米大吟醸" class="product-image">
+                        <div class="product-content">
+                            <div class="product-category">日本酒</div>
+                            <h3 class="product-title">獺祭 23 純米大吟醸</h3>
+                            <p class="product-description">山口県の旭酒造が造る、卓越した品質の日本酒。</p>
+                            <div class="product-price">¥6,800</div>
+                            <div class="product-actions">
+                                <button class="view-product">商品を見る</button>
+                                <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
     </div>
